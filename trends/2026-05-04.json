@@ -10,11 +10,17 @@
     "deduped_union": 760
   },
   "buckets": {
+    "Manipulation": {
+      "total": 17,
+      "cv": 14,
+      "ro": 0,
+      "cvro": 3
+    },
     "3D/Scene": {
-      "total": 49,
+      "total": 48,
       "cv": 37,
       "ro": 8,
-      "cvro": 4
+      "cvro": 3
     },
     "Robot Learning": {
       "total": 55,
@@ -23,10 +29,10 @@
       "cvro": 9
     },
     "Autonomous Driving": {
-      "total": 28,
-      "cv": 7,
+      "total": 26,
+      "cv": 6,
       "ro": 16,
-      "cvro": 5
+      "cvro": 4
     },
     "Foundation Models": {
       "total": 40,
@@ -35,14 +41,14 @@
       "cvro": 0
     },
     "Generation": {
-      "total": 64,
-      "cv": 57,
+      "total": 63,
+      "cv": 56,
       "ro": 6,
       "cvro": 1
     },
     "Efficiency/Systems": {
-      "total": 43,
-      "cv": 38,
+      "total": 42,
+      "cv": 37,
       "ro": 4,
       "cvro": 1
     },
@@ -86,7 +92,7 @@
     ],
     [
       "alignment",
-      14
+      13
     ],
     [
       "distillation",
@@ -97,12 +103,20 @@
       11
     ],
     [
+      "object detection",
+      10
+    ],
+    [
       "3d gaussian",
       8
     ],
     [
       "sparse",
       8
+    ],
+    [
+      "pose estimation",
+      7
     ],
     [
       "adversarial",
@@ -125,15 +139,7 @@
       6
     ],
     [
-      "manipulation",
-      6
-    ],
-    [
       "hallucination",
-      6
-    ],
-    [
-      "world model",
       6
     ],
     [
@@ -145,15 +151,19 @@
       5
     ],
     [
+      "world model",
+      5
+    ],
+    [
       "flow matching",
       4
     ],
     [
-      "pruning",
+      "manipulation",
       4
     ],
     [
-      "3d generation",
+      "pruning",
       4
     ],
     [
@@ -162,14 +172,6 @@
     ],
     [
       "scene reconstruction",
-      4
-    ],
-    [
-      "vla",
-      4
-    ],
-    [
-      "embodied",
       4
     ],
     [
@@ -185,7 +187,7 @@
       3
     ],
     [
-      "lidar",
+      "3d generation",
       3
     ],
     [
@@ -205,10 +207,6 @@
       2
     ],
     [
-      "robot learning",
-      2
-    ],
-    [
       "3d reconstruction",
       2
     ],
@@ -219,28 +217,28 @@
     [
       "lora",
       2
+    ],
+    [
+      "embodied",
+      2
+    ],
+    [
+      "visual reasoning",
+      2
     ]
   ],
   "keywords_ro": [
     [
       "manipulation",
-      14
+      13
     ],
     [
       "vehicle",
-      10
+      9
     ],
     [
       "robust",
-      9
-    ],
-    [
-      "navigation",
-      9
-    ],
-    [
-      "autonomous driving",
-      6
+      7
     ],
     [
       "vla",
@@ -251,7 +249,7 @@
       6
     ],
     [
-      "vision-language-action",
+      "navigation",
       6
     ],
     [
@@ -259,7 +257,7 @@
       5
     ],
     [
-      "humanoid",
+      "vision-language-action",
       5
     ],
     [
@@ -267,15 +265,23 @@
       4
     ],
     [
-      "world model",
-      4
-    ],
-    [
       "diffusion",
       4
     ],
     [
+      "humanoid",
+      4
+    ],
+    [
+      "autonomous driving",
+      4
+    ],
+    [
       "gripper",
+      3
+    ],
+    [
+      "world model",
       3
     ],
     [
@@ -291,18 +297,6 @@
       3
     ],
     [
-      "lidar",
-      2
-    ],
-    [
-      "sparse",
-      2
-    ],
-    [
-      "distillation",
-      2
-    ],
-    [
       "locomotion",
       2
     ],
@@ -311,7 +305,7 @@
       2
     ],
     [
-      "policy learning",
+      "exploration",
       2
     ],
     [
@@ -319,7 +313,7 @@
       2
     ],
     [
-      "exploration",
+      "policy learning",
       2
     ],
     [
@@ -335,7 +329,7 @@
       2
     ],
     [
-      "v2x",
+      "lidar",
       1
     ],
     [
@@ -343,23 +337,7 @@
       1
     ],
     [
-      "scene reconstruction",
-      1
-    ],
-    [
-      "vision-and-language navigation",
-      1
-    ],
-    [
       "3d generation",
-      1
-    ],
-    [
-      "traffic",
-      1
-    ],
-    [
-      "point cloud",
       1
     ],
     [
@@ -368,6 +346,10 @@
     ],
     [
       "mesh",
+      1
+    ],
+    [
+      "sparse",
       1
     ],
     [
@@ -380,6 +362,30 @@
     ],
     [
       "splatting",
+      1
+    ],
+    [
+      "adversarial",
+      1
+    ],
+    [
+      "carla",
+      1
+    ],
+    [
+      "video generation",
+      1
+    ],
+    [
+      "robot policy",
+      1
+    ],
+    [
+      "safety-critical",
+      1
+    ],
+    [
+      "motion planning",
       1
     ]
   ]
