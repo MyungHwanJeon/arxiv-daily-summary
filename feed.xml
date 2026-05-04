@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arXiv Daily Briefing — cs.CV · cs.RO</title>
+    <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/</link>
+    <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
+    <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
+    <language>ko</language>
+    <lastBuildDate>Mon, 04 May 2026 22:39:21 +0900</lastBuildDate>
+    <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-04 (월)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-04.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-04.html</guid>
+      <pubDate>Mon, 04 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[이번 주 제일 뜨거웠던 건 단연 Generation 이었어요. 주간 64편으로 8개 버킷 중 1위였고, diffusion이 33회로 최다 키워드였습니다. 다만 이 안에서 흥미로운 건, 단순한 "더 예쁜 생성" 논문이 아니라 diffusion을 분석·재해석하는 이론 논문 이 부쩍 늘었다는 점이에요. 오늘만 해도 "When Do Diffusion Models learn to Generate Multiple Objects?"는 데이터 효과를 분리해서 다객체 실패 원인을 진단하고, "Recovering Hidden Reward in Diffusion-Based Policies"는 score function이 expert soft Q-function의 gradient라는 걸 ma…]]></description>
+    </item>
+  </channel>
+</rss>

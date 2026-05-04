@@ -1,0 +1,386 @@
+{
+  "date": "2026-05-04",
+  "window": {
+    "start": "2026-04-27",
+    "end": "2026-05-03"
+  },
+  "totals": {
+    "cv_pastweek_entries": 613,
+    "ro_pastweek_entries": 183,
+    "deduped_union": 760
+  },
+  "buckets": {
+    "3D/Scene": {
+      "total": 49,
+      "cv": 37,
+      "ro": 8,
+      "cvro": 4
+    },
+    "Robot Learning": {
+      "total": 55,
+      "cv": 4,
+      "ro": 42,
+      "cvro": 9
+    },
+    "Autonomous Driving": {
+      "total": 28,
+      "cv": 7,
+      "ro": 16,
+      "cvro": 5
+    },
+    "Foundation Models": {
+      "total": 40,
+      "cv": 40,
+      "ro": 0,
+      "cvro": 0
+    },
+    "Generation": {
+      "total": 64,
+      "cv": 57,
+      "ro": 6,
+      "cvro": 1
+    },
+    "Efficiency/Systems": {
+      "total": 43,
+      "cv": 38,
+      "ro": 4,
+      "cvro": 1
+    },
+    "Embodied AI": {
+      "total": 11,
+      "cv": 3,
+      "ro": 6,
+      "cvro": 2
+    },
+    "Safety/Alignment": {
+      "total": 36,
+      "cv": 31,
+      "ro": 4,
+      "cvro": 1
+    }
+  },
+  "keywords_cv": [
+    [
+      "diffusion",
+      33
+    ],
+    [
+      "robust",
+      25
+    ],
+    [
+      "vision-language model",
+      16
+    ],
+    [
+      "vlm",
+      15
+    ],
+    [
+      "gaussian splat",
+      15
+    ],
+    [
+      "splatting",
+      15
+    ],
+    [
+      "alignment",
+      14
+    ],
+    [
+      "distillation",
+      13
+    ],
+    [
+      "lightweight",
+      11
+    ],
+    [
+      "3d gaussian",
+      8
+    ],
+    [
+      "sparse",
+      8
+    ],
+    [
+      "adversarial",
+      7
+    ],
+    [
+      "point cloud",
+      7
+    ],
+    [
+      "image editing",
+      6
+    ],
+    [
+      "video generation",
+      6
+    ],
+    [
+      "mesh",
+      6
+    ],
+    [
+      "manipulation",
+      6
+    ],
+    [
+      "hallucination",
+      6
+    ],
+    [
+      "world model",
+      6
+    ],
+    [
+      "compression",
+      6
+    ],
+    [
+      "autonomous driving",
+      5
+    ],
+    [
+      "flow matching",
+      4
+    ],
+    [
+      "pruning",
+      4
+    ],
+    [
+      "3d generation",
+      4
+    ],
+    [
+      "traffic",
+      4
+    ],
+    [
+      "scene reconstruction",
+      4
+    ],
+    [
+      "vla",
+      4
+    ],
+    [
+      "embodied",
+      4
+    ],
+    [
+      "generative model",
+      4
+    ],
+    [
+      "vehicle",
+      4
+    ],
+    [
+      "token pruning",
+      3
+    ],
+    [
+      "lidar",
+      3
+    ],
+    [
+      "navigation",
+      3
+    ],
+    [
+      "moe",
+      2
+    ],
+    [
+      "3dgs",
+      2
+    ],
+    [
+      "quantization",
+      2
+    ],
+    [
+      "robot learning",
+      2
+    ],
+    [
+      "3d reconstruction",
+      2
+    ],
+    [
+      "nerf",
+      2
+    ],
+    [
+      "lora",
+      2
+    ]
+  ],
+  "keywords_ro": [
+    [
+      "manipulation",
+      14
+    ],
+    [
+      "vehicle",
+      10
+    ],
+    [
+      "robust",
+      9
+    ],
+    [
+      "navigation",
+      9
+    ],
+    [
+      "autonomous driving",
+      6
+    ],
+    [
+      "vla",
+      6
+    ],
+    [
+      "tactile",
+      6
+    ],
+    [
+      "vision-language-action",
+      6
+    ],
+    [
+      "embodied",
+      5
+    ],
+    [
+      "humanoid",
+      5
+    ],
+    [
+      "robot learning",
+      4
+    ],
+    [
+      "world model",
+      4
+    ],
+    [
+      "diffusion",
+      4
+    ],
+    [
+      "gripper",
+      3
+    ],
+    [
+      "legged",
+      3
+    ],
+    [
+      "dexterous",
+      3
+    ],
+    [
+      "slam",
+      3
+    ],
+    [
+      "lidar",
+      2
+    ],
+    [
+      "sparse",
+      2
+    ],
+    [
+      "distillation",
+      2
+    ],
+    [
+      "locomotion",
+      2
+    ],
+    [
+      "trajectory prediction",
+      2
+    ],
+    [
+      "policy learning",
+      2
+    ],
+    [
+      "lora",
+      2
+    ],
+    [
+      "exploration",
+      2
+    ],
+    [
+      "quadruped",
+      2
+    ],
+    [
+      "demonstrations",
+      2
+    ],
+    [
+      "odometry",
+      2
+    ],
+    [
+      "v2x",
+      1
+    ],
+    [
+      "alignment",
+      1
+    ],
+    [
+      "scene reconstruction",
+      1
+    ],
+    [
+      "vision-and-language navigation",
+      1
+    ],
+    [
+      "3d generation",
+      1
+    ],
+    [
+      "traffic",
+      1
+    ],
+    [
+      "point cloud",
+      1
+    ],
+    [
+      "moe",
+      1
+    ],
+    [
+      "mesh",
+      1
+    ],
+    [
+      "3d gaussian",
+      1
+    ],
+    [
+      "gaussian splat",
+      1
+    ],
+    [
+      "splatting",
+      1
+    ]
+  ]
+}

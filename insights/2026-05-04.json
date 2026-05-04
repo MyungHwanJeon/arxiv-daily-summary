@@ -1,0 +1,45 @@
+{
+  "date": "2026-05-04",
+  "insights": [
+    {
+      "title": "Diffusion policy가 \"샘플러\"에서 \"reward를 함의한 모델\"로 이론적 격상",
+      "claim": "EnergyFlow가 diffusion policy의 score function이 expert soft Q-function gradient임을 maximum-entropy optimality 하에서 증명. PrefMoE의 robust preference modeling과 결합하면 reward recovery 라인이 본격화.",
+      "papers": [
+        "https://arxiv.org/abs/2605.00623",
+        "https://arxiv.org/abs/2605.00384"
+      ]
+    },
+    {
+      "title": "3DGS는 \"렌더링 도구\"가 아니라 \"primitive를 통제·편집·이식하는 워크플로우\"로 굳어졌다",
+      "claim": "오늘 Beyond Heuristics(learnable density), 2D-SuGaR(surface-aware), GOR-IS(intrinsic-space), VkSplat(Vulkan)이 한 날에 나옴. 표현 자체를 다루는 워크플로우로 이행.",
+      "papers": [
+        "https://arxiv.org/abs/2605.00408",
+        "https://arxiv.org/abs/2605.00569",
+        "https://arxiv.org/abs/2605.00498",
+        "https://arxiv.org/abs/2605.00219"
+      ]
+    },
+    {
+      "title": "VLA가 \"어디서 학습 데이터를 확보할까\"의 답을 egocentric video와 fleet deployment에서 찾는다",
+      "claim": "Being-H0.7은 egocentric video에서 latent world-action 학습, LWD는 fleet RL로 배포 중 학습. 데이터 부족을 두 방향에서 정공으로 풀려는 흐름.",
+      "papers": [
+        "https://arxiv.org/abs/2605.00078",
+        "https://arxiv.org/abs/2605.00416"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "EnergyFlow + Fleet RL: 배포 중 회수한 reward로 on-policy 보정",
+      "claim": "offline IRL 회수 + online fleet adaptation의 폐쇄 루프. PrefMoE를 통한 noise filtering 결합."
+    },
+    {
+      "title": "Learnable Density Control을 4D / 동적 장면으로 확장",
+      "claim": "Beyond Heuristics + Predictive Spatio-Temporal Scene Graphs 결합으로 manipulation 환경 변화에 적응하는 4D Gaussian density policy."
+    },
+    {
+      "title": "Egocentric Latent Action + Conformal Safety로 인증 가능한 HRC",
+      "claim": "Being-H0.7 latent action 위에 conformal prediction을 얹어 reject-low-confidence 게이트로 VLA+safety 갭 메우기."
+    }
+  ]
+}
