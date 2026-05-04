@@ -126,7 +126,7 @@ parts.append('<!DOCTYPE html>\n<html lang="ko"><head><meta charset="UTF-8"><meta
 parts.append(f'<title>arXiv Weekly Retrospective — {TODAY} ({WEEK_LABEL})</title>')
 parts.append(f'<style>{CSS}</style></head><body><div class="container">')
 
-parts.append(f'<a class="home-button" href="https://gisbi-kim.github.io/arxiv-daily-summary/">← 홈으로</a>')
+parts.append(f'<a class="home-button" href="https://MyungHwanJeon.github.io/arxiv-daily-summary/">← 홈으로</a>')
 parts.append(f'<h1>🗓 arXiv Weekly Retrospective</h1>')
 parts.append(f'<p class="subtitle">{WEEK_LABEL} · {WEEK_START} ~ {WEEK_END} · cs.CV/cs.RO pastweek 누적 회고</p>')
 parts.append(f'<div class="weekly-banner"><strong>토요일 주말판.</strong> 이번주 arxiv가 안 도는 토요일이라, 평일 단발 브리핑 대신 한 주 누적을 박사+교수급 시각으로 회고합니다. 상단은 30초 안에 끝나는 교수용 요약, 본문은 박사과정이 다음주 손 움직일 거리.</div>')
@@ -338,12 +338,12 @@ parts.append('<div class="note">🛠 이번주는 TTS 파이프라인이 이 환
 
 # ============ Footer ============
 parts.append('<hr>')
-parts.append(f'<a class="home-button" href="https://gisbi-kim.github.io/arxiv-daily-summary/">🏠 전체 목록으로</a>')
+parts.append(f'<a class="home-button" href="https://MyungHwanJeon.github.io/arxiv-daily-summary/">🏠 전체 목록으로</a>')
 parts.append(f'''<div class="footer">
 <p>📚 입력: cs.CV/cs.RO pastweek {snap["totals"]["total_scanned"]}편 스캔 · ROI {snap["totals"]["selected"]}편 분류 · trends/insights/benchmarks {WEEK_START}~{WEEK_END} 누적</p>
 <p>🛠 생성 파이프라인: <code>scripts/build_weekly.py</code> + <code>scripts/build_weekly_html.py</code> · arxiv 리스트는 stdlib 파서 직접 파싱(WebFetch 미사용)</p>
-<p>📝 톤·구조: <a href="https://github.com/gisbi-kim/arxiv-daily-summary/blob/main/prompts/instruction_v20260425.md">prompts/instruction_v20260425.md</a> [주말 모드 — Weekly Retrospective] 따름</p>
-<p>📡 RSS 구독: <a href="https://gisbi-kim.github.io/arxiv-daily-summary/feed.xml">/feed.xml</a></p>
+<p>📝 톤·구조: <a href="https://github.com/MyungHwanJeon/arxiv-daily-summary/blob/main/prompts/instruction_v20260425.md">prompts/instruction_v20260425.md</a> [주말 모드 — Weekly Retrospective] 따름</p>
+<p>📡 RSS 구독: <a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml">/feed.xml</a></p>
 </div>''')
 
 parts.append('</div></body></html>')

@@ -9,6 +9,10 @@ if hasattr(sys.stdout, "buffer"):
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 BUCKETS = [
+    ("Manipulation", [
+        "6D object", "pose estimation", "VLA", "diffusion policy", "object detection",
+        "bop", "object reconstruction",
+    ]),
     ("3D/Scene", [
         "3d gaussian", "gaussian splat", "3dgs", "nerf", "neural radiance",
         "slam", "scene reconstruction", "neural implicit", "splatting",

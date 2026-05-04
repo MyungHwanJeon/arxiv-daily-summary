@@ -22,7 +22,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from xml.sax.saxutils import escape as xml_escape
 
-SITE_URL = "https://gisbi-kim.github.io/arxiv-daily-summary"
+SITE_URL = "https://MyungHwanJeon.github.io/arxiv-daily-summary"
 FEED_TITLE = "arXiv Daily Briefing — cs.CV · cs.RO"
 FEED_DESC = (
     "cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, "
