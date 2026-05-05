@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 04 May 2026 23:17:50 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 12:25:54 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-05 (화)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-05.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-05.html</guid>
+      <pubDate>Tue, 05 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[이번 주 가장 뜨거운 건 여전히 Generation 이에요 — 주간 76편으로 8개 버킷 중 1위, 어제(63편) 대비 +21% 늘었습니다. 다만 단순히 양만 늘어난 게 아니라 결이 흥미로워요. 오늘 하루만 봐도 SwiftPie (one-step personalization), Visual Implicit AR (implicit equilibrium layer), SteeringDiffusion (activation-level control), Motion-Aware Caching (autoregressive video), SpecEdit·DirectEdit (training-free editing) 같이 "denoising/sampling 비용을 어떻게 깎느냐"에 집중…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-04 (월)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-04.html</link>

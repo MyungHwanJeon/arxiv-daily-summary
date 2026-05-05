@@ -1,0 +1,44 @@
+{
+  "date": "2026-05-05",
+  "insights": [
+    {
+      "title": "VLA가 \"deliberation\"을 학습한다 — test-time compute가 robot learning에 본격 진입",
+      "claim": "Sentinel-VLA(metacognitive monitoring), VLA-ATTC(critic-driven adaptive test-time compute), Anticipation-VLA(adaptive subgoal anticipation)가 같은 날에 나옴. LLM의 test-time compute scaling이 embodied 영역으로 넘어오는 첫 본격 신호.",
+      "papers": [
+        "https://arxiv.org/abs/2605.01191",
+        "https://arxiv.org/abs/2605.01194",
+        "https://arxiv.org/abs/2605.01772"
+      ]
+    },
+    {
+      "title": "Diffusion policy 분석이 \"주파수 도메인\"으로 한 단계 더 깊어졌다",
+      "claim": "Hydra-DP3가 robot action trajectory의 low-frequency 우세성을 보이고 denoiser 오차 상한을 freq subspace 차원으로 묶음. 어제 EnergyFlow의 statistical 시각(score = expert Q-gradient)에 신호처리 시각이 더해져 diffusion policy 분석의 두 축이 한 주에 깔림.",
+      "papers": [
+        "https://arxiv.org/abs/2605.01581"
+      ]
+    },
+    {
+      "title": "VLA 데이터 수집의 진입 장벽이 한 단계 더 낮아졌다",
+      "claim": "Phone2Act(스마트폰+ARCore teleop), VILAS(저가 매니퓰레이션 플랫폼), Seeing Realism from Simulation(sim→real video transfer)이 한 날에 묶임. 어제 Being-H0.7(egocentric)·LWD(fleet)에 이어 'consumer-grade 장비로 VLA 데이터 인플레이션'이 세 번째 축으로 자리잡음.",
+      "papers": [
+        "https://arxiv.org/abs/2605.01948",
+        "https://arxiv.org/abs/2605.02037",
+        "https://arxiv.org/abs/2605.02757"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "VLA Test-Time Compute Scaling Laws — compute 추가량과 success-rate 개선의 정량적 관계",
+      "claim": "Sentinel-VLA·VLA-ATTC·Anticipation-VLA가 deliberation을 도입했지만 'compute vs success' 곡선은 미정. (a) compute가 task complexity와 어떻게 곱해지는가, (b) compute가 perception/planning/recovery 중 어디를 사는가, (c) closed-loop latency 한계와의 임계점."
+    },
+    {
+      "title": "Frequency-Aware Reward Recovery — 주파수 도메인에서 EnergyFlow + Hydra-DP3 결합",
+      "claim": "Hydra-DP3의 low-frequency 우세 + EnergyFlow의 score=expert Q-gradient를 결합해 'reward signal의 frequency 분포' 분석. frequency-truncated estimator가 EnergyFlow vanilla보다 안정적인지 LIBERO/CALVIN에서 band별 비교."
+    },
+    {
+      "title": "Phone2Act 데이터 + GiB-style Auto-Quality Filter — user demo 자동 정제 파이프라인",
+      "claim": "Phone2Act의 consumer-grade 데이터 인플레이션과 GiB(Good-in-Bad)·data quality metric의 자동 sifter를 inline으로 결합. 사용자 demo 마치는 즉시 'good/bad' 부분 자동 판정으로 quality at scale 표준."
+    }
+  ]
+}
