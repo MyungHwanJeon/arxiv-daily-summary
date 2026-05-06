@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 05 May 2026 12:25:54 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 12:24:31 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-06 (수)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-06.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-06.html</guid>
+      <pubDate>Wed, 06 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[이번 주 가장 뜨거운 건 어제와 마찬가지로 Generation 이에요 — 주간 76편으로 단연 1위, 어제 스냅샷 대비 0% 정확히 평행 이동했습니다. 다만 어제까지 "diffusion sampling 비용 깎기"가 결이었다면, 오늘 결은 한 단계 더 안쪽으로 들어갔어요. Memorization in Stable Diffusion이 CLIP의 <pad> 토큰에서 나온다 는 진단, Ortho-Hydra 의 DiT LoRA cold-start 문제 해부, UniReasoner 의 understanding-generation gap 정식화 — 셋 다 "왜 안 되는지를 메커니즘 차원에서 설명"하는 진단 논문입니다. 한 주간 양적으로 폭증했던 generation이 이제 자기 메커…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-05 (화)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-05.html</link>

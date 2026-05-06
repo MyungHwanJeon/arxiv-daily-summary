@@ -1,0 +1,26 @@
+{
+  "date": "2026-05-06",
+  "results": [
+    {
+      "benchmark": "7Scenes",
+      "metric": "Registration Recall (2D-3D)",
+      "value_relative": "+8% over prior SOTA",
+      "paper": "https://arxiv.org/abs/2605.04044",
+      "note": "UniCorrn unified correspondence transformer"
+    },
+    {
+      "benchmark": "3DLoMatch",
+      "metric": "Registration Recall (3D-3D)",
+      "value_relative": "+10% over prior SOTA",
+      "paper": "https://arxiv.org/abs/2605.04044",
+      "note": "UniCorrn unified correspondence transformer"
+    },
+    {
+      "benchmark": "RobotWorldBench (in-domain, self-built)",
+      "metric": "6-dimension aggregate score",
+      "value_relative": "+10.1% over strongest baseline (self-graded)",
+      "paper": "https://arxiv.org/abs/2605.03821",
+      "note": "RoboAlign-R1 — judge is self-trained, treat as in-domain only"
+    }
+  ]
+}

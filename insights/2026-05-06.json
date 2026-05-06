@@ -1,0 +1,47 @@
+{
+  "date": "2026-05-06",
+  "insights": [
+    {
+      "title": "Generative policy fine-tuning이 본격 패러다임으로 — BC 다음 단계가 한 주 안에 정리됨",
+      "claim": "Diffusion/flow policy를 BC로만 학습하던 단계에서, OGPO(off-policy critic + 변형 PPO로 generative process 전체 backprop), RCD(self-reconstruction error를 log-density proxy로 쓰는 training-free guidance), RoboAlign-R1(reward-aligned post-training + sliding window re-encoding), RLDX-1(MSAT architecture)이 한 주 안에 함께 등장. LLM에서의 SFT→RLHF→RLAIF 진화가 robot learning에 그대로 평행 이동 중이며, 향후 6개월 내 robot RLHF 표준 레시피 정리 논문 등장 예상.",
+      "papers": [
+        "https://arxiv.org/abs/2605.03065",
+        "https://arxiv.org/abs/2605.03075",
+        "https://arxiv.org/abs/2605.03821",
+        "https://arxiv.org/abs/2605.03269"
+      ]
+    },
+    {
+      "title": "Stable Diffusion memorization의 첫 메커니즘적 설명 — <pad> 토큰이 범인이었다",
+      "claim": "CLIP의 v_pad가 v_eot(CLIP 학습 시 유일하게 명시적 최적화된 임베딩)와 구조적으로 중복되어 v_eot의 영향을 의도치 않게 amplify하는 것이 SD memorization의 직접 원인. 두 줄짜리 inference-time 수정(<pad>를 ! 토큰으로 교체 + v_eot mask)으로 detection 없이 mitigation 가능. 같은 주 ReMem(LVLM unlearning 평가 신뢰도)와 CoVUBench(LVLM copyright unlearning)와 결합되어 '메모리 메커니즘 + 평가'가 한 주에 동시 정립.",
+      "papers": [
+        "https://arxiv.org/abs/2605.02908",
+        "https://arxiv.org/abs/2605.03759",
+        "https://arxiv.org/abs/2605.03547"
+      ]
+    },
+    {
+      "title": "Humanoid 데이터 수집의 '특수 장비 제거' 라인 — 어제 Phone2Act, 오늘 BifrostUMI + Embodiment Editing",
+      "claim": "어제 Phone2Act(스마트폰 ARCore 6-DoF teleop)에 이어 오늘 BifrostUMI(VR 디바이스 keypoint trajectory + wrist 시각, robot 없이 humanoid 학습), Bridging the Embodiment Gap(disentangled cross-embodiment video editing, 사람→로봇 비디오 합성), SigLoMa(ego-centric vision만으로 quadruped loco-manipulation, MoCap 없이) 3편이 같은 날 등장. consumer-grade를 넘어 '장비 자체를 줄이거나 변환'으로 발전. 1년 누적 시 robot fleet 없는 lab도 humanoid VLA 학습 가능한 표준 파이프라인 정착 예상.",
+      "papers": [
+        "https://arxiv.org/abs/2605.03452",
+        "https://arxiv.org/abs/2605.03637",
+        "https://arxiv.org/abs/2605.03846"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "Off-Policy Finetune + Test-Time Refinement Hybrid — OGPO와 RCD를 한 파이프라인으로",
+      "claim": "OGPO(training-side off-policy PPO)와 RCD(test-time self-reconstruction guidance)는 보완적. OGPO finetune된 policy 위에 RCD로 long-horizon composition을 보정하는 hybrid 실험을 OGBench에서 BC, OGPO 단독, BC+RCD, OGPO+RCD 4조합으로 비교. 검증 시 'robot RLHF + diffusion guidance'의 첫 통합 레시피."
+    },
+    {
+      "title": "CLIP <pad> 토큰 진단을 VLM-as-Judge·VLA Action Decoder에 적용",
+      "claim": "SD에서 발견된 v_pad over-influence를 VLM judge 모델(RoboAlign-Judge 등)과 CLIP 기반 VLA action decoder(GR00T 류)에도 ablation. 가설: VLM judge의 시각 단서 과의존, VLA의 instruction 무시 패턴 모두 같은 메커니즘일 가능성. 1쿼터 안에 first result 가능, multimodal 전반 임팩트."
+    },
+    {
+      "title": "Cross-Embodiment Video Editing의 Quality Filter — 사람→로봇 변환 비디오의 자동 검증",
+      "claim": "Bridging the Embodiment Gap의 합성 비디오 품질을 GiB sifter + RoboAlign-Judge 6-dimension reward로 자동 선별하는 파이프라인. BifrostUMI 데이터 파이프라인의 마지막 quality 게이트. 1인 연구실 스코프, 산업 영향 큼."
+    }
+  ]
+}
