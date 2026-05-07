@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 06 May 2026 12:24:31 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 13:49:35 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-07 (목)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-07.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-07.html</guid>
+      <pubDate>Thu, 07 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[이번 주는 Generation 이 다시 84편으로 1위(어제 76 → +11%)로 기세를 이어갔는데, 결이 좀 바뀌었어요. 어제까지는 "memorization 진단"·"DiT cold-start" 같은 메커니즘 분석 논문이 주류였다면, 오늘은 생성 모델을 "다른 일을 시키는" 시도 로 이동했습니다. 대표적으로 Open-Source Image Editing Models Are Zero-Shot Vision Learners 가 Qwen-Image-Edit, FireRed, LongCat 같은 공개 편집 모델을 별도 fine-tuning 없이 monocular depth·surface normal·semantic segmentation에 그대로 던져보는 평가를 내놨고, Str…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-06 (수)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-06.html</link>

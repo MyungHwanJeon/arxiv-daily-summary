@@ -1,0 +1,47 @@
+{
+  "date": "2026-05-07",
+  "results": [
+    {
+      "benchmark": "ORAD-3D",
+      "metric": "Off-road feedforward 4D reconstruction (rendering+geometry)",
+      "value_relative": "consistent improvements over prior feedforward 4DGS baselines",
+      "paper": "https://arxiv.org/abs/2605.04435",
+      "note": "Ground4D — voxel-grounded temporal Gaussian aggregation; absolute SOTA value not in abstract"
+    },
+    {
+      "benchmark": "RELLIS-3D",
+      "metric": "Off-road feedforward 4D reconstruction",
+      "value_relative": "consistent improvements over prior",
+      "paper": "https://arxiv.org/abs/2605.04435",
+      "note": "Ground4D"
+    },
+    {
+      "benchmark": "CARD (new dataset)",
+      "metric": "Dense depth pixels per frame",
+      "value_relative": "~500K (KITTI Depth Completion 6.5x, other public driving 10x)",
+      "paper": "https://arxiv.org/abs/2605.05014",
+      "note": "CARD multi-LiDAR fusion dataset, dataset-side metric not SOTA-on-task"
+    },
+    {
+      "benchmark": "CARLA Leaderboard",
+      "metric": "RL-based driving with event camera",
+      "value_relative": "improved performance over InterFuser baseline",
+      "paper": "https://arxiv.org/abs/2605.04355",
+      "note": "InterFuserDVS — DVS modality token fusion"
+    },
+    {
+      "benchmark": "OGBench / D4RL / robomimic",
+      "metric": "Offline-to-online RL on manipulation (success rate)",
+      "value_relative": "outperforms standard offline-to-online learning baselines",
+      "paper": "https://arxiv.org/abs/2605.05172",
+      "note": "Q2RL — Q extracted from BC + Q-Gating"
+    },
+    {
+      "benchmark": "CharXiv reasoning subset",
+      "metric": "Multi-subplot chart reasoning (accuracy)",
+      "value_relative": "consistent improvements over strong MLLM baselines",
+      "paper": "https://arxiv.org/abs/2605.04304",
+      "note": "HierVA — hierarchical visual agent"
+    }
+  ]
+}

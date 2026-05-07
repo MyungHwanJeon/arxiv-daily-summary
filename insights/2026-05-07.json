@@ -1,0 +1,51 @@
+{
+  "date": "2026-05-07",
+  "insights": [
+    {
+      "title": "3DGS가 한 주 만에 'novel rendering'에서 'infrastructure layer'로 굳어짐",
+      "claim": "오늘 한 날에 splatting 인프라 5축이 동시에 정리됨 — Ilov3Splat(instance-level open-vocab 의미 grounding), ULF-Loc(α-blending이 만드는 3DGS feature bias의 이론적 진단 + geometry-weighted unbiased aggregation으로 보정), QuadBox(geometry-aware bounding box로 rasterization tile-traversal 가속), Aes3D(reconstruction fidelity가 아닌 aesthetic 차원의 첫 데이터셋·벤치), Velox/Syn4D/Ground4D/CARD(4D representation·합성·실측·driving용 dense 3D 데이터). splatting이 'novel rendering 기법' 카테고리에서 졸업하고 'open-vocab 의미 + 정확한 feature + 빠른 rasterization + 미적 평가 + 4D 데이터셋' 패키지가 됨. 향후 6개월 splatting 논문은 이 인프라 위에서 application-specific하게 분화될 가능성 높음.",
+      "papers": [
+        "https://arxiv.org/abs/2605.04506",
+        "https://arxiv.org/abs/2605.04730",
+        "https://arxiv.org/abs/2605.04844",
+        "https://arxiv.org/abs/2605.05155",
+        "https://arxiv.org/abs/2605.04527",
+        "https://arxiv.org/abs/2605.05207",
+        "https://arxiv.org/abs/2605.04435",
+        "https://arxiv.org/abs/2605.05014"
+      ]
+    },
+    {
+      "title": "Open-source 생성 모델이 zero-shot perception을 한다 — 'scaling이 perception까지 흡수' 라인의 첫 오픈 instance",
+      "claim": "지금까지 '대형 생성 모델이 학습 안 한 비전 태스크를 푼다' 주장은 closed-source(Veo3, Nano Banana Pro)에 한정되거나 instruction tuning이 필요했음. 오늘 Open-Source Image Editing Models Are Zero-Shot Vision Learners가 Qwen-Image-Edit/FireRed/LongCat을 fine-tuning 없이 NYUv2/DIODE depth, surface normal, Cityscapes seg에서 non-trivial 성능 확인. 어제 Grounding Video-LLMs(Semantic Prior Dominance — model이 prior로 답한다)와 정확히 반대 결론. 둘이 동시 옳다면 가설은 'task가 prior와 합치할 때만 emerge한 것처럼 보인다'. 검증되면 multimodal foundation model 평가 방식이 'task accuracy → prior 의존도 disentangle'로 옮겨감.",
+      "papers": [
+        "https://arxiv.org/abs/2605.04566",
+        "https://arxiv.org/abs/2605.04515"
+      ]
+    },
+    {
+      "title": "Driving이 generative scenario·world model 두 축으로 한꺼번에 정리됨 — 양만 폭증(+28%)이 아닌 결의 입체화",
+      "claim": "Autonomous Driving 버킷이 25→32(+28%)로 가장 큰 상승. 결이 두 축으로 좁혀짐. 축 1: safety-critical scenario generation — Conditional Flow-VAE(continuous latent flow), ReflectDrive-2(discrete diffusion + RL self-editing). 축 2: driver/scene world model — Driver-WM(in-cabin dynamics traffic-conditioned latent rollout), InfoCoordiBridge(BEV neuro-symbolic SceneSummary로 LLM 직접 던지기 회피). 어제까지 모듈 별로 흩어진 라인이 'scenario를 어떻게 만들까 + driver/scene을 어떻게 모델링할까' 두 축에 동시 입체화. CARLA·nuPlan에서 closed-loop 수치 비교 폭증 예상.",
+      "papers": [
+        "https://arxiv.org/abs/2605.04366",
+        "https://arxiv.org/abs/2605.04647",
+        "https://arxiv.org/abs/2605.05092",
+        "https://arxiv.org/abs/2605.04475"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "ULF-Loc의 'α-blending bias' 이론을 instance segmentation·feature distillation 3DGS 변형으로 확장",
+      "claim": "ULF-Loc이 보인 3DGS α-blending optimization의 inherent feature bias 진단을 (a) feature-distilled 3DGS(LangSplat·Feature 3DGS), (b) Ilov3Splat의 instance feature field, (c) gaussian-anchored CLIP feature 활용 모델 전반에 ablation. 가설: 모든 feature-augmented 3DGS는 같은 bias로 매칭 정확도와 instance separation이 손상돼 있음. 검증되면 single insight로 multiple downstream(open-vocab seg, localization, language grounding) 동시 개선. 1쿼터 first result, 임팩트는 splatting 인프라 전체."
+    },
+    {
+      "title": "Q2RL과 OGPO를 결합한 'BC + Q-extraction + off-policy generative finetune' full stack",
+      "claim": "Q2RL(BC에서 Q-function 추출 + Q-Gating으로 offline-to-online을 매끄럽게)과 OGPO(off-policy critic PPO로 generative process 전체 backprop)는 정확히 보완관계지만 누구도 묶지 않음. Q2RL이 만든 Q는 OGPO critic 초기화에 그대로 사용 가능, OGPO는 Q2RL 끝 지점에서 generative process 전체에 PPO 적용. 실험: D4RL/robomimic + 자체 manipulation에서 BC, Q2RL, OGPO, Q2RL→OGPO 4조합 비교. 가설: (d)가 데이터 효율과 최종 성능 모두에서 단독보다 뚜렷하게 나음. 우리 manipulation 파이프라인 다음 분기 메인 후보."
+    },
+    {
+      "title": "'Generative model이 perception을 안 보고 한다' 가설의 ablation 프레임워크",
+      "claim": "어제 Grounding Video-LLMs(Semantic Prior Dominance)와 오늘 Open-Source Image Editing as Zero-Shot Vision Learners가 정반대 결론. 둘이 동시 옳다면 가설은 'task가 prior와 합치할 때만 emerge'. 실험: zero-shot vision benchmark를 prior-aligned subset / prior-conflicting subset(rotation, occlusion, counter-intuitive scene)으로 분리한 뒤 편집 모델 vs perception 모델 비교. counter-intuitive에서 격차 벌어지면 'scaling-driven emergence'는 사실상 prior matching. multimodal foundation model 평가 방식을 다시 짜는 메타 contribution."
+    }
+  ]
+}
