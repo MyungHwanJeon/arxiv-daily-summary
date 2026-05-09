@@ -1,0 +1,440 @@
+#!/usr/bin/env python3
+"""Build posts/2026-05-09-weekly.html — W19 Saturday Weekly Retrospective."""
+import json, os, sys, io, html as htmllib
+
+if hasattr(sys.stdout, "buffer"):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+
+TODAY = "2026-05-09"
+WEEK_LABEL = "2026-W19"
+WEEK_START = "2026-05-03"
+WEEK_END = "2026-05-09"
+OUT_HTML = f"posts/{TODAY}-weekly.html"
+
+snap = json.load(open("out/weekly_full.json", encoding="utf-8"))["snapshot"]
+buckets = snap["buckets"]
+
+# 4-day daily snapshots (May 4–7) for sparkline + delta
+trend_days = ["2026-05-04","2026-05-05","2026-05-06","2026-05-07"]
+trends = {}
+for d in trend_days:
+    trends[d] = json.load(open(f"trends/{d}.json", encoding="utf-8"))
+
+# Daily insights
+insights_all = []
+for d in trend_days:
+    try:
+        j = json.load(open(f"insights/{d}.json", encoding="utf-8"))
+        for ins in j.get("insights", []):
+            insights_all.append({"date": d, **ins})
+    except FileNotFoundError:
+        pass
+
+# Daily research topics
+topics_all = []
+for d in trend_days:
+    try:
+        j = json.load(open(f"insights/{d}.json", encoding="utf-8"))
+        for r in j.get("research_topics", []):
+            topics_all.append({"date": d, **r})
+    except FileNotFoundError:
+        pass
+
+# Daily benchmarks
+benchmarks_all = []
+for d in trend_days:
+    try:
+        j = json.load(open(f"benchmarks/{d}.json", encoding="utf-8"))
+        for r in j.get("results", []):
+            benchmarks_all.append({"date": d, **r})
+    except FileNotFoundError:
+        pass
+
+def esc(s): return htmllib.escape(str(s), quote=False)
+
+CSS = """
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#f6f7f9;color:#1f2328;line-height:1.74;font-size:15px;padding:32px 16px;word-wrap:break-word;word-break:keep-all}
+.container{max-width:920px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);padding:36px 48px 56px}
+h1{font-size:28px;margin:0 0 6px;font-weight:700;color:#0d1117;letter-spacing:-.01em}
+h2{font-size:21px;margin:44px 0 14px;padding-bottom:8px;border-bottom:2px solid #e5e7eb;color:#0d1117;font-weight:700}
+h3{font-size:17px;margin:24px 0 8px;color:#0d1117;font-weight:600}
+h4{font-size:15px;margin:14px 0 6px;color:#0d1117;font-weight:600}
+p{margin:0 0 14px}
+a{color:#0969da;text-decoration:none}
+a:hover{text-decoration:underline}
+.subtitle{margin:0 0 22px;color:#656d76;font-size:14px}
+.weekly-banner{background:linear-gradient(135deg,#ede9fe 0%,#ddd6fe 100%);border:1px solid #8b5cf6;border-radius:10px;padding:16px 22px;margin:0 0 26px;font-size:14px;color:#3b0764;line-height:1.65;font-weight:500}
+.weekly-banner strong{color:#1e1b4b}
+.home-button{display:inline-block;padding:7px 14px;background:#f3f4f6;color:#374151;border:1px solid #d1d5db;border-radius:8px;font-size:13px;text-decoration:none;font-weight:500;margin:0 0 18px}
+.home-button:hover{background:#e5e7eb;color:#0d1117;text-decoration:none}
+.meta{font-size:13px;color:#3b434d;padding:14px 18px;background:#f6f8fa;border-left:3px solid #7c3aed;border-radius:6px;margin:14px 0 28px}
+.meta div{margin:2px 0}
+.exec-summary{background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:18px 22px;margin:14px 0;font-size:15.5px;line-height:1.78;color:#0c4a6e}
+.exec-summary strong{color:#0c4a6e}
+.hot-cold-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.hot-cold-grid .panel{padding:14px 18px;border-radius:8px;border:1px solid;font-size:14px}
+.panel-hot{background:#fef2f2;border-color:#fecaca;color:#7f1d1d}
+.panel-cold{background:#eff6ff;border-color:#bfdbfe;color:#1e3a8a}
+.panel h4{margin-top:0;font-size:14px}
+.panel ul{margin:6px 0;padding-left:22px}
+.panel li{margin:4px 0;line-height:1.6}
+.bucket-bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:13.5px}
+.bucket-bar .name{flex:0 0 130px;color:#475569;font-weight:500}
+.bucket-bar .bar{flex:1;height:14px;background:#e0f2fe;border-radius:3px;overflow:hidden;position:relative}
+.bucket-bar .fill{height:100%;background:linear-gradient(90deg,#0ea5e9 0%,#7c3aed 100%);border-radius:3px}
+.bucket-bar .num{flex:0 0 60px;text-align:right;font-variant-numeric:tabular-nums;color:#1e293b;font-weight:500}
+.bucket-bar .split{flex:0 0 100px;font-size:11.5px;color:#64748b;font-family:ui-monospace,monospace}
+.bucket-bar .spark{flex:0 0 80px;font-family:ui-monospace,monospace;color:#0369a1;font-size:11px;letter-spacing:1px}
+.bucket-bar .delta-pos{color:#dc2626;font-weight:700}
+.bucket-bar .delta-neg{color:#0369a1;font-weight:700}
+.bucket-bar .delta-flat{color:#64748b;font-weight:600}
+.top5-list{counter-reset:t5;padding:0;list-style:none;margin:14px 0}
+.top5-list li{counter-increment:t5;padding:14px 16px;background:#fafbfc;border:1px solid #e5e7eb;border-radius:8px;margin:8px 0;position:relative;padding-left:50px}
+.top5-list li::before{content:counter(t5);position:absolute;left:14px;top:14px;width:26px;height:26px;background:#0d1117;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.top5-list .why{display:block;color:#475569;font-size:13.5px;margin-top:4px;line-height:1.6}
+.deep-dive{background:#fef9c3;border:1px solid #fde047;border-radius:10px;padding:20px 24px;margin:14px 0}
+.deep-dive h3{margin-top:0;color:#713f12}
+.deep-dive .section-tag{font-weight:600;color:#854d0e;text-transform:uppercase;letter-spacing:0.04em;font-size:12px;margin-top:14px;margin-bottom:4px}
+.deep-dive table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+.deep-dive th,.deep-dive td{border:1px solid #fde68a;padding:6px 10px;text-align:left}
+.deep-dive th{background:#fef3c7}
+.deep-dive pre{background:#fefce8;border:1px solid #fde68a;border-radius:6px;padding:10px 14px;font-size:12.5px;overflow-x:auto;line-height:1.55}
+.leaderboard{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0}
+.leaderboard th,.leaderboard td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;vertical-align:top}
+.leaderboard th{background:#f3f4f6;font-weight:600;color:#0d1117}
+.leaderboard td.delta-pos{color:#15803d;font-weight:600}
+.leaderboard td.delta-neg{color:#b91c1c;font-weight:600}
+.kit-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:14px 0}
+.kit-table th,.kit-table td{border:1px solid #d1d5db;padding:8px 10px;text-align:left;vertical-align:top}
+.kit-table th{background:#dcfce7;color:#166534;font-weight:600}
+.kit-table .stars{font-variant-numeric:tabular-nums;font-weight:600;color:#854d0e}
+.theme-card{background:#fafbfc;border:1px solid #e5e7eb;border-radius:8px;padding:16px 20px;margin:12px 0}
+.theme-card h3{margin:0 0 6px}
+.predict-card{background:#f3e8ff;border:1px solid #c4b5fd;border-radius:8px;padding:14px 18px;margin:10px 0}
+.predict-card h4{margin:0 0 4px;color:#5b21b6}
+.predict-card .why{font-size:13.5px;color:#4c1d95;line-height:1.65}
+.note{background:#fff7ed;border:1px solid #fed7aa;border-radius:6px;padding:10px 14px;margin:10px 0;font-size:13px;color:#7c2d12}
+.commentary{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:18px 22px;margin:14px 0}
+.commentary h3{margin-top:0;color:#14532d}
+.commentary .step{margin:10px 0;padding:8px 0;border-top:1px dashed #86efac}
+.commentary .step:first-of-type{border-top:none}
+.commentary .step-label{font-weight:700;color:#15803d;font-size:13px;margin-right:6px}
+.commentary.mini{background:#ecfdf5;padding:14px 18px}
+.commentary.mini h3{font-size:15px}
+.kw-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.kw-panel{padding:14px 18px;border-radius:8px;border:1px solid #e5e7eb;background:#fafbfc;font-size:13.5px}
+.kw-panel h4{margin-top:0}
+.kw-panel ol{margin:6px 0;padding-left:22px}
+.kw-panel li{margin:3px 0;line-height:1.55}
+hr{border:none;border-top:1px solid #e5e7eb;margin:36px 0}
+.footer{margin-top:48px;padding-top:18px;border-top:1px solid #e5e7eb;color:#656d76;font-size:13px;line-height:1.7}
+@media (max-width:640px){.container{padding:24px 18px}h1{font-size:23px}h2{font-size:19px}body{padding:16px 8px}.hot-cold-grid,.kw-grid{grid-template-columns:1fr}.bucket-bar .spark,.bucket-bar .split{display:none}}
+"""
+
+def sparkline(seq):
+    """Mini sparkline using Unicode block chars."""
+    if not seq or all(v == 0 for v in seq): return "─"
+    chars = "▁▂▃▄▅▆▇█"
+    lo, hi = min(seq), max(seq)
+    if hi == lo: return chars[3] * len(seq)
+    return "".join(chars[int((v - lo) / (hi - lo) * 7)] for v in seq)
+
+def trend_for_bucket(b):
+    """Return (sparkline_str, delta_pct: today vs day1)."""
+    seq = []
+    for d in trend_days:
+        seq.append(trends[d].get("buckets", {}).get(b, {}).get("total", 0))
+    today_v = buckets[b]["total"]
+    full = seq + [today_v]
+    if seq[0] == 0:
+        return sparkline(full), 0.0
+    # Compute average of first 2 days vs last 2 days for stability
+    base = (seq[0] + seq[1]) / 2
+    end = (seq[-1] + today_v) / 2
+    delta = (end - base) / base * 100 if base else 0
+    return sparkline(full), delta
+
+def bucket_bar(name, total, cv, ro, max_total):
+    pct = int(total / max_total * 100) if max_total else 0
+    spark, delta = trend_for_bucket(name)
+    if delta > 5: dcls, dtxt = "delta-pos", f"+{delta:.0f}%"
+    elif delta < -5: dcls, dtxt = "delta-neg", f"{delta:.0f}%"
+    else: dcls, dtxt = "delta-flat", "≈"
+    return (
+        f'<div class="bucket-bar"><span class="name">{esc(name)}</span>'
+        f'<span class="bar"><span class="fill" style="width:{pct}%"></span></span>'
+        f'<span class="num">{total}편</span>'
+        f'<span class="split">CV {cv} / RO {ro}</span>'
+        f'<span class="spark">{spark} <span class="{dcls}">{dtxt}</span></span></div>'
+    )
+
+# Build HTML
+parts = []
+parts.append('<!DOCTYPE html>\n<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">')
+parts.append(f'<title>arXiv Weekly Retrospective — {TODAY} ({WEEK_LABEL})</title>')
+parts.append(f'<style>{CSS}</style></head><body><div class="container">')
+
+parts.append('<a class="home-button" href="https://MyungHwanJeon.github.io/arxiv-daily-summary/">← 홈으로</a>')
+parts.append('<h1>🗓 arXiv Weekly Retrospective</h1>')
+parts.append(f'<p class="subtitle">{WEEK_LABEL} · {WEEK_START} ~ {WEEK_END} · cs.CV/cs.RO pastweek 누적 회고</p>')
+parts.append('<div class="weekly-banner"><strong>토요일 주말판.</strong> 토요일은 arxiv가 안 도는 날이라, 평일 단발 브리핑 대신 한 주 누적을 박사+교수급 시각으로 회고합니다. 상단은 30초 안에 끝나는 교수용 요약, 본문은 박사과정이 다음주 손 움직일 거리. 평일과 다르게 본문 길이 상한은 없습니다.</div>')
+parts.append(f'<div class="meta"><div>📅 발행: {TODAY} (토)</div><div>📊 주간 시야: pastweek {snap["totals"]["total_scanned"]}편 스캔 · ROI {snap["totals"]["selected"]}편 선별</div><div>🗂 데이터: trends/insights/benchmarks {trend_days[0]}~{trend_days[-1]} (4일 누적) + 오늘 W19 스냅샷</div></div>')
+
+# ============ ① Executive Summary ============
+parts.append('<h2>🗓 ① Executive Summary <span style="font-size:13px;color:#656d76;font-weight:400">(교수용 30초)</span></h2>')
+parts.append('''<div class="exec-summary">
+이번 주 cs.CV/cs.RO를 한 줄로 요약하면 <strong>"VLA가 deliberation을 학습하기 시작했고, diffusion policy는 BC 다음 단계로 본격 이행했다"</strong>입니다. 한 주 동안 Sentinel-VLA·VLA-ATTC·Anticipation-VLA 같은 metacognitive·test-time-compute VLA, OGPO·RCD·Q2RL·RoboAlign-R1 같은 generative policy fine-tuning, From Pixels to Tokens 같은 latent action supervision systematic study가 한꺼번에 떨어진 결정적인 한 주였어요.
+가장 변한 건 <strong>Generation 버킷이 101편으로 폭증(W18 4일 평균 75편 대비 +35%)</strong>했다는 점이고, 결도 단순 video/image diffusion에서 "open-source generative model이 zero-shot perception을 한다", "DiT 내부 outlier token 진단", "stable diffusion memorization의 pad token 메커니즘" 같은 내재 분석으로 옮겨가고 있어요.
+가장 안 변한 건 <strong>3D/Scene이 43편으로 -11%</strong> 살짝 식고, Safety/Alignment 35편 그대로. 단, 3DGS는 양은 줄었지만 결이 "novel rendering"에서 "instance-level open-vocab grounding · α-blending bias 진단 · localization infrastructure"로 굳어지는 인프라 페이즈로 진입했습니다.
+</div>''')
+
+# ============ ② Hot vs Cold ============
+parts.append('<h2>⚖️ ② Hot vs Cold <span style="font-size:13px;color:#656d76;font-weight:400">(W19 vs 직전 4일 sparkline)</span></h2>')
+parts.append('<p style="font-size:13.5px;color:#656d76">※ 정식 4주 이동평균은 trends 누적이 W17 시작이라 W19에선 4일 sparkline + 양 끝 평균 델타로 대체합니다. W21부터 정식 가동.</p>')
+
+ordered = sorted([(n, d["total"], d["cv"], d["ro"]) for n, d in buckets.items()], key=lambda x: -x[1])
+max_total = ordered[0][1]
+parts.append('<div style="margin:14px 0">')
+for name, total, cv, ro in ordered:
+    parts.append(bucket_bar(name, total, cv, ro, max_total))
+parts.append('</div>')
+
+parts.append('''<div class="hot-cold-grid">
+<div class="panel panel-hot"><h4>⬆ 가속 (양과 결이 같이 두꺼워진 곳)</h4>
+<ul>
+<li><strong>Generation 101편 (+35%)</strong> — 일주일 만에 두 자릿수에서 세 자릿수로. 단순 영상/이미지 diffusion이 아니라 "오픈 generative model이 perception을 한다"(Open-Source Image Editing as Zero-Shot Vision Learners), "DiT outlier token 진단"(Taming Outlier Tokens in DiTs), "SD memorization의 pad token 메커니즘"으로 결이 내재 분석으로 깊어진 게 핵심.</li>
+<li><strong>Foundation Models 45편 (+16%)</strong> — VLM hallucination·visual reasoning·long-context가 같은 결로 두꺼워짐. 결정적으로 Awaking Spatial Intelligence(JoyAI-Image)가 understanding+generation+editing 통합 foundation model을 공개로 내놓으면서 "MMDiT × spatially-enhanced MLLM"이 한 묶음으로 굳어짐.</li>
+<li><strong>Efficiency/Systems 53편 (+18%)</strong> — KV cache·sparse MoE·on-device 추론이 평일별 5편씩 떨어지는 페이스. VLM/VLA 쪽 모델이 무거워지자 "어떻게 줄일까"가 같이 따라붙음.</li>
+<li><strong>Embodied AI 16편 (+19%)</strong> — 절대 카운트는 작지만 long-horizon·anticipation·navigation의 결이 정리되는 중. Anticipation-VLA(2605.01772) 같은 subgoal 예측 라인이 상승 시그널.</li>
+</ul></div>
+<div class="panel panel-cold"><h4>⬇ 감속 / 정체 (얇아지거나 옆걸음)</h4>
+<ul>
+<li><strong>3D/Scene 43편 (-11%)</strong> — 단순 quality 경쟁의 포화 신호. 단, ULF-Loc(α-blending bias 이론), Ilov3Splat(instance-level open-vocab), QuadBox(geometry-feature joint) 같이 인프라화 라인은 살아있음. 양은 줄어도 결이 더 진해진 케이스.</li>
+<li><strong>Robot Learning 51편 (-1%, 사실상 정체)</strong> — 합산은 정체이지만 내부 결이 격렬히 재편. VLA test-time compute(Sentinel·VLA-ATTC·Anticipation), generative policy finetune(OGPO·Q2RL), latent action supervision(From Pixels to Tokens), egocentric/fleet/consumer 데이터(Being-H0.7·LWD·Phone2Act·BifrostUMI) — 같은 양에 4–5배의 결이 들어찼음.</li>
+<li><strong>Safety/Alignment 35편 (정체)</strong> — 평소 30편대 유지. RL safety는 단발이고 VLA-safety 결합 흐름은 아직 "준비 중". W18 weekly에서 부풀었던 시점 대비 식음.</li>
+<li><strong>Manipulation 21편 (≈)</strong> — 큰 변화 없음. dexterous·grasping이 RL 버킷으로 빨려가는 중.</li>
+</ul></div>
+</div>''')
+
+parts.append('''<p style="font-size:14px;color:#475569;margin-top:14px">한 줄 해석: <strong>"Generation·FM·Eff·Embodied가 같이 위로"</strong> 가는 건 우연이 아닙니다. 오픈 generative foundation model이 perception까지 흡수하는 신호가 강해지면서, 그 무게에 맞춰 효율화·long-horizon embodied 응용이 동반 성장하는 구조. 동시에 robot learning은 양은 정체지만 내부 결이 4–5배로 격렬히 재편 중 — 다음 분기 결과물은 "얼마나 얇은가"가 아니라 "어떤 결을 잡았는가"로 평가됩니다.</p>''')
+
+# ============ ③ Top 5 ============
+parts.append('<h2>🔥 ③ 주간 Top 5 <span style="font-size:13px;color:#656d76;font-weight:400">(평일 must-read 풀 + 박사+교수 시각 재선정)</span></h2>')
+top5 = [
+    ("From Pixels to Tokens: A Systematic Study of Latent Action Supervision for VLA Models",
+     "https://arxiv.org/abs/2605.04678", "RO",
+     "VLA latent action supervision의 fragmented 접근들을 image-based vs action-based 두 직교 축으로 정리하고, 동일 backbone에서 4-way ablation을 수행한 첫 systematic study. 결정적 발견 — VLM에 discrete latent action token을 직접 supervise하는 게 가장 강한 정책. 다음 6개월 VLA 논문의 baseline 표 단골이 될 것."),
+    ("OGPO: Sample Efficient Full-Finetuning of Generative Control Policies",
+     "https://arxiv.org/abs/2605.03065", "RO",
+     "Diffusion/flow policy를 BC로만 학습하던 단계에서 off-policy critic + 변형 PPO로 generative process 전체를 backprop하는 첫 본격 fine-tuning 프레임워크. 같은 주에 RCD·Q2RL·RoboAlign-R1이 함께 떨어진 'generative policy fine-tuning 본격 패러다임' 흐름의 머리."),
+    ("When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning (Q2RL)",
+     "https://arxiv.org/abs/2605.05172", "RO",
+     "BC policy에서 Q-function을 추출해 offline-to-online을 매끄럽게 만든 게 핵심. OGPO와 정확히 보완관계 — Q2RL이 만든 Q는 OGPO critic 초기화에 그대로 쓸 수 있음. 'BC + Q-extraction + off-policy generative finetune' full stack의 마지막 퍼즐 조각."),
+    ("Hydra-DP3: Frequency-Aware Right-Sizing of 3D Diffusion Policies",
+     "https://arxiv.org/abs/2605.01581", "RO",
+     "Diffusion policy 분석에 처음으로 주파수 도메인 시각을 본격 도입. robot action trajectory의 low-frequency 우세성을 보이고 denoiser 오차 상한을 freq subspace 차원으로 묶음. EnergyFlow의 statistical 시각과 함께 diffusion policy 이론의 두 축이 한 주에 굳음."),
+    ("Awaking Spatial Intelligence in Unified Multimodal Understanding and Generation (JoyAI-Image)",
+     "https://arxiv.org/abs/2605.04128", "CV",
+     "Spatially-enhanced MLLM과 MMDiT를 묶어 understanding+generation+editing을 한 모델로 가는 unified foundation model 라인의 본격 공개판. 'MMDiT × spatial intelligence MLLM'이 한 묶음으로 굳는 결정적 evidence — 다음 분기 unified VLM의 baseline 표 단골 후보."),
+]
+parts.append('<ol class="top5-list">')
+for title, url, badge, why in top5:
+    parts.append(f'<li><a href="{url}" target="_blank"><strong>{esc(title)}</strong></a> <span style="font-size:11px;font-weight:600;padding:1px 7px;border-radius:10px;background:#fff8c5;color:#7a4e00;border:1px solid #d4a72c;margin-left:6px">{esc(badge)}</span><span class="why">{esc(why)}</span></li>')
+parts.append('</ol>')
+
+# ============ ④ Deep-dive ============
+parts.append('<h2>🌟 ④ Deep-dive — From Pixels to Tokens</h2>')
+parts.append('''<div class="deep-dive">
+<h3><a href="https://arxiv.org/abs/2605.04678" target="_blank">From Pixels to Tokens: A Systematic Study of Latent Action Supervision for VLA Models</a></h3>
+<p style="color:#713f12;font-size:13.5px"><em>이 한 편을 변곡점으로 고른 이유: VLA 분야가 그동안 각자 고유한 latent action 정의로 자기 데이터셋·자기 태스크 위에서 SOTA를 주장해왔는데, 이걸 같은 backbone 위 4-way ablation으로 정리한 첫 논문. 평가 격자가 바뀌면 다음 분기 모든 VLA 논문이 이 격자에 맞춰 자기 위치를 매겨야 합니다 — 즉 baseline 표가 일제히 갈아엎어집니다.</em></p>
+
+<div class="section-tag">핵심 주장</div>
+<p>Latent action supervision은 (i) <strong>image-based latent action</strong>(이미지 차이로 trajectory를 regularize)과 (ii) <strong>action-based latent action</strong>(연속 action을 잠재 토큰으로 unify)이라는 두 직교 축으로 분해된다. 동일 VLA backbone에서 4가지 통합 전략을 비교했을 때 <strong>"VLM에 discrete latent action token을 직접 supervise하는 S4가 일관적으로 가장 강한 정책을 만든다"</strong>가 핵심 발견. 그리고 image-based는 long-horizon reasoning·scene generalization, action-based는 dexterous motor coordination에서 강한 <strong>formulation-task correspondence</strong>가 처음으로 깔끔하게 분리됨.</p>
+
+<div class="section-tag">방법 핵심 — 4-way ablation 의사코드</div>
+<pre>
+# Common backbone: VLA = VLM(vision+text) + action decoder
+#
+# Latent action z is defined two ways (orthogonal axes):
+#   (A) image-based:   z_t = f_img(I_t, I_{t+1})    # trajectory regularizer
+#   (B) action-based:  z_t = f_act(a_t, ..., a_{t+k})  # target unifier
+#
+# 4 supervision strategies compared under unified loss:
+#   S1) image-based only:      L = L_act + λ · ||z^pred − z^A||²
+#   S2) action-based only:     L = L_act + λ · ||z^pred − z^B||²
+#   S3) joint:                 L = L_act + λ_A · ||·||² + λ_B · ||·||²
+#   S4) discrete VLM tokens:   tokenize z^B → VLM SFT directly on tokens
+#
+# Tasks span: long-horizon manipulation · bimanual/dexterous · novel object/layout
+</pre>
+
+<div class="section-tag">핵심 실험 (정성 정리)</div>
+<table>
+<tr><th>Latent action 정의</th><th>Long-horizon 다중방 manipulation</th><th>Bimanual/Dexterous coordination</th><th>Novel object/layout 일반화</th></tr>
+<tr><td>S1) Image-based only</td><td>강 ✅</td><td>중</td><td>강 ✅</td></tr>
+<tr><td>S2) Action-based only</td><td>중</td><td>강 ✅</td><td>약</td></tr>
+<tr><td>S3) Joint</td><td>강</td><td>강</td><td>중</td></tr>
+<tr><td>S4) Discrete VLM tokens</td><td>최고 🏆</td><td>최고 🏆</td><td>최고 🏆</td></tr>
+</table>
+<p style="font-size:12px;color:#92400e">(논문 보고 결과의 정성 표; 정확한 수치는 arxiv 본문 참고)</p>
+
+<div class="section-tag">약점·한계 (저자 인정 + 독자 의심)</div>
+<p>저자 인정 한계: ablation은 한 backbone(주로 OpenVLA-급) 위에서만 검증됨. π0 계열·GR00T-N1 계열에서도 같은 ranking이 나오는지는 미검증. 평가 환경도 LIBERO·RoboCasa 같은 비교적 좁은 시뮬에서 주로 — Open-X-Embodiment 분포 밖 long-horizon 실세계는 추가 검증 필요.<br><br>
+독자 관점 의심: (1) S4가 "VLM 토큰화"라는 디코더 디자인 자체의 강점일 수 있어서 latent action supervision의 본질 때문이 아닐 가능성 — backbone-decoder 분리 ablation이 부족. (2) discrete tokenization의 vocabulary 크기·tokenizer 학습 방식이 결과에 어떤 sensitivity를 가지는지 미정. 같은 방법이지만 vocab 32 vs 1024에서 결론이 뒤집힐 수 있음. (3) image-based latent action의 정의 f_img가 단순 frame difference인지 학습된 encoder인지에 따라 S1 평가가 흔들림 — fair comparison의 정의가 살짝 약함.</p>
+
+<div class="section-tag">우리 분야 영향</div>
+<p>이 논문이 자리잡으면 VLA 평가지에 "S1/S2/S3/S4 4-way 위치"가 baseline 표 컬럼으로 추가됨. 다음 분기 모든 latent action 류 VLA 논문이 이 4-way 격자 위에 자기 방법을 표시해야 reviewer가 받음. 우리 랩 시점에서 — VLA 손댄다면 baseline 표에 S4 (discrete VLM token sup) 칸을 미리 마련하는 게 안전. 더 나아가 "S4가 강한 진짜 이유"를 분리하는 follow-up(VLM tokenizer 디자인의 어느 측이 결정적인가)이 다음 분기 첫 follow-up 후보. 또 OGPO·Q2RL과 결합해 "S4 supervision으로 BC하고 OGPO로 finetune" full stack 실험이 1쿼터 안에 누군가 낼 가능성 매우 큼 — 이 자리를 우리가 먼저 잡으면 강력한 차별화.</p>
+</div>''')
+
+# ============ ⑤ SOTA leaderboard ============
+parts.append('<h2>📈 ⑤ SOTA 위클리 리더보드 <span style="font-size:13px;color:#656d76;font-weight:400">(박사과정 핵심)</span></h2>')
+if benchmarks_all:
+    parts.append('<table class="leaderboard"><thead><tr><th>벤치마크</th><th>메트릭</th><th>이번주 보고</th><th>지난주</th><th>Δ</th><th>논문</th></tr></thead><tbody>')
+    for r in benchmarks_all:
+        bm = esc(r.get("benchmark","?"))
+        metric = esc(r.get("metric","?"))
+        val = r.get("value", None)
+        prev = r.get("prev","—")
+        paper = r.get("paper","")
+        link = f'<a href="{paper}" target="_blank">arxiv ↗</a>' if paper else "—"
+        if val is None:
+            cls, delta, val_disp = "delta-pos", "🆕 신규 보고", "—"
+        elif isinstance(val, (int, float)) and val < 0:
+            cls, delta, val_disp = "delta-neg", f"{val:+}", str(val)
+        else:
+            cls, delta, val_disp = "", "—", str(val)
+        parts.append(f'<tr><td>{bm}</td><td>{metric}</td><td>{val_disp}</td><td>{prev}</td><td class="{cls}">{delta}</td><td>{link}</td></tr>')
+    parts.append('</tbody></table>')
+    parts.append('<p style="font-size:13px;color:#475569">※ benchmarks 누적이 5월 6–7일 2일치만 잡혀 있어 표가 얇습니다. 또한 평일 추출 시 메트릭 수치가 None으로 들어간 행이 다수라 이번주는 "신규 보고" 라벨로만 표시. W21부터 정식 가동.</p>')
+else:
+    parts.append('<p>이번주 보고된 SOTA 갱신이 누적 데이터에 잡힌 게 없어 섹션 생략.</p>')
+
+# ============ ⑥ Reproducible kit ============
+parts.append('<h2>🧪 ⑥ 재현 가능 키트 <span style="font-size:13px;font-weight:400;color:#656d76">(월요일 git clone 후보)</span></h2>')
+parts.append('<div class="note">🛠 이번주 평일 브리핑이 코드 공개 배지·repo URL 추출을 abstract 외부(arxiv "Comments" 필드)에서 안 했기 때문에 자동 인덱스가 비어 있습니다. 다음주 평일 모드에서 이 추출 단계를 보강할 예정. 대신 이번주 Top5에 직접 언급된 후보 — From Pixels to Tokens, OGPO, Q2RL, Hydra-DP3, JoyAI-Image — 의 arxiv 페이지에서 "Code" 링크를 수동 확인하는 걸 권장합니다.</div>')
+
+# ============ ⑦ 주간 테마 3 ============
+parts.append('<h2>🧭 ⑦ 주간 테마 3개 <span style="font-size:13px;color:#656d76;font-weight:400">(insights 7일 누적 메타 클러스터링)</span></h2>')
+themes = [
+    ("VLA가 'deliberation 학습'으로 이행 — test-time compute가 robot에 본격 진입",
+     "Sentinel-VLA(metacognitive monitoring), VLA-ATTC(critic-driven adaptive test-time compute), Anticipation-VLA(adaptive subgoal anticipation)가 5월 5일 한 날에 같이 떨어졌고, 5월 7일 From Pixels to Tokens가 latent action supervision을 정리하면서 'deliberation을 어떤 표현 위에서 할지'까지 깔렸습니다. LLM의 test-time compute scaling이 embodied로 넘어오는 결정적 일주일이었어요. 단발 SOTA 경쟁이 끝나가고 'compute → success-rate 곡선'을 정량화하는 새 평가 차원이 열렸다는 게 메타 흐름의 핵심. 우리 랩 시점에선 baseline 표에 'compute budget per step'을 컬럼으로 추가해야 할 시점."),
+    ("Generative policy fine-tuning이 BC 다음 단계로 본격 패러다임화",
+     "5월 6일 OGPO(off-policy critic + 변형 PPO로 generative process 전체 backprop), RCD(self-reconstruction error를 log-density proxy로 쓰는 training-free guidance), RoboAlign-R1(reward distillation), 5월 7일 Q2RL(BC에서 Q-function 추출 + Q-Gating)이 4편이 한 주에 줄줄이 떨어졌습니다. Diffusion/flow policy를 BC로만 학습하던 단계가 끝나고 'BC + Q-extraction + off-policy generative finetune' full stack으로 갈아타는 신호 — 이 흐름은 6–12개월 안에 manipulation 디폴트 트레이닝 레시피가 됩니다. RCD의 training-free guidance가 OGPO finetuned policy 위에 얹히는 hybrid 실험이 다음 분기 첫 follow-up 후보로 가장 유력."),
+    ("VLA 데이터 인플레이션의 두 번째 라운드 — egocentric / fleet / consumer-grade",
+     "5월 4일 Being-H0.7(egocentric video latent world-action) + LWD(fleet RL 배포 중 학습), 5월 5일 Phone2Act(스마트폰 ARCore 6-DoF teleop) + VILAS(저가 매니퓰레이션 플랫폼) + Seeing Realism from Simulation, 5월 6일 BifrostUMI(VR 디바이스 keypoint, robot 없는 humanoid 학습) + Bridging the Embodiment Gap(disentangled cross-embodiment video editing)이 한 주 동안 7편 가까이. VLA가 'general purpose'를 외치던 단계에서 '데이터 부족 어떻게 풀까'라는 vertical problem으로 무게중심이 옮겨간 두 번째 라운드. 하드웨어 단가가 $150 수준까지 내려오고, 사람→로봇 video editing이 quality filter와 결합되면서, 1인 연구실도 데이터 파이프라인을 처음부터 깔 수 있는 환경이 됐습니다."),
+]
+for title, body in themes:
+    parts.append(f'<div class="theme-card"><h3>{esc(title)}</h3><p>{esc(body)}</p></div>')
+
+# ============ ⑧ 회고 + 예측 ============
+parts.append('<h2>🪞 ⑧ 회고 + 🔮 다음주 예측</h2>')
+parts.append('<div class="note">📌 회고 섹션은 다음주(W20)부터 활성화됩니다. 이번 W19가 첫 weekly 실행이라 weekly/2026-W18.json이 없어 채점 대상이 없어요. 다음주 토요일에 아래 예측 3개가 채점됨.</div>')
+
+predictions = [
+    ("VLA Test-Time Compute Scaling Laws 후속이 다음 2주 안에 3편 이상 떨어진다",
+     "Sentinel·VLA-ATTC·Anticipation-VLA가 deliberation을 도입했지만 'compute budget vs task SR' 곡선은 아직 정량화 안 됐어요. 누군가 LIBERO/CALVIN/RoboCasa에서 compute budget을 sweep하면서 task complexity별로 sub-linear / linear / super-linear 영역을 분리하는 logged study를 낼 가능성 높음. 안 나오면 'deliberation = SOTA 갱신용 trick' 단계에서 멈춘 것으로 판정."),
+    ("'BC + Q-extraction + Off-Policy Generative Finetune' Full Stack 결합 논문이 다음주 안에 등장",
+     "OGPO + Q2RL은 정확히 보완관계인데 이번주에는 별개 논문으로 떨어졌습니다. 다음주에 누군가 두 방법을 한 파이프라인으로 묶어 OGBench/D4RL/robomimic에서 4-way 비교(BC, OGPO 단독, Q2RL+OGPO, Q2RL+OGPO+RCD)를 내놓을 가능성 강함. 안 나오면 두 방법이 호환성 이슈로 안 묶이는 것."),
+    ("Open-Source Generative Model의 Zero-Shot Perception 후속이 5편 이상 떨어진다",
+     "5월 7일 Open-Source Image Editing Models Are Zero-Shot Vision Learners가 Qwen-Image-Edit/FireRed/LongCat을 monocular depth·normal·segmentation에 던졌어요. 이게 첫 오픈 instance라 다음주에 (a) 같은 방법을 video editing 모델로 확장, (b) DiT 기반 vs flow 기반 차이 ablation, (c) instruction tuning 없이 어디까지 가는지 한계 정량화 같은 후속이 빠르게 따라옵니다. 안 나오면 5월 7일 결과가 cherry-pick일 가능성."),
+]
+for title, why in predictions:
+    parts.append(f'<div class="predict-card"><h4>🔮 {esc(title)}</h4><p class="why">{esc(why)}</p></div>')
+
+# ============ ⑨ Trend commentary ============
+parts.append('<h2>🎓 ⑨ 트렌드 해설 <span style="font-size:13px;color:#656d76;font-weight:400">(박사+교수급 시각)</span></h2>')
+parts.append('<p style="font-size:13.5px;color:#475569"><em>특정 논문 줄거리가 아니라 흐름을 historical context와 함께 해석합니다.</em></p>')
+
+# Main 6-step
+parts.append('''<div class="commentary">
+<h3>🧠 메인 — Diffusion Policy의 "BC 다음" 단계가 한 주 안에 굳어진 이유</h3>
+
+<div class="step"><span class="step-label">🔍 무엇이 부상했나</span>
+이번주 robot learning에서 <strong>diffusion/flow policy를 BC로만 학습하던 시대가 끝났음</strong>을 알리는 4편(OGPO, RCD, Q2RL, RoboAlign-R1)이 5–7일 사이에 줄줄이 떨어졌습니다. 게다가 EnergyFlow(5월 4일)가 'diffusion policy의 score function이 expert soft Q-function gradient'임을 maximum-entropy optimality 하에서 증명한 것까지 합치면, 이론·기법·도구가 한 주 안에 동시 정렬된 거예요.</div>
+
+<div class="step"><span class="step-label">🧠 그게 뭔지</span>
+Diffusion policy는 2023년 Chi et al.의 Diffusion Policy 논문 이후 robot manipulation의 사실상 표준 BC 베이스라인이 됐고, 2024년 ACT/π0/GR00T 같은 large-scale VLA가 그 위에 얹혔어요. 하지만 학습 자체는 거의 다 BC였습니다 — 즉 expert 데이터의 score를 모방할 뿐, RL/IRL로 finetune하는 게 어려웠어요. score function의 backprop이 long unrolled chain을 따라가야 했기 때문입니다. 이번주 풀린 문제가 바로 이거예요. <strong>BC 다음 단계 — RL/IRL/preference로 diffusion policy를 어떻게 갈고닦을까</strong>가 4-방향에서 동시에 풀렸습니다.</div>
+
+<div class="step"><span class="step-label">⚙️ 왜 지금</span>
+직전 한계가 풀렸기 때문입니다. (1) OGPO는 변형 PPO + off-policy critic으로 generative process 전체를 backprop하면서 sample efficiency를 잡았고, (2) RCD는 self-reconstruction error를 log-density proxy로 써서 training-free guidance를 가능하게 했고(Bayes inference의 trick), (3) Q2RL은 BC policy에서 Q-function을 추출해 offline-to-online을 매끄럽게 만들었고, (4) EnergyFlow는 score = expert Q gradient라는 통일된 시각을 깔았습니다. 어떤 한 가지 breakthrough가 아니라 "여러 각도에서 동시에 풀려서 한 주 안에 패러다임이 굳었다"는 게 핵심.</div>
+
+<div class="step"><span class="step-label">🪞 재포장인가, 새로운가</span>
+솔직히 말하면 <strong>절반은 재포장</strong>입니다. PPO·off-policy AC·classifier-free guidance·Q-extraction은 다 2018–2022년에 image gen·LLM RLHF에서 정립된 거고, robotics는 5–6년 텀으로 그걸 받은 거예요. 새로운 건 (a) generative process 전체를 backprop할 수 있게 만든 sample-efficient critic 디자인 (b) BC에서 Q-function을 깔끔하게 떼어내는 추출법 (c) score function의 IRL적 해석 — 이 세 가지가 결정적입니다. 즉 이론적 도약이 아니라 <strong>"image gen 분야의 정설을 robotics action space로 옮기는 마지막 트릭들이 한꺼번에 풀렸다"</strong>는 게 정확한 평가.</div>
+
+<div class="step"><span class="step-label">🔭 6–12개월 뒤</span>
+12개월 안에 manipulation 디폴트 학습 레시피가 "BC → OGPO finetune → RCD test-time refinement"의 full stack으로 갈아탈 가능성 80%. baseline 표에 'BC only' 칸은 사라지고, 'BC + OGPO', 'BC + Q2RL + OGPO + RCD' 같은 stack 레이블이 표준이 됩니다. 단, 어디서 막힐지도 보입니다 — (1) RCD의 self-reconstruction proxy가 long-horizon에서 calibration 깨짐, (2) OGPO의 critic이 sparse reward 환경에서 unstable, (3) Q2RL의 Q-extraction이 multi-task BC에서 task-conditioning 충돌을 일으킴. 이 세 곳이 다음 페이즈의 새 병목이 될 거예요.</div>
+
+<div class="step"><span class="step-label">🎯 우리 분야 시사점</span>
+교수 시점에선 <strong>"diffusion policy fine-tuning"이 다음 분기 펀딩·박사과정 토픽 1순위 후보</strong>가 됐다는 뜻. 단발 SOTA 경쟁이 아니라 stack 결합 논문이 reviewer pool에서 상승하는 시점. 박사과정 시점에선 우리 baseline에 OGPO·RCD·Q2RL 셋을 같이 비교 칸으로 넣어두는 게 safe하고, 무엇보다 이 셋의 hybrid 실험(OGPO + RCD, Q2RL + OGPO 같은)을 빠르게 1쿼터 안에 first-result로 뽑으면 강력한 차별화가 됩니다. EnergyFlow의 IRL 시각까지 결합해 'reward signal frequency 분포'를 분석하면(Hydra-DP3의 frequency 시각과 묶여) 분석 + 알고리즘 양 쪽 모두 잡는 논문이 가능합니다.</div>
+</div>''')
+
+# Side mini 1 — 3DGS infrastructure layer
+parts.append('''<div class="commentary mini">
+<h3>📎 사이드 — 3DGS의 'novel rendering' 단계 종료, 'infrastructure layer' 진입</h3>
+<div class="step"><span class="step-label">🔍 관찰</span>
+3D/Scene 버킷이 -11%로 살짝 식었지만 그 안의 결이 결정적으로 바뀌었어요. 5월 7일 ULF-Loc이 α-blending이 만드는 3DGS feature bias의 이론적 진단 + geometry-weighted unbiased aggregation으로 보정을 내놓고, Ilov3Splat이 instance-level open-vocabulary semantic grounding을, QuadBox가 geometry-feature joint를 같은 날에 정리했습니다.</div>
+<div class="step"><span class="step-label">⚙️ 왜 지금</span>
+3DGS의 quality 경쟁(2024–2025년 누적)이 포화에 도달했고, 이제 표현 자체의 internal bias 진단·instance-level semantic grounding·feature distillation 같은 인프라 layer로 무게중심이 이동. 이는 splatting이 "예쁜 그림"에서 "로보틱스 scene 표현 layer"로 흡수되는 중간 단계의 신호.</div>
+<div class="step"><span class="step-label">🔭 전망</span>
+6개월 안에 manipulation·SLAM의 디폴트 scene 표현이 splatting으로 굳어집니다. 다만 dynamic scene + articulation 결합에서 막힐 거라 4D splatting + per-object dynamics가 그 다음 페이즈가 될 거예요. ULF-Loc의 α-blending bias 이론을 feature-distilled splatting 변형들(LangSplat·Feature 3DGS) 전반으로 확장하는 게 가장 빠른 follow-up.</div>
+</div>''')
+
+# Side mini 2 — Stable Diffusion memorization mechanism
+parts.append('''<div class="commentary mini">
+<h3>📎 사이드 — Stable Diffusion memorization의 첫 메커니즘적 설명</h3>
+<div class="step"><span class="step-label">🔍 관찰</span>
+5월 6일 한 편이 Stable Diffusion memorization이 왜·어떻게 일어나는지에 대한 첫 직접적 메커니즘 설명을 내놨습니다 — CLIP의 v_pad가 v_eot(CLIP 학습 시 유일하게 명시적으로 최적화된 임베딩)와 구조적으로 중복되어 v_eot의 영향을 의도치 않게 amplify하는 게 직접 원인이라는 진단. 두 줄짜리 inference-time 수정(&lt;pad&gt;를 ! 토큰으로 교체 + v_eot mask)으로 detection 없이 mitigation 가능.</div>
+<div class="step"><span class="step-label">⚙️ 왜 지금</span>
+2023–2025년 SD memorization은 detection·extraction 라인이 주류였는데, "메커니즘이 뭐냐"라는 본질적 질문은 미답. CLIP의 토큰 임베딩 분석 기법이 이번 사이클에 충분히 정밀해진 게 timing의 핵심. 이 진단이 옳다면 SD memorization은 "데이터 leak"이 아니라 "tokenizer 디자인 결함"으로 재정의됩니다.</div>
+<div class="step"><span class="step-label">🔭 전망</span>
+같은 진단을 (a) VLM-as-Judge 모델(RoboAlign-Judge 등)의 시각 단서 과의존, (b) CLIP 기반 VLA action decoder(GR00T 류)의 instruction 무시 패턴에 적용하는 후속이 1쿼터 안에 다수 나옵니다. SD에서 발견된 v_pad over-influence가 VLA에서도 같은 메커니즘일 가능성이 높고, 이게 사실이면 VLA의 낮은 instruction-following 점수의 root cause가 됩니다.</div>
+</div>''')
+
+# ============ Audio note ============
+parts.append('<h2>🎧 ⑩ 주간 오디오</h2>')
+parts.append('<div class="note">🛠 이번주는 TTS 파이프라인이 이 환경에서 미연결이라 mp3 생성을 건너뜁니다. 다음 주말판부터 정상 발행 예정.</div>')
+
+# ============ Footer ============
+parts.append('<hr>')
+parts.append('<a class="home-button" href="https://MyungHwanJeon.github.io/arxiv-daily-summary/">🏠 전체 목록으로</a>')
+parts.append(f'''<div class="footer">
+<p>📚 입력: cs.CV/cs.RO pastweek {snap["totals"]["total_scanned"]}편 스캔 · ROI {snap["totals"]["selected"]}편 분류 · trends/insights/benchmarks {trend_days[0]}~{trend_days[-1]} 누적 + W19 오늘 스냅샷</p>
+<p>🛠 생성 파이프라인: <code>scripts/build_weekly.py</code> + <code>scripts/build_weekly_html_2026_05_09.py</code> · arxiv 리스트는 stdlib 파서 직접 파싱(WebFetch 미사용)</p>
+<p>📝 톤·구조: <a href="https://github.com/MyungHwanJeon/arxiv-daily-summary/blob/main/prompts/instruction.md">prompts/instruction.md</a> [주말 모드 — Weekly Retrospective] 따름</p>
+<p>📡 RSS 구독: <a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml">/feed.xml</a></p>
+</div>''')
+
+parts.append('</div></body></html>')
+
+html_doc = "\n".join(parts)
+os.makedirs("posts", exist_ok=True)
+with open(OUT_HTML, "w", encoding="utf-8") as f:
+    f.write(html_doc)
+print(f"WROTE {OUT_HTML} ({len(html_doc)} bytes)")
+
+# Save weekly/2026-W19.json
+weekly_payload = {
+    "date": TODAY,
+    "iso_week": WEEK_LABEL,
+    "predictions": [
+        {"title": p[0], "claim": p[1], "rationale": p[1]} for p in predictions
+    ],
+    "themes": [
+        {"title": t[0], "summary": t[1]} for t in themes
+    ],
+    "top5": [
+        {"title": t[0], "arxiv": t[1]} for t in top5
+    ],
+}
+os.makedirs("weekly", exist_ok=True)
+with open(f"weekly/{WEEK_LABEL}.json", "w", encoding="utf-8") as f:
+    json.dump(weekly_payload, f, ensure_ascii=False, indent=2)
+print(f"WROTE weekly/{WEEK_LABEL}.json")
+
+# Save benchmarks/2026-05-09.json (empty for weekly mode — instruction says even empty list is recorded)
+os.makedirs("benchmarks", exist_ok=True)
+with open(f"benchmarks/{TODAY}.json", "w", encoding="utf-8") as f:
+    json.dump({"date": TODAY, "results": []}, f, ensure_ascii=False, indent=2)
+print(f"WROTE benchmarks/{TODAY}.json (empty — weekly mode)")

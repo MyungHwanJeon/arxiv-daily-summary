@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 07 May 2026 13:49:35 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 23:41:34 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>🗓 arXiv Weekly Retrospective</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-09-weekly.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-09-weekly.html</guid>
+      <pubDate>Sat, 09 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[arXiv Daily Briefing 2026-05-09]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-07 (목)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-07.html</link>

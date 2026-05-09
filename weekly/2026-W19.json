@@ -1,0 +1,57 @@
+{
+  "date": "2026-05-09",
+  "iso_week": "2026-W19",
+  "predictions": [
+    {
+      "title": "VLA Test-Time Compute Scaling Laws 후속이 다음 2주 안에 3편 이상 떨어진다",
+      "claim": "Sentinel·VLA-ATTC·Anticipation-VLA가 deliberation을 도입했지만 'compute budget vs task SR' 곡선은 아직 정량화 안 됐어요. 누군가 LIBERO/CALVIN/RoboCasa에서 compute budget을 sweep하면서 task complexity별로 sub-linear / linear / super-linear 영역을 분리하는 logged study를 낼 가능성 높음. 안 나오면 'deliberation = SOTA 갱신용 trick' 단계에서 멈춘 것으로 판정.",
+      "rationale": "Sentinel·VLA-ATTC·Anticipation-VLA가 deliberation을 도입했지만 'compute budget vs task SR' 곡선은 아직 정량화 안 됐어요. 누군가 LIBERO/CALVIN/RoboCasa에서 compute budget을 sweep하면서 task complexity별로 sub-linear / linear / super-linear 영역을 분리하는 logged study를 낼 가능성 높음. 안 나오면 'deliberation = SOTA 갱신용 trick' 단계에서 멈춘 것으로 판정."
+    },
+    {
+      "title": "'BC + Q-extraction + Off-Policy Generative Finetune' Full Stack 결합 논문이 다음주 안에 등장",
+      "claim": "OGPO + Q2RL은 정확히 보완관계인데 이번주에는 별개 논문으로 떨어졌습니다. 다음주에 누군가 두 방법을 한 파이프라인으로 묶어 OGBench/D4RL/robomimic에서 4-way 비교(BC, OGPO 단독, Q2RL+OGPO, Q2RL+OGPO+RCD)를 내놓을 가능성 강함. 안 나오면 두 방법이 호환성 이슈로 안 묶이는 것.",
+      "rationale": "OGPO + Q2RL은 정확히 보완관계인데 이번주에는 별개 논문으로 떨어졌습니다. 다음주에 누군가 두 방법을 한 파이프라인으로 묶어 OGBench/D4RL/robomimic에서 4-way 비교(BC, OGPO 단독, Q2RL+OGPO, Q2RL+OGPO+RCD)를 내놓을 가능성 강함. 안 나오면 두 방법이 호환성 이슈로 안 묶이는 것."
+    },
+    {
+      "title": "Open-Source Generative Model의 Zero-Shot Perception 후속이 5편 이상 떨어진다",
+      "claim": "5월 7일 Open-Source Image Editing Models Are Zero-Shot Vision Learners가 Qwen-Image-Edit/FireRed/LongCat을 monocular depth·normal·segmentation에 던졌어요. 이게 첫 오픈 instance라 다음주에 (a) 같은 방법을 video editing 모델로 확장, (b) DiT 기반 vs flow 기반 차이 ablation, (c) instruction tuning 없이 어디까지 가는지 한계 정량화 같은 후속이 빠르게 따라옵니다. 안 나오면 5월 7일 결과가 cherry-pick일 가능성.",
+      "rationale": "5월 7일 Open-Source Image Editing Models Are Zero-Shot Vision Learners가 Qwen-Image-Edit/FireRed/LongCat을 monocular depth·normal·segmentation에 던졌어요. 이게 첫 오픈 instance라 다음주에 (a) 같은 방법을 video editing 모델로 확장, (b) DiT 기반 vs flow 기반 차이 ablation, (c) instruction tuning 없이 어디까지 가는지 한계 정량화 같은 후속이 빠르게 따라옵니다. 안 나오면 5월 7일 결과가 cherry-pick일 가능성."
+    }
+  ],
+  "themes": [
+    {
+      "title": "VLA가 'deliberation 학습'으로 이행 — test-time compute가 robot에 본격 진입",
+      "summary": "Sentinel-VLA(metacognitive monitoring), VLA-ATTC(critic-driven adaptive test-time compute), Anticipation-VLA(adaptive subgoal anticipation)가 5월 5일 한 날에 같이 떨어졌고, 5월 7일 From Pixels to Tokens가 latent action supervision을 정리하면서 'deliberation을 어떤 표현 위에서 할지'까지 깔렸습니다. LLM의 test-time compute scaling이 embodied로 넘어오는 결정적 일주일이었어요. 단발 SOTA 경쟁이 끝나가고 'compute → success-rate 곡선'을 정량화하는 새 평가 차원이 열렸다는 게 메타 흐름의 핵심. 우리 랩 시점에선 baseline 표에 'compute budget per step'을 컬럼으로 추가해야 할 시점."
+    },
+    {
+      "title": "Generative policy fine-tuning이 BC 다음 단계로 본격 패러다임화",
+      "summary": "5월 6일 OGPO(off-policy critic + 변형 PPO로 generative process 전체 backprop), RCD(self-reconstruction error를 log-density proxy로 쓰는 training-free guidance), RoboAlign-R1(reward distillation), 5월 7일 Q2RL(BC에서 Q-function 추출 + Q-Gating)이 4편이 한 주에 줄줄이 떨어졌습니다. Diffusion/flow policy를 BC로만 학습하던 단계가 끝나고 'BC + Q-extraction + off-policy generative finetune' full stack으로 갈아타는 신호 — 이 흐름은 6–12개월 안에 manipulation 디폴트 트레이닝 레시피가 됩니다. RCD의 training-free guidance가 OGPO finetuned policy 위에 얹히는 hybrid 실험이 다음 분기 첫 follow-up 후보로 가장 유력."
+    },
+    {
+      "title": "VLA 데이터 인플레이션의 두 번째 라운드 — egocentric / fleet / consumer-grade",
+      "summary": "5월 4일 Being-H0.7(egocentric video latent world-action) + LWD(fleet RL 배포 중 학습), 5월 5일 Phone2Act(스마트폰 ARCore 6-DoF teleop) + VILAS(저가 매니퓰레이션 플랫폼) + Seeing Realism from Simulation, 5월 6일 BifrostUMI(VR 디바이스 keypoint, robot 없는 humanoid 학습) + Bridging the Embodiment Gap(disentangled cross-embodiment video editing)이 한 주 동안 7편 가까이. VLA가 'general purpose'를 외치던 단계에서 '데이터 부족 어떻게 풀까'라는 vertical problem으로 무게중심이 옮겨간 두 번째 라운드. 하드웨어 단가가 $150 수준까지 내려오고, 사람→로봇 video editing이 quality filter와 결합되면서, 1인 연구실도 데이터 파이프라인을 처음부터 깔 수 있는 환경이 됐습니다."
+    }
+  ],
+  "top5": [
+    {
+      "title": "From Pixels to Tokens: A Systematic Study of Latent Action Supervision for VLA Models",
+      "arxiv": "https://arxiv.org/abs/2605.04678"
+    },
+    {
+      "title": "OGPO: Sample Efficient Full-Finetuning of Generative Control Policies",
+      "arxiv": "https://arxiv.org/abs/2605.03065"
+    },
+    {
+      "title": "When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning (Q2RL)",
+      "arxiv": "https://arxiv.org/abs/2605.05172"
+    },
+    {
+      "title": "Hydra-DP3: Frequency-Aware Right-Sizing of 3D Diffusion Policies",
+      "arxiv": "https://arxiv.org/abs/2605.01581"
+    },
+    {
+      "title": "Awaking Spatial Intelligence in Unified Multimodal Understanding and Generation (JoyAI-Image)",
+      "arxiv": "https://arxiv.org/abs/2605.04128"
+    }
+  ]
+}
