@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Sat, 09 May 2026 23:41:34 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 12:22:28 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-11 (월)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-11.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-11.html</guid>
+      <pubDate>Mon, 11 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[이번 주는 Generation 이 단연 폭발했습니다 — pastweek 63→119편(+89%)로 거의 두 배가 됐고, 그 안에서 결이 두 갈래로 갈렸어요. 한쪽은 DiT 내부 메커니즘 정밀화 입니다. 오늘 같은 날 Mean Mode Screaming 이 1000-layer DiT가 silent 한 채로 mean-dominated collapse에 빠지는 구조적 취약점을 mechanistic auditing으로 격리해 보여줬고, HSA(Heterogeneous Step Allocation) 는 비디오 DiT에서 토큰별로 denoising step 수를 다르게 주는 training-free 가속을, Prior-Aligned Autoencoders 는 latent diffu…]]></description>
+    </item>
     <item>
       <title>🗓 arXiv Weekly Retrospective</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-09-weekly.html</link>

@@ -1,0 +1,392 @@
+{
+ "date": "2026-05-11",
+ "window": {
+  "start": "2026-05-04",
+  "end": "2026-05-10"
+ },
+ "totals": {
+  "cv_pastweek_entries": 796,
+  "ro_pastweek_entries": 235,
+  "deduped_union": 992
+ },
+ "buckets": {
+  "Manipulation": {
+   "total": 24,
+   "cv": 19,
+   "ro": 1,
+   "cvro": 4
+  },
+  "3D/Scene": {
+   "total": 49,
+   "cv": 40,
+   "ro": 7,
+   "cvro": 2
+  },
+  "Robot Learning": {
+   "total": 51,
+   "cv": 5,
+   "ro": 40,
+   "cvro": 6
+  },
+  "Autonomous Driving": {
+   "total": 32,
+   "cv": 14,
+   "ro": 14,
+   "cvro": 4
+  },
+  "Foundation Models": {
+   "total": 56,
+   "cv": 53,
+   "ro": 2,
+   "cvro": 1
+  },
+  "Generation": {
+   "total": 119,
+   "cv": 106,
+   "ro": 10,
+   "cvro": 3
+  },
+  "Efficiency/Systems": {
+   "total": 55,
+   "cv": 52,
+   "ro": 3,
+   "cvro": 0
+  },
+  "Embodied AI": {
+   "total": 20,
+   "cv": 4,
+   "ro": 15,
+   "cvro": 1
+  },
+  "Safety/Alignment": {
+   "total": 41,
+   "cv": 30,
+   "ro": 9,
+   "cvro": 2
+  }
+ },
+ "keywords_cv": [
+  [
+   "diffusion",
+   53
+  ],
+  [
+   "vision-language model",
+   25
+  ],
+  [
+   "robust",
+   24
+  ],
+  [
+   "distillation",
+   23
+  ],
+  [
+   "alignment",
+   17
+  ],
+  [
+   "world model",
+   16
+  ],
+  [
+   "vlm",
+   16
+  ],
+  [
+   "object detection",
+   15
+  ],
+  [
+   "splatting",
+   15
+  ],
+  [
+   "video generation",
+   13
+  ],
+  [
+   "sparse",
+   12
+  ],
+  [
+   "gaussian splat",
+   12
+  ],
+  [
+   "flow matching",
+   10
+  ],
+  [
+   "image editing",
+   10
+  ],
+  [
+   "point cloud",
+   10
+  ],
+  [
+   "lora",
+   10
+  ],
+  [
+   "lightweight",
+   9
+  ],
+  [
+   "adversarial",
+   9
+  ],
+  [
+   "pose estimation",
+   8
+  ],
+  [
+   "gan",
+   8
+  ],
+  [
+   "hallucination",
+   7
+  ],
+  [
+   "3d reconstruction",
+   7
+  ],
+  [
+   "vehicle",
+   7
+  ],
+  [
+   "3d gaussian",
+   7
+  ],
+  [
+   "mllm",
+   6
+  ],
+  [
+   "autonomous driving",
+   6
+  ],
+  [
+   "compression",
+   6
+  ],
+  [
+   "generative model",
+   5
+  ],
+  [
+   "vla",
+   5
+  ],
+  [
+   "lidar",
+   5
+  ],
+  [
+   "low-rank",
+   5
+  ],
+  [
+   "navigation",
+   5
+  ],
+  [
+   "driver",
+   4
+  ],
+  [
+   "vision-language-action",
+   4
+  ],
+  [
+   "quantization",
+   4
+  ],
+  [
+   "embodied",
+   4
+  ],
+  [
+   "mesh",
+   4
+  ],
+  [
+   "multimodal llm",
+   4
+  ],
+  [
+   "traffic",
+   4
+  ],
+  [
+   "ood detection",
+   3
+  ]
+ ],
+ "keywords_ro": [
+  [
+   "robust",
+   17
+  ],
+  [
+   "navigation",
+   17
+  ],
+  [
+   "manipulation",
+   15
+  ],
+  [
+   "vla",
+   10
+  ],
+  [
+   "embodied",
+   9
+  ],
+  [
+   "vehicle",
+   9
+  ],
+  [
+   "motion planning",
+   6
+  ],
+  [
+   "grasping",
+   6
+  ],
+  [
+   "diffusion",
+   6
+  ],
+  [
+   "imitation learning",
+   5
+  ],
+  [
+   "lidar",
+   5
+  ],
+  [
+   "world model",
+   5
+  ],
+  [
+   "vision-language-action",
+   4
+  ],
+  [
+   "tactile",
+   4
+  ],
+  [
+   "dexterous",
+   4
+  ],
+  [
+   "demonstrations",
+   4
+  ],
+  [
+   "locomotion",
+   3
+  ],
+  [
+   "quadruped",
+   3
+  ],
+  [
+   "slam",
+   3
+  ],
+  [
+   "teleoperation",
+   3
+  ],
+  [
+   "traffic",
+   3
+  ],
+  [
+   "pose estimation",
+   3
+  ],
+  [
+   "humanoid",
+   3
+  ],
+  [
+   "autonomous driving",
+   2
+  ],
+  [
+   "v2x",
+   2
+  ],
+  [
+   "sim-to-real",
+   2
+  ],
+  [
+   "safety-critical",
+   2
+  ],
+  [
+   "object detection",
+   2
+  ],
+  [
+   "vlm",
+   2
+  ],
+  [
+   "alignment",
+   2
+  ],
+  [
+   "signal temporal logic",
+   2
+  ],
+  [
+   "gan",
+   2
+  ],
+  [
+   "legged",
+   1
+  ],
+  [
+   "embodied agent",
+   1
+  ],
+  [
+   "sparse",
+   1
+  ],
+  [
+   "lora",
+   1
+  ],
+  [
+   "exploration",
+   1
+  ],
+  [
+   "vision-language model",
+   1
+  ],
+  [
+   "novel view",
+   1
+  ],
+  [
+   "sim2real",
+   1
+  ]
+ ]
+}

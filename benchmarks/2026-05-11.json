@@ -1,0 +1,23 @@
+{
+  "date": "2026-05-11",
+  "results": [
+    {
+      "benchmark": "K-RADAR",
+      "metric": "scene captioning under fog/snow vs camera baseline",
+      "value": "camera baseline 90%+ hallucination을 7M-param radar-aligned-to-SigLIP 모듈이 능가",
+      "paper": "https://arxiv.org/abs/2605.07367"
+    },
+    {
+      "benchmark": "OmniDocBench",
+      "metric": "evaluation integrity audit",
+      "value": "21,353개 평가 블록 중 2,580개 오류(12.08%) 확인 → PureDocBench로 대체 제안",
+      "paper": "https://arxiv.org/abs/2605.07492"
+    },
+    {
+      "benchmark": "LIBERO",
+      "metric": "VLA closed-loop success under WM-simulator",
+      "value": "Sword가 dynamic latent bootstrapping으로 generalization + long-horizon error 동시 개선 보고",
+      "paper": "https://arxiv.org/abs/2605.07288"
+    }
+  ]
+}

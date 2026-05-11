@@ -1,0 +1,50 @@
+{
+  "date": "2026-05-11",
+  "insights": [
+    {
+      "title": "World Action Model이 'training 어떻게 할까'에서 'imagined future를 어떻게 쓰고 검증할까'로 메타 레벨이 한 칸 올라감",
+      "claim": "오늘 같은 날 WAM/world-model-augmented VLA 라인이 네 편 동시 등장 — Sword(LIBERO에서 WM 시뮬레이터 generalization을 dynamic latent bootstrapping으로 해결), One Token Per Frame(world module의 visual bandwidth를 frame당 단일 토큰으로 압축해도 VLA 성능이 유지된다는 반직관적 발견), NoiseGate(WAM 내부에서 per-latent timestep schedule을 학습해 video와 action 정보 흐름 분리), Is the Future Compatible?(WAM이 만든 future가 action sequence와 dynamically compatible한지 검증하는 새 reliability axis 도입). 4월 말 EnergyFlow·Q2RL·OGPO가 'generative policy를 어떻게 학습할까'였다면, 오늘은 그 generative process가 만드는 imagined future 자체를 비판적으로 다루는 라인으로 한 칸 메타 레벨이 올라감. 향후 6-12개월 WAM의 'imagined future 검증/압축/조건부 사용' 문제가 본격 차세대 토픽이 될 가능성.",
+      "papers": [
+        "https://arxiv.org/abs/2605.07288",
+        "https://arxiv.org/abs/2605.07931",
+        "https://arxiv.org/abs/2605.07794",
+        "https://arxiv.org/abs/2605.07514"
+      ]
+    },
+    {
+      "title": "3DGS가 'novel rendering'을 졸업하고 'primitive를 직접 다루는 응용 인프라'로 재정의됨",
+      "claim": "지난주(05-07) Ilov3Splat·ULF-Loc·QuadBox·Aes3D 묶음으로 정리된 흐름이 오늘 더 명확. 오늘은 3DGS primitive를 native하게 사용하는 응용이 한 날에 몰림 — From Pixels to Primitives(scene change detection을 Gaussian primitive 단위로), SplitGS-Loc(GSFF의 α-blending이 만드는 photometric overfit 진단 + 2D-3D matching용 split), Differentiable Ray Tracing with Gaussians(3DGS를 RF propagation simulator로), SplatWeaver(generalizable NVS에서 Gaussian primitive를 spatially-varying complexity에 맞춰 동적 할당). 'Gaussian primitive 자체가 explicit하고 미분 가능한 단위'라는 점이 본격적으로 활용되기 시작. 지난주 ULF-Loc의 α-blending bias 진단의 자연스러운 후속편이고, 3DGS가 단순 렌더링 도구를 졸업했다는 강한 신호.",
+      "papers": [
+        "https://arxiv.org/abs/2605.07203",
+        "https://arxiv.org/abs/2605.07351",
+        "https://arxiv.org/abs/2605.07781",
+        "https://arxiv.org/abs/2605.07287",
+        "https://arxiv.org/abs/2605.06876"
+      ]
+    },
+    {
+      "title": "VLM이 자기 perception failure를 진단·교정하는 라인이 한 주 사이 두꺼워짐",
+      "claim": "Foundation Models 버킷 +40% 폭증 안쪽을 보면, 단순 SOTA 갱신보다 VLM이 어떻게/왜 실패하는지를 자가 진단하는 논문이 많아짐 — Uncovering 3D Scene Topology(VLM 내부 latent topological map이 heavily entangled되어 있다는 실증 + shaping), Hard to Read Easy to Jailbreak(visual context 압축이 jailbreak를 inadvertently 유도하는 cognitive overload 메커니즘), MedVIGIL(broken visual evidence에 대한 silent failure 평가), PolarVLM(reflective/transparent 객체에서 RGB-only VLM의 구조적 한계를 polarization으로 직접 보충). 지난주 'Why Do VLMs Struggle To Recognize Human Emotions?'의 long-tail · 미세표정 진단과 결이 같음. 'VLM도 perception failure mode를 명시적으로 다루는 단계'로 분야가 진입했다는 뜻이고, robotics deployment 측에 VLA evaluation harness로 가져오면 silent failure 탐지 메트릭으로 직결.",
+      "papers": [
+        "https://arxiv.org/abs/2605.07148",
+        "https://arxiv.org/abs/2605.07250",
+        "https://arxiv.org/abs/2605.07919",
+        "https://arxiv.org/abs/2605.07574"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "WAM의 'imagined future' 호환성을 자동 검증·게이팅하는 메타 레이어",
+      "claim": "Is the Future Compatible?의 action-state consistency 메트릭 + NoiseGate의 per-latent timestep gating을 묶어, WAM이 만든 latent future 중 dynamically incompatible한 sample을 자동 reject하거나 partial-rollout으로 잘라내는 게이트 레이어 구축. LIBERO·RoboCasa에 적용해 closed-loop success rate vs incompatible-future-rejection rate trade-off 곡선 → 'imagined future의 신뢰도를 실시간으로 measure하는 첫 reusable layer'로 기여 가능. 다음 분기 메인 후보."
+    },
+    {
+      "title": "3DGS Primitive 직접 작용 패러다임을 manipulation scene editing으로 확장",
+      "claim": "From Pixels to Primitives의 'scene change detection을 Gaussian primitive 단위로' 아이디어를 manipulation 환경에 가져오면, 로봇이 scene을 picking·placing할 때 3DGS primitive를 직접 edit하는 implicit world model 가능. 지난주 Beyond Heuristics(learnable density)와 결합, R3D의 '3D 인코더 + diffusion 디코더' 구조와 자연스럽게 통합. 별도 sim2real 없이 closed-loop manipulation 1차 결과 가능."
+    },
+    {
+      "title": "VLM Perception Failure Mode 진단을 robotics deployment(VLA safety) 측에 가져오기",
+      "claim": "FM 버킷의 자가 진단 라인(3D Scene Topology, MedVIGIL, PolarVLM)을 VLA evaluation harness로 가져오면 VLA가 perception failure를 silent하게 흘리는 케이스 사전 탐지 가능. MedVIGIL의 ROI-corrupted/false premise perturbation을 manipulation scene perturbation(occlusion, specular highlight, camera shake)으로 번역 → 'VLA의 silent perception failure rate' 새 메트릭. 지난주 Vision-Based Safe HRC의 conformal prediction과 결합하면 인증 가능한 안전 게이트, Safety 버킷 만성 공백 메우는 1차 기여."
+    }
+  ]
+}
