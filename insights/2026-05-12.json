@@ -1,0 +1,51 @@
+{
+ "date": "2026-05-12",
+ "insights": [
+  {
+   "title": "Latent diffusion에서 'generation-friendly latent manifold'라는 질문이 정식 연구 대상으로 격상",
+   "claim": "tokenizer를 reconstruction fidelity가 아닌 manifold 구조(coherent spatial structure, local continuity, global semantics)로 평가해야 generation quality와 align됨",
+   "papers": [
+    "https://arxiv.org/abs/2605.07915",
+    "https://arxiv.org/abs/2605.06829",
+    "https://arxiv.org/abs/2605.06680",
+    "https://arxiv.org/abs/2605.08029"
+   ]
+  },
+  {
+   "title": "VLM self-diagnosis 라인이 다층화되며 attack surface도 동시에 굳어지는 중",
+   "claim": "perception failure 진단(MedVIGIL, PolarVLM)·defense(SAEgis)와 함께 input-space attack(CloudWeb, Hard to Read) 라인이 차세대 표준으로 자리잡고 있음",
+   "papers": [
+    "https://arxiv.org/abs/2605.07919",
+    "https://arxiv.org/abs/2605.07574",
+    "https://arxiv.org/abs/2605.07447",
+    "https://arxiv.org/abs/2605.07273",
+    "https://arxiv.org/abs/2605.07250",
+    "https://arxiv.org/abs/2605.07399"
+   ]
+  },
+  {
+   "title": "Foresight-driven anticipation이 CV·RO·multimodal에 동시 등장",
+   "claim": "'미래를 먼저 imagine하고 그 위에서 행동/평가'라는 framing이 driving·world model·audio-video generation에 동시에 나타나는 cross-domain 응축",
+   "papers": [
+    "https://arxiv.org/abs/2605.07195",
+    "https://arxiv.org/abs/2605.07278",
+    "https://arxiv.org/abs/2605.07061",
+    "https://arxiv.org/abs/2605.07514"
+   ]
+  }
+ ],
+ "research_topics": [
+  {
+   "title": "PAE 스타일 manifold shaping을 latent world model로 이식",
+   "claim": "Prior-Aligned Autoencoder의 세 manifold 속성을 latent WM encoder의 정규화 term으로 끼얹어 long-horizon planning-friendly latent 정의"
+  },
+  {
+   "title": "VLM Perception Failure → VLA Silent Failure로 평가 프레임 이식",
+   "claim": "MedVIGIL의 broken visual evidence 평가를 VLA harness로 가져와 manipulation에서 silent failure rate 정량화"
+  },
+  {
+   "title": "Foresight-driven 평가 프레임을 audio-video-action joint generation으로 확장",
+   "claim": "AV-Phys Bench의 physical commonsense 5-dim을 audio-video-action으로 확장해 embodied generation의 affordance 이해도 측정"
+  }
+ ]
+}

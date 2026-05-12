@@ -1,0 +1,51 @@
+{
+ "date": "2026-05-12",
+ "results": [
+  {
+   "benchmark": "LINEMOD",
+   "metric": "ADD-0.1 (single RGB-D ref, no CAD)",
+   "value": 92.5,
+   "paper": "https://arxiv.org/abs/2605.07023",
+   "prior_sota": 52.6,
+   "prior_paper": "One2Any CVPR 2025"
+  },
+  {
+   "benchmark": "OmniDocBench",
+   "metric": "audit (error rate)",
+   "value": 12.08,
+   "paper": "https://arxiv.org/abs/2605.07492",
+   "note": "PureDocBench replaces OmniDocBench"
+  },
+  {
+   "benchmark": "VURB",
+   "metric": "preference pair (new benchmark)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.07872"
+  },
+  {
+   "benchmark": "TAVIS-Head/Hands",
+   "metric": "GALT (new benchmark)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.07943"
+  },
+  {
+   "benchmark": "AV-Phys Bench",
+   "metric": "5-dim physical commonsense (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.07061"
+  },
+  {
+   "benchmark": "Robomimic+OGBench",
+   "metric": "one-step generative policy success",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.07727",
+   "note": "SOTA vs ODE-based baselines"
+  },
+  {
+   "benchmark": "LithoBench",
+   "metric": "remote sensing lithology (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.07640"
+  }
+ ]
+}

@@ -1,0 +1,254 @@
+{
+ "date": "2026-05-12",
+ "buckets": {
+  "Manipulation": {
+   "total": 24,
+   "cv": 21,
+   "ro": 3
+  },
+  "3D/Scene": {
+   "total": 49,
+   "cv": 41,
+   "ro": 8
+  },
+  "Robot Learning": {
+   "total": 51,
+   "cv": 7,
+   "ro": 44
+  },
+  "Autonomous Driving": {
+   "total": 32,
+   "cv": 15,
+   "ro": 17
+  },
+  "Foundation Models": {
+   "total": 56,
+   "cv": 54,
+   "ro": 2
+  },
+  "Generation": {
+   "total": 119,
+   "cv": 109,
+   "ro": 10
+  },
+  "Efficiency/Systems": {
+   "total": 55,
+   "cv": 52,
+   "ro": 3
+  },
+  "Embodied AI": {
+   "total": 20,
+   "cv": 4,
+   "ro": 16
+  },
+  "Safety/Alignment": {
+   "total": 41,
+   "cv": 31,
+   "ro": 10
+  }
+ },
+ "keywords_cv": [
+  [
+   "segmentation",
+   46
+  ],
+  [
+   "diffusion",
+   45
+  ],
+  [
+   "multimodal",
+   40
+  ],
+  [
+   "efficient",
+   34
+  ],
+  [
+   "vision-language",
+   34
+  ],
+  [
+   "transformer",
+   25
+  ],
+  [
+   "world",
+   23
+  ],
+  [
+   "distillation",
+   21
+  ],
+  [
+   "reasoning",
+   21
+  ],
+  [
+   "attention",
+   21
+  ],
+  [
+   "robust",
+   20
+  ],
+  [
+   "vlm",
+   16
+  ],
+  [
+   "alignment",
+   15
+  ],
+  [
+   "object detection",
+   15
+  ],
+  [
+   "splatting",
+   14
+  ],
+  [
+   "world model",
+   13
+  ],
+  [
+   "gaussian splat",
+   12
+  ],
+  [
+   "video gen",
+   12
+  ],
+  [
+   "sparse",
+   11
+  ],
+  [
+   "video generation",
+   11
+  ],
+  [
+   "generative",
+   10
+  ],
+  [
+   "image editing",
+   10
+  ],
+  [
+   "point cloud",
+   10
+  ],
+  [
+   "lightweight",
+   9
+  ],
+  [
+   "test-time",
+   8
+  ]
+ ],
+ "keywords_ro": [
+  [
+   "robust",
+   15
+  ],
+  [
+   "navigation",
+   14
+  ],
+  [
+   "manipulation",
+   14
+  ],
+  [
+   "world",
+   11
+  ],
+  [
+   "reinforcement learning",
+   9
+  ],
+  [
+   "vla",
+   9
+  ],
+  [
+   "reasoning",
+   7
+  ],
+  [
+   "grasp",
+   7
+  ],
+  [
+   "efficient",
+   7
+  ],
+  [
+   "embodied",
+   6
+  ],
+  [
+   "motion planning",
+   6
+  ],
+  [
+   "diffusion",
+   6
+  ],
+  [
+   "imitation",
+   5
+  ],
+  [
+   "imitation learning",
+   5
+  ],
+  [
+   "tactile",
+   4
+  ],
+  [
+   "lidar",
+   4
+  ],
+  [
+   "long-horizon",
+   4
+  ],
+  [
+   "trajectory",
+   4
+  ],
+  [
+   "tracking",
+   4
+  ],
+  [
+   "dexterous",
+   4
+  ],
+  [
+   "vision-language",
+   3
+  ],
+  [
+   "slam",
+   3
+  ],
+  [
+   "quadruped",
+   3
+  ],
+  [
+   "locomotion",
+   3
+  ],
+  [
+   "teleoperation",
+   3
+  ]
+ ]
+}

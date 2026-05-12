@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 11 May 2026 12:22:28 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 12:22:01 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-12 (화)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-12.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-12.html</guid>
+      <pubDate>Tue, 12 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[이번 주는 결국 Generation 과 Foundation Models 두 버킷이 같이 폭발한 한 주로 정리됩니다 — Generation은 pastweek 76→119편(+57%), Foundation Models는 36→56편(+56%)로 거의 같은 폭으로 같이 두꺼워졌어요. 결을 보면 두 버킷이 만나는 지점이 더 흥미로운데, "무엇을 생성/이해할 latent space인가" 라는 질문 자체로 한 칸 메타 레벨이 올라간 모양새입니다. 오늘만 봐도 Prior-Aligned Autoencoders 가 "diffusion-friendly한 latent manifold란 무엇인가"에 대해 reconstruction fidelity가 아니라 manifold 구조(coherent…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-11 (월)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-11.html</link>
