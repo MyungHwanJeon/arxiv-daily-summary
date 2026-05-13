@@ -1,0 +1,52 @@
+{
+ "date": "2026-05-13",
+ "insights": [
+  {
+   "title": "World Action Models(WAM/WAIM)이 정식 paradigm 명칭과 survey-level consolidation을 갖춘 단계로 격상",
+   "claim": "05-12 RC-aux의 'predictive but not plannable' 진단과 ForeSight의 anticipatory framing이 오늘 WAM paradigm 명명 + survey + 첫 WAIM 인스턴스(DAWN) + concrete latent-action 인터페이스(MoLA) + belief-inference 재정의(3D-Belief)로 한꺼번에 응결됨",
+   "papers": [
+    "https://arxiv.org/abs/2605.12090",
+    "https://arxiv.org/abs/2605.11550",
+    "https://arxiv.org/abs/2605.12167",
+    "https://arxiv.org/abs/2605.11367",
+    "https://arxiv.org/abs/2605.11596",
+    "https://arxiv.org/abs/2605.11750"
+   ]
+  },
+  {
+   "title": "VLA 라인의 핵심이 '성능 더 끌어올리기'에서 'deploy 가능하게 다듬기'로 옮겨감",
+   "claim": "VLA 백본을 frozen으로 두고 inference-time/architecture-level thin-layer intervention만 추가해 efficiency·safety를 동시 강화하는 'VLA inference engine' 라인이 한 날에 6편 동시에 등장",
+   "papers": [
+    "https://arxiv.org/abs/2605.11567",
+    "https://arxiv.org/abs/2605.11459",
+    "https://arxiv.org/abs/2605.11817",
+    "https://arxiv.org/abs/2605.12160",
+    "https://arxiv.org/abs/2605.11750",
+    "https://arxiv.org/abs/2605.12369"
+   ]
+  },
+  {
+   "title": "Unified Multimodal Generator architecture가 'VAE 제거 + native pixel-space single token space'로 한 칸 진화",
+   "claim": "05-12 PAE의 'generation-friendly latent manifold' 질문이 오늘 한 단계 더 가서 '애초에 separate latent space가 필요한가?'로 옮겨감 — HiDream-O1·SenseNova-U1·L2P가 같은 결의 native pixel-space architecture 라인 형성",
+   "papers": [
+    "https://arxiv.org/abs/2605.11061",
+    "https://arxiv.org/abs/2605.12500",
+    "https://arxiv.org/abs/2605.12013"
+   ]
+  }
+ ],
+ "research_topics": [
+  {
+   "title": "WAM/WAIM paradigm을 우리 lab manipulation pipeline에 정공으로 도입",
+   "claim": "Forecast-GS를 World Predictor로, MoLA를 action generator로, 3D-Belief의 partial observability eval을 harness로 묶어 LIBERO/RoboCasa에서 closed-loop 측정. 05-12 PAE 라인과 80% 인프라 공유 가능"
+  },
+  {
+   "title": "'VLA Inference Engine' 라인의 thin-layer intervention 6종을 우리 setting에서 unify ablation",
+   "claim": "A3·Pace-and-Path·GridS·Premover·DreamAvoid·GuidedVLA를 같은 backbone에 stackability 측면에서 cross-comparison해 'inference-time intervention의 stackability' 첫 정량 답 도출 + MedVIGIL silent failure 평가와 dual gate 묶음"
+  },
+  {
+   "title": "Native Pixel-space Unified Generator를 robotics video world model로 직접 이식",
+   "claim": "HiDream-O1의 pixel-space DiT를 robotics WM 인코더로 이식해 latent bottleneck 자체를 우회하고 native action-conditioned video generator 구축 + MoLA decoder와 결합해 새 stack 정의"
+  }
+ ]
+}

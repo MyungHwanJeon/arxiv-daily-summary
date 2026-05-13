@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 12 May 2026 12:22:01 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 12:23:36 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-13 (수)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-13.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-13.html</guid>
+      <pubDate>Wed, 13 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[이번 주는 정말 통째로 폭발한 한 주입니다 — 9개 버킷 전부 가 7일 전 대비 두 자릿수 % 성장했어요. 가장 뜨거운 두 축은 Foundation Models (pastweek 37→74, +100%)와 Generation (76→145, +91%)인데, 어제(05-12) 보고드린 "VLM self-diagnosis 라인 + latent diffusion manifold 격상"의 결을 이번주에도 그대로 두껍게 이어가고 있어요. 근데 오늘의 진짜 헤드라인은 Robot Learning (47→72, +53%) 안쪽에서 일어난 응축이에요. 어제까지 "Predictive but Not Plannable"이라는 진단(RC-aux)과 "Foresight-driven anticip…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-12 (화)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-12.html</link>

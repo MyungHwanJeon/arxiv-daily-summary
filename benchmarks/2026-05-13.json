@@ -1,0 +1,78 @@
+{
+ "date": "2026-05-13",
+ "results": [
+  {
+   "benchmark": "LIBERO + RoboTwin 2.0",
+   "metric": "VLA closed-loop success rate",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.11832",
+   "note": "Action Manifold + G3T reports wins on LIBERO, RoboTwin 2.0, and real-robot. risk filter: cherry-pick suspicion"
+  },
+  {
+   "benchmark": "SafeManip",
+   "metric": "LTLf temporal safety property satisfaction (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12386"
+  },
+  {
+   "benchmark": "PRISM (Embodied capability-tier eval)",
+   "metric": "capability-attributed failure rate (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.11534"
+  },
+  {
+   "benchmark": "PCSR-Bench",
+   "metric": "perspective-conditioned spatial reasoning (8 tasks, 84,373 QA) (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12413"
+  },
+  {
+   "benchmark": "WebEye (Perception Deep Research)",
+   "metric": "Search-Grounding / Search-Segmentation (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12497"
+  },
+  {
+   "benchmark": "UHR-Micro",
+   "metric": "Earth observation VLM micro-scale perception (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12237"
+  },
+  {
+   "benchmark": "XWOD",
+   "metric": "AD object detection under extreme weather (new, 10K imgs)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.11521"
+  },
+  {
+   "benchmark": "BARISTA",
+   "metric": "egocentric compositional understanding (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12074"
+  },
+  {
+   "benchmark": "GeoR-Bench",
+   "metric": "geoscience visual reasoning (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.11541"
+  },
+  {
+   "benchmark": "OmniClean (omni-modal visually-debiased)",
+   "metric": "8,551 retained queries from 16,968 audited (new audit protocol)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12034"
+  },
+  {
+   "benchmark": "RobustPVOS",
+   "metric": "PVOS under real-world corruptions (new, 351 clips / 2,500 masks)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12006"
+  },
+  {
+   "benchmark": "Chronicles-OCR",
+   "metric": "cross-temporal Chinese character visual perception (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.11960"
+  }
+ ]
+}
