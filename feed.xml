@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 13 May 2026 12:23:36 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 12:24:24 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-14 (목)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-14.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-14.html</guid>
+      <pubDate>Thu, 14 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[이번 주는 어제(05-13) 보고드린 WAM/WAIM 응결과 "VLA inference engine" 라인이 그대로 한 칸 더 두꺼워진 한 주입니다 — pastweek 9개 버킷 모두 7일 전 대비 두 자릿수 이상으로 성장했고, 특히 Manipulation (pw 18→48, +167%)과 Embodied AI (13→31, +138%)가 베이스 자체가 작던 두 축에서 통째로 두 배 이상으로 부풀어 올랐어요. 절대 편수로 가장 뜨거운 두 축은 여전히 Generation (84→148, +76%)과 Foundation Models (42→78, +86%)인데, 어제의 "VAE 제거 + native pixel-space" 라인을 오늘의 Qwen-Image-VAE-2.0 가…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-13 (수)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-13.html</link>

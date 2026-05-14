@@ -1,0 +1,91 @@
+{
+ "date": "2026-05-14",
+ "results": [
+  {
+   "benchmark": "WOD-E2E (Waymo Open Dataset E2E driving)",
+   "metric": "Rater Feedback Score (RFS)",
+   "value": 8.20,
+   "prev": "human 8.13 (GT)",
+   "paper": "https://arxiv.org/abs/2605.12624",
+   "note": "MindVLA-U1 first to surpass experienced human drivers on WOD-E2E (8.20 RFS @ 2 diffusion steps, 16 FPS)"
+  },
+  {
+   "benchmark": "WOD-E2E (Waymo Open Dataset E2E driving)",
+   "metric": "Rater Feedback Score (RFS) @ best-of-128",
+   "value": 9.14,
+   "prev": "RAP 8.5 / human 8.13",
+   "paper": "https://arxiv.org/abs/2605.12625",
+   "note": "Driving Intents Amplify Planning-Oriented RL — held-out RFS 7.681 → 8.211 with multi-intent GRPO"
+  },
+  {
+   "benchmark": "AssemblyBench",
+   "metric": "Physics-aware 6-DoF industrial assembly motion (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12845",
+   "note": "Multimodal-instruction industrial part assembly benchmark; physics-plausible 6-DoF motion per step"
+  },
+  {
+   "benchmark": "PCSR-Bench replacement / PanoWorld",
+   "metric": "Spatial Supersensing in 360-degree panorama (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.13169",
+   "note": "Panorama-based spatial reasoning MLLM benchmark — addresses narrow-FoV limitation of perspective-only paradigm"
+  },
+  {
+   "benchmark": "TouchAnything",
+   "metric": "Bimanual tactile estimation from egocentric video (new dataset)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.13083",
+   "note": "Egocentric video → bimanual tactile signal estimation; first large-scale tactile-from-video dataset"
+  },
+  {
+   "benchmark": "Ego2World",
+   "metric": "Belief-state planning over cooking world from egocentric video (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.13335",
+   "note": "Compiles egocentric cooking videos into executable worlds for partial-observation planning eval"
+  },
+  {
+   "benchmark": "MMCL-Bench",
+   "metric": "Multimodal context learning (rules + procedures + evidence) (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12703",
+   "note": "Tests learning task-local rules/procedures from visual or mixed-modality teaching context"
+  },
+  {
+   "benchmark": "Visual Aesthetic Benchmark",
+   "metric": "Frontier MLLM aesthetic judgment (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12684",
+   "note": "Tests whether MLLMs can judge image beauty consistently with human aesthetic preference"
+  },
+  {
+   "benchmark": "KamonBench",
+   "metric": "Grammar-based compositional factor recovery in VLMs (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.13322",
+   "note": "Japanese family-crest test of compositional visual recognition under explicit grammar"
+  },
+  {
+   "benchmark": "Edit-Compass + EditReward-Compass",
+   "metric": "Unified image editing & reward modeling eval (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.13062",
+   "note": "Joint benchmark for instruction-edit fidelity and reward-model faithfulness"
+  },
+  {
+   "benchmark": "ImageAttributionBench",
+   "metric": "Generalizable image attribution (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12967",
+   "note": "Tests generalization of synthetic-image source attribution"
+  },
+  {
+   "benchmark": "CiteVQA",
+   "metric": "Evidence attribution for Doc-VQA (new)",
+   "value": null,
+   "paper": "https://arxiv.org/abs/2605.12882",
+   "note": "Scores not just the final Doc-VQA answer but the supporting evidence — fills the evaluation gap of existing Doc-VQA suites"
+  }
+ ]
+}

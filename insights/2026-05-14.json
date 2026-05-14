@@ -1,0 +1,54 @@
+{
+ "date": "2026-05-14",
+ "insights": [
+  {
+   "title": "VLA 'inference engine' 라인이 AR vs Diffusion 두 paradigm을 동시에 가속하는 모드로 진입",
+   "claim": "어제(05-13) 신호로 잡혔던 'VLA inference engine'이 오늘은 AR-VLA를 block diffusion으로 가속(BlockVLA)하고 Diffusion-VLA를 speculative inference로 가속(Realtime-VLA FLASH)하는 두 paradigm 동시 latency-cut + AttenA+의 action inequality / FrameSkip의 data-side compression / D-VLA의 distributed async RL 4편이 같은 결의 'VLA infra' framing으로 합류",
+   "papers": [
+    "https://arxiv.org/abs/2605.13382",
+    "https://arxiv.org/abs/2605.13778",
+    "https://arxiv.org/abs/2605.13548",
+    "https://arxiv.org/abs/2605.13757",
+    "https://arxiv.org/abs/2605.13276",
+    "https://arxiv.org/abs/2605.13105"
+   ]
+  },
+  {
+   "title": "E2E Autonomous Driving이 VLA paradigm으로 본격 흡수되어 WOD-E2E human-driver baseline을 처음으로 넘는다",
+   "claim": "어제(05-13) WAIM의 driving instantiation(DAWN)에 이어 오늘은 MindVLA-U1이 'VLA beats VA'를 정식 framing으로 가져오면서 WOD-E2E 8.20 RFS로 human 8.13 RFS를 처음 초과(2 diffusion steps, 16 FPS), Driving Intents Amplify가 같은 벤치에서 best-of-128 9.14 RFS로 추가 SOTA, Action Emergence from Streaming Intent와 Causality-Aware E2E AD가 같은 라인의 method-axis와 evaluation-axis를 채움",
+   "papers": [
+    "https://arxiv.org/abs/2605.12624",
+    "https://arxiv.org/abs/2605.12625",
+    "https://arxiv.org/abs/2605.12622",
+    "https://arxiv.org/abs/2605.13646"
+   ]
+  },
+  {
+   "title": "3DGS가 'photoreal NVS'에서 '실전 배포 친화(robust + scalable + protectable)'로 응축 axis가 옮겨감",
+   "claim": "이번 주 3D/Scene 버킷의 신규 GS 라인 6편이 모두 도구적 단계 — HarmoGS(wild robustness via conflict-aware gradient), RoSplat(generalizable feed-forward), BlitzGS(city-scale distributed), Z-Order Transformer(latency-friendly generalizable), GuardMarkGS(ownership + edit deterrence), Sparse Code Uplifting(3D language GS 효율화), Real2Sim(physics-driven editable GS for AD) — 'pretty rendering' 단계 종료의 신호",
+   "papers": [
+    "https://arxiv.org/abs/2605.13073",
+    "https://arxiv.org/abs/2605.13093",
+    "https://arxiv.org/abs/2605.13794",
+    "https://arxiv.org/abs/2605.13465",
+    "https://arxiv.org/abs/2605.12919",
+    "https://arxiv.org/abs/2605.13600",
+    "https://arxiv.org/abs/2605.13591"
+   ]
+  }
+ ],
+ "research_topics": [
+  {
+   "title": "BlockVLA(AR→block-diffusion) vs Realtime-VLA FLASH(diffusion→speculative)의 cross-paradigm latency-success ablation",
+   "claim": "VLA Inference Engine 라인이 형성 중인 지금 같은 backbone(예: OpenVLA / pi0 / RDT)에서 AR-paradigm BlockVLA와 dVLA-paradigm Realtime-VLA FLASH를 LIBERO·RoboTwin·real-robot 환경에서 latency–success 곡선으로 직접 비교. 'AR vs Diffusion 어느 paradigm이 inference engine 친화적인가'라는 분야 미해결 질문에 첫 정량 답 가능"
+  },
+  {
+   "title": "3DGS 'in-the-wild deployment kit'을 한 stack으로 묶어 manipulation scene pipeline에 통합",
+   "claim": "HarmoGS(in-the-wild robustness) + RoSplat(feed-forward generalization) + BlitzGS(scalable reconstruction) + GuardMarkGS(ownership protection)의 4-축 컴포넌트를 단일 wrapper로 묶고, 우리 lab의 manipulation scene을 in-the-wild 캡처 → 즉시 GS reconstruction → policy training의 closed-loop로 만든다. 어제 추천드린 WAM #1(Forecast-GS 기반 World Predictor)의 데이터 인프라를 동시에 해결"
+  },
+  {
+   "title": "E2E driving VLA의 long-tail safety를 'belief-state residual risk' 평가 프레임으로 정량화",
+   "claim": "오늘 MindVLA-U1·Action Emergence·Causality-Aware E2E AD가 VA→VLA 전환의 method axis를 채웠는데 safety axis는 여전히 비어 있음. Belief-Space Residual Risk(05-14)와 Distributionally Robust Safety Filtering을 묶어 'VLA driving policy의 belief-conditioned residual risk' 첫 정량 프레임 제시. WAM survey의 evaluation column의 빈 칸을 직접 메우는 기여"
+  }
+ ]
+}

@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>arXiv Daily Briefing — 2026-05-14</title>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#f6f7f9;color:#1f2328;line-height:1.72;font-size:15px;padding:32px 16px;word-wrap:break-word;word-break:keep-all}
+.container{max-width:860px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);padding:40px 48px}
+h1{font-size:28px;margin:0 0 6px;font-weight:700;color:#0d1117;letter-spacing:-.01em}
+h2{font-size:21px;margin:40px 0 14px;padding-bottom:8px;border-bottom:2px solid #e5e7eb;color:#0d1117;font-weight:700}
+h3{font-size:17px;margin:22px 0 10px;color:#0d1117;font-weight:600}
+h4.bucket{margin:40px 0 16px;padding:10px 0 8px;border-top:3px solid #0d1117;border-bottom:1px solid #eaeef2;font-size:19px;font-weight:700;color:#0d1117}
+h4.bucket .count{font-size:13px;font-weight:400;color:#656d76;font-style:italic;margin-left:8px}
+p{margin:0 0 14px}
+a{color:#0969da;text-decoration:none}
+a:hover{text-decoration:underline}
+.meta{font-size:13px;color:#3b434d;padding:14px 18px;background:#f6f8fa;border-left:3px solid #0969da;border-radius:6px;margin:14px 0 28px}
+.meta div{margin:2px 0}
+.bucket-line{font-family:ui-monospace,SFMono-Regular,Consolas,Menlo,monospace;background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;padding:10px 14px;font-size:13px;color:#24292f;margin:10px 0;overflow-x:auto}
+.paper{padding:16px 0;border-top:1px solid #eaeef2}
+.paper:first-of-type{border-top:none}
+.paper-line1{margin-bottom:4px}
+.paper-line1 a{font-weight:600}
+.paper-authors{font-style:italic;color:#656d76;font-size:14px;margin:2px 0 10px}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:1px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;font-family:ui-monospace,monospace;letter-spacing:.02em}
+.badge-cv{background:#ddf4ff;color:#0550ae;border:1px solid #54aeff}
+.badge-ro{background:#fff8c5;color:#7a4e00;border:1px solid #d4a72c}
+.badge-cvro{background:#ffe5d9;color:#9a3412;border:1px solid #f59e0b}
+.badge-code{background:#dafbe1;color:#1a7f37;border:1px solid #4ac26b}
+.badge-page{background:#e3f2fd;color:#0550ae;border:1px solid #80c2f9}
+.badge-hf{background:#fff5b1;color:#7a4e00;border:1px solid #e0c45a}
+.badge-nocode{background:#eaeef2;color:#656d76;border:1px solid #d0d7de}
+.badge-unknown{background:#f3f4f6;color:#9ca3af;border:1px solid #e0e3e8}
+.insight,.topic{background:#fafbfc;border:1px solid #eaeef2;border-radius:8px;padding:14px 18px;margin:12px 0}
+.insight h3,.topic h3{margin-top:0}
+blockquote{border-left:3px solid #d0d7de;margin:10px 0;padding:6px 14px;color:#656d76;background:#f6f8fa;border-radius:0 6px 6px 0;font-size:13.5px}
+.hot{font-weight:600;color:#b91c1c}
+.cold{font-weight:600;color:#0369a1}
+hr{border:none;border-top:1px solid #eaeef2;margin:28px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid #eaeef2;font-size:12px;color:#656d76;text-align:center}
+ul.links{padding-left:20px}
+ul.links li{margin:4px 0}
+.home-btn{display:inline-block;padding:6px 14px;font-size:13px;font-weight:500;color:#0969da;background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;text-decoration:none;transition:background-color .12s ease,border-color .12s ease}
+.home-btn:hover{background:#eaeef2;border-color:#8b95a1;text-decoration:none}
+.home-btn-top{margin:0 0 18px}
+.home-btn-bottom{display:block;text-align:center;margin:18px 0 0}
+.crossover{background:#fafbfc;border:1px solid #eaeef2;border-radius:8px;padding:14px 18px;margin:14px 0}
+.crossover h3{margin-top:0}
+.must-read{background:#fff8e1;border:1px solid #f5c542;border-radius:8px;padding:16px 20px;margin:14px 0}
+.must-read h3{margin-top:0;color:#7a4e00}
+.must-read table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+.must-read th,.must-read td{padding:6px 10px;border-bottom:1px solid #eaeef2;text-align:left}
+.must-read th{background:#fdf2c8;font-weight:600}
+.retro{background:#f0f4ff;border:1px solid #c7d2fe;border-radius:8px;padding:14px 18px;margin:14px 0}
+.retro h3{margin-top:0;color:#3730a3}
+.bench-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0}
+.bench-table th,.bench-table td{padding:6px 10px;border-bottom:1px solid #eaeef2;text-align:left}
+.bench-table th{background:#f6f8fa;font-weight:600}
+@media (max-width:640px){.container{padding:24px 20px}h1{font-size:23px}h2{font-size:19px}body{padding:16px 8px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/" class="home-btn home-btn-top">← 전체 목록으로</a>
+
+<h1>📄 arXiv Daily Briefing — 2026-05-14 (목)</h1>
+
+<div class="meta">
+<div><strong>시야:</strong> 주간 2026-05-07 ~ 2026-05-13 · 오늘 배치 2026-05-13(수) 공지분</div>
+<div><strong>소스:</strong> cs.CV/new + cs.RO/new (pastweek 포함 트렌드 분석)</div>
+<div><strong>주간 규모:</strong> cs.CV 1,079편 · cs.RO 318편 (deduped union 1,328편)</div>
+<div><strong>오늘 선별:</strong> 전체 신규 213편 중 ROI 매칭 182편 → 본문 컷 후 약 80편 · 9개 버킷</div>
+</div>
+
+<!-- ============ 주간 동향 ============ -->
+<h2>🔭 주간 동향</h2>
+
+<p>이번 주는 어제(05-13) 보고드린 WAM/WAIM 응결과 "VLA inference engine" 라인이 그대로 한 칸 더 두꺼워진 한 주입니다 — pastweek 9개 버킷 모두 7일 전 대비 두 자릿수 이상으로 성장했고, 특히 <strong>Manipulation</strong>(pw 18→48, +167%)과 <strong>Embodied AI</strong>(13→31, +138%)가 베이스 자체가 작던 두 축에서 통째로 두 배 이상으로 부풀어 올랐어요. 절대 편수로 가장 뜨거운 두 축은 여전히 <strong>Generation</strong>(84→148, +76%)과 <strong>Foundation Models</strong>(42→78, +86%)인데, 어제의 "VAE 제거 + native pixel-space" 라인을 오늘의 <a href="https://arxiv.org/abs/2605.13565">Qwen-Image-VAE-2.0</a>가 다시 정공으로 받아치고(어제 framing이 "VAE를 없애자"였다면 오늘은 "VAE를 정말 잘 만들자"), <a href="https://arxiv.org/abs/2605.13111">Pyramid Forcing</a>은 long video generation의 head-aware KV cache로 어제의 "long-context everything" 결을 generation 쪽에서 받아냅니다.</p>
+
+<p>주목할 만한 건 <strong>Autonomous Driving</strong> 버킷(pw 32→35, +9%) 안쪽에서 일어난 응축이에요. 양적 변화는 +9%로 가장 조용해 보이지만, 사실 오늘 driving 신규 20편의 거의 모든 축이 어제 보고드린 <em>WAIM(World-Action Interactive Models)</em>의 driving 도메인 instantiation으로 한꺼번에 옮겨갔습니다. <a href="https://arxiv.org/abs/2605.12624">MindVLA-U1</a>이 "VLA Beats VA" 라는 정식 framing으로 unified streaming architecture를 driving에 가져오면서 <strong>WOD-E2E에서 8.20 RFS</strong>로 experienced human driver의 8.13 RFS를 <em>처음으로 초과</em>하고(2 diffusion steps · 16 FPS), 같은 날 <a href="https://arxiv.org/abs/2605.12625">Driving Intents Amplify Planning-Oriented RL</a>이 multi-intent GRPO로 best-of-128에서 9.14 RFS를 찍어 RAP(8.5)와 human(8.13)을 모두 큰 폭으로 넘습니다. <a href="https://arxiv.org/abs/2605.12622">Action Emergence from Streaming Intent</a>는 E2E driving의 "action emergence"를 target capability로 정식 정의하고, <a href="https://arxiv.org/abs/2605.13646">Causality-Aware E2E AD</a>는 ego-centric joint scene modeling으로 causal substrate를 깔아요. 4편이 같은 날에 같은 결로 모이는 건 정말 드문 일인데, 어제 DAWN이 깐 WAIM framework가 24시간 안에 driving 도메인에서 SOTA 갱신·human baseline 초과까지 일사천리로 굳어진 거예요. E2E driving이 본격적으로 VLA paradigm으로 흡수되는 변곡점입니다.</p>
+
+<p>한편 부상 중인 미니토픽 두 가지. 첫째, <strong>VLA "inference engine"</strong> 라인이 오늘은 paradigm-축으로 한 단계 더 들어가요 — 어제까지는 "thin-layer intervention 6종(A3, GridS, Premover 등)"이라는 architectural sub-line이었다면, 오늘은 <em>AR-VLA vs Diffusion-VLA 두 paradigm을 동시에 가속</em>하는 라인이 등장합니다. <a href="https://arxiv.org/abs/2605.13382">BlockVLA</a>는 autoregressive VLA를 block-diffusion finetuning으로 가속, <a href="https://arxiv.org/abs/2605.13778">Realtime-VLA FLASH</a>는 diffusion VLA를 speculative inference로 가속해요. 거기에 <a href="https://arxiv.org/abs/2605.13548">AttenA+</a>가 action inequality(모든 action을 동일 중요도로 다루는 가정)를 rectify하고, <a href="https://arxiv.org/abs/2605.13757">FrameSkip</a>이 dense demonstration의 informative frame만 골라 학습하고, <a href="https://arxiv.org/abs/2605.13276">D-VLA</a>가 high-concurrency distributed async RL을 VLA에 가져옵니다. 둘째, <strong>3DGS의 응축 axis 전환</strong>입니다 — pretty rendering 단계가 끝나고 "in-the-wild deployment kit" 시대로 옮겨가는 결이 명확해졌어요. <a href="https://arxiv.org/abs/2605.13073">HarmoGS</a>(in-the-wild conflict-aware gradient harmonization), <a href="https://arxiv.org/abs/2605.13093">RoSplat</a>(robust generalizable feed-forward), <a href="https://arxiv.org/abs/2605.13794">BlitzGS</a>(city-scale distributed), <a href="https://arxiv.org/abs/2605.13465">Z-Order Transformer</a>(latency-friendly feed-forward), <a href="https://arxiv.org/abs/2605.12919">GuardMarkGS</a>(ownership tracing + edit deterrence), <a href="https://arxiv.org/abs/2605.13591">Real2Sim</a>(physics-driven editable GS for AD) — 6편이 같은 결로 모이는데, 평가축이 PSNR/SSIM에서 robustness·scale·protection·editability로 옮겨가는 게 분야 변곡점 신호예요.</p>
+
+<blockquote>※ 위 델타는 7일 전(2026-05-07) pastweek 스냅샷 대비입니다. 목요일 실행이라 회고 루프(②③④에 대한 2주/4주 채점)는 다음 월요일 실행에서 다시 활성화됩니다.</blockquote>
+
+<!-- ============ CV vs RO 대비 ============ -->
+<h2>📐 CV vs RO 대비</h2>
+
+<p>이번 주 키워드 분포를 CV/RO로 나눠 보면, 양쪽 다 한꺼번에 두꺼워진 결은 유지되지만 응축 축이 살짝 다시 갈라졌어요. CV는 <em>diffusion(79) · multimodal(62) · rl(62) · benchmark(60) · vision-language(57) · segmentation(56) · reasoning(51) · efficient(50) · world(44) · robust(36)</em>로 "생성·정렬·추론·벤치마크" 사각형이 어제 결을 유지하면서 <strong>world(44)</strong>가 한 칸 더 두꺼워졌고, RO는 <em>manipulation(27) · rl(26) · vision-language(25) · vla(23) · navigation(22) · world(20) · agent(19) · robust(17) · reinforcement learning(17) · embodied(15)</em>로 manipulation이 RO 최상단을 다시 차지하면서 <strong>vla(23)</strong>가 어제 17 → 23으로 +35% 점프했어요. 어제 등장한 "agentic robot" 어휘는 RO 19로 유지되고, "world" 어휘는 CV 44 / RO 20으로 둘 다 어제보다 한 칸 더 올라왔습니다 — WAM paradigm이 어휘 레벨에서도 두 분야 동시 침투를 가속하는 중이에요.</p>
+
+<ul>
+<li><strong>공통 hot 키워드</strong>: <em>rl</em>(CV 62 / RO 26), <em>vision-language</em>(CV 57 / RO 25), <em>world</em>(CV 44 / RO 20), <em>robust</em>(CV 36 / RO 17), <em>benchmark</em>(CV 60 / RO 14) — 어제와 거의 동일 4축 + benchmark가 동시 응축. "RL로 정렬", "world 모델 어휘", "vision-language 인터페이스", "robust evaluation" 4축은 두 분야가 같이 두꺼워요.</li>
+<li><strong>CV에만</strong>: <em>diffusion</em>(79, RO의 10배 이상), <em>segmentation</em>(56), <em>multimodal</em>(62 vs RO 미진입), <em>splatting</em>(여전히 두꺼움), <em>distillation</em>(20대 유지) — 생성·렌더링·압축 어휘는 여전히 CV 전용 라인.</li>
+<li><strong>RO에만</strong>: <em>manipulation</em>(27, CV에 거의 안 잡힘), <em>vla</em>(23, +35% 가속), <em>navigation</em>(22), <em>agent</em>(19), <em>reinforcement learning</em>(17), <em>embodied</em>(15) — 물리·행동·agentic orchestration 어휘는 RO 전용.</li>
+<li><strong>같은 단어 다른 맥락</strong>:
+  <ul>
+    <li><em>world (model)</em> — CV에선 <a href="https://arxiv.org/abs/2605.12957">GTA</a>처럼 image-to-3D world generation의 video-diffusion 기반 <em>visual world simulator</em>로 쓰이고, RO에선 <a href="https://arxiv.org/abs/2605.12624">MindVLA-U1</a>·<a href="https://arxiv.org/abs/2605.13646">Causality-Aware E2E AD</a>처럼 ego-centric joint scene modeling으로 <em>action을 condition하는 planning latent</em>로 쓰여요. 같은 어휘인데 한쪽은 "visual realism + asset generation", 한쪽은 "action-conditioned scene dynamics"로 평가축이 또 갈라집니다. 어제 짚었던 "predictive vs. plannable" 결이 오늘도 두 분야에서 같이 유지.</li>
+    <li><em>VLA</em> — CV에선 <a href="https://arxiv.org/abs/2605.12624">MindVLA-U1</a>의 driving E2E policy처럼 <em>perception-to-action mapping</em>으로 쓰이고, RO에선 <a href="https://arxiv.org/abs/2605.13382">BlockVLA</a>·<a href="https://arxiv.org/abs/2605.13778">Realtime-VLA FLASH</a>·<a href="https://arxiv.org/abs/2605.13548">AttenA+</a>처럼 manipulation backbone의 <em>inference engine·training infrastructure</em>로 쓰입니다. CV는 "VLA가 무엇을 출력하는가", RO는 "VLA를 어떻게 deploy하는가"로 같은 약어 안에서도 질문 자체가 갈라져요. 오늘 두 결이 더 명확해졌습니다.</li>
+    <li><em>diffusion</em> — CV에선 <a href="https://arxiv.org/abs/2605.12964">Asymmetric Flow Models</a>·<a href="https://arxiv.org/abs/2605.13111">Pyramid Forcing</a>의 generative model architecture로, RO에선 <a href="https://arxiv.org/abs/2605.13382">BlockVLA</a>·<a href="https://arxiv.org/abs/2605.13778">Realtime-VLA FLASH</a>·<a href="https://arxiv.org/abs/2605.13316">Test-time Sparsity for Action Diffusion</a>처럼 정책 backbone의 inference cost를 깎는 도구로 쓰입니다. 한쪽은 perceptual quality 최적화, 한쪽은 control latency 최적화로 분기.</li>
+  </ul>
+</li>
+</ul>
+
+<!-- ============ 인사이트 ============ -->
+<h2>💡 오늘의 인사이트</h2>
+
+<div class="insight">
+<h3>1. VLA "inference engine" 라인이 AR vs Diffusion 두 paradigm을 동시에 가속하는 모드로 진입했다</h3>
+<p>어제(05-13) 보고드린 "VLA inference engine"이 thin-layer intervention 6종으로 막 형성된 sub-area였다면, 오늘은 그 라인이 한 칸 더 들어가 <em>paradigm-축</em>으로 분기합니다. <a href="https://arxiv.org/abs/2605.13382">BlockVLA</a>는 autoregressive(AR) VLA의 sequential decoding latency를 <strong>block diffusion finetuning</strong>으로 깎고, <a href="https://arxiv.org/abs/2605.13778">Realtime-VLA FLASH</a>는 diffusion-based VLA(dVLA)의 full-inference latency를 <strong>speculative inference framework</strong>로 깎아요. 두 paradigm이 정반대 방향에서 latency를 cut하는데 같은 날에 같이 깔린 게 결정적이에요 — 분야가 "어느 paradigm이 deploy 친화적인가"라는 fundamental 질문을 직접 던지기 시작한 거죠. 거기에 <a href="https://arxiv.org/abs/2605.13548">AttenA+</a>가 "모든 action이 동등하게 informative하다"는 implicit assumption을 깨고 action inequality를 rectify하고, <a href="https://arxiv.org/abs/2605.13757">FrameSkip</a>이 dense teleoperation의 균일 sampling이 데이터 낭비라는 진단으로 informative frame만 골라 학습하며, <a href="https://arxiv.org/abs/2605.13276">D-VLA</a>가 high-concurrency distributed async RL framework를 깔고, <a href="https://arxiv.org/abs/2605.13105">What to Ignore, What to React</a>가 RL fine-tuning의 deployment-time visual shift robustness를 다룹니다. inference·data·training 세 측면에서 동시에 두꺼워지는 신호 — 다음 1–2분기 안에 "VLA infrastructure"라는 명칭으로 sub-area 확정될 것 같습니다.</p>
+</div>
+
+<div class="insight">
+<h3>2. E2E Autonomous Driving이 VLA paradigm으로 본격 흡수되며 WOD-E2E human-driver baseline을 24시간 안에 두 번 초과했다</h3>
+<p>어제 보고드린 WAIM(World-Action Interactive Models)의 driving 도메인 instantiation(DAWN)이 24시간 안에 SOTA 갱신 + human baseline 초과까지 일사천리로 굳어졌습니다. <a href="https://arxiv.org/abs/2605.12624">MindVLA-U1</a>은 unified streaming architecture로 VLA를 driving에 직접 가져오면서 <strong>WOD-E2E에서 8.20 RFS</strong>를 찍어 experienced human driver의 8.13 RFS를 처음 초과(2 diffusion steps · 16 FPS, 즉 throughput도 VA-class 유지), 같은 날 <a href="https://arxiv.org/abs/2605.12625">Driving Intents Amplify Planning-Oriented RL</a>이 multi-intent GRPO로 single-trajectory continuous-action mode collapse를 깨고 best-of-128에서 <strong>9.14 RFS</strong>를 찍어 RAP(8.5)와 human(8.13)을 모두 큰 폭으로 넘어요. <a href="https://arxiv.org/abs/2605.12622">Action Emergence from Streaming Intent</a>는 "action emergence" 자체를 target capability로 정식 정의해 평가축을 새로 깔고, <a href="https://arxiv.org/abs/2605.13646">Causality-Aware E2E AD</a>는 ego-centric joint scene modeling으로 causal substrate를 깐 위에 prediction과 planning을 묶습니다. 같은 날에 method·SOTA·평가축·causal substrate 4축이 한꺼번에 채워지는 건 분야 변곡점의 전형적 패턴 — E2E driving이 modular pipeline에서 VA로, VA에서 VLA로 옮겨가는 두 번째 phase shift가 오늘 시작됐다고 봅니다. 다음 분기 ICRA·IROS·CVPR submission이 죄다 이 framing으로 쏠릴 가능성이 매우 큽니다.</p>
+</div>
+
+<div class="insight">
+<h3>3. 3DGS의 응축 axis가 "더 예쁘게(PSNR/SSIM)"에서 "실전 배포 친화(robust + scalable + protectable + editable)"로 옮겨갔다</h3>
+<p>이번 주 3D/Scene 버킷의 신규 GS 라인 6–7편이 모두 같은 결로 떨어진 게 인상적입니다. <a href="https://arxiv.org/abs/2605.13073">HarmoGS</a>는 in-the-wild 캡처의 transient distractor와 illumination inconsistency를 conflict-aware gradient harmonization으로 풀고(image-level masking을 넘어 gradient-space 처방), <a href="https://arxiv.org/abs/2605.13093">RoSplat</a>는 generalizable feed-forward GS의 input view 수와 해상도 변동에 대한 robustness를 정조준, <a href="https://arxiv.org/abs/2605.13794">BlitzGS</a>는 city-scale 재구성을 system·algorithm·representation 3-level에서 active gaussian workload를 줄이는 distributed framework로 풀고, <a href="https://arxiv.org/abs/2605.13465">Z-Order Transformer</a>는 feed-forward GS의 latency를 Z-order space-filling 기반으로 깎습니다. 거기에 <a href="https://arxiv.org/abs/2605.12919">GuardMarkGS</a>가 3DGS asset의 ownership tracing과 instruction-driven edit deterrence를 동시에 잡고, <a href="https://arxiv.org/abs/2605.13600">Sparse Code Uplifting</a>이 3D Language GS의 high-dim feature association을 효율화, <a href="https://arxiv.org/abs/2605.13591">Real2Sim</a>이 physics-driven editable GS로 autonomous driving simulation을 만듭니다. 평가축이 PSNR/SSIM에서 robustness/scalability/protection/editability로 옮겨가는 분야 변곡점이에요 — 3DGS의 "research phase"가 끝나고 "production phase"가 시작되는 신호. 다음 분기 industry 응용 paper들이 폭증할 것 같습니다.</p>
+</div>
+
+<!-- ============ 추천 연구주제 ============ -->
+<h2>🔬 추천 연구주제</h2>
+
+<div class="topic">
+<h3>1. BlockVLA(AR→block-diffusion) vs Realtime-VLA FLASH(diffusion→speculative)의 cross-paradigm latency–success ablation</h3>
+<p>VLA inference engine 라인이 형성 중인 지금, 같은 backbone(예: OpenVLA / pi0 / RDT)에서 AR-paradigm BlockVLA와 dVLA-paradigm Realtime-VLA FLASH를 LIBERO·RoboTwin 2.0·real-robot 세 환경에서 latency–success 곡선으로 직접 비교하는 게 분야 미해결 질문에 첫 정량 답이 될 수 있어요. 구체적으론 (1) 동일 backbone+동일 dataset에서 두 paradigm을 each fine-tune, (2) 각 inference budget(10ms/30ms/100ms/300ms)에서 success rate 측정, (3) <a href="https://arxiv.org/abs/2605.13548">AttenA+</a>의 action inequality rectification을 둘 다에 stack해 추가 gain을 측정, (4) <a href="https://arxiv.org/abs/2605.13757">FrameSkip</a>의 data-side compression을 함께 ablation. 어제 추천드린 "VLA inference engine 6종 stackability" 라인의 자연스러운 paradigm-축 확장이고, 학회에서 항상 보기 좋은 latency-success Pareto frontier 그림을 만들 수 있어요. 인프라는 어제 라인과 90% 공유 가능 — ROI 매우 높습니다.</p>
+</div>
+
+<div class="topic">
+<h3>2. 3DGS "in-the-wild deployment kit"을 한 wrapper로 묶어 manipulation scene pipeline에 통합</h3>
+<p>오늘 등장한 4축 컴포넌트 — <a href="https://arxiv.org/abs/2605.13073">HarmoGS</a>(in-the-wild robustness) + <a href="https://arxiv.org/abs/2605.13093">RoSplat</a>(feed-forward generalization) + <a href="https://arxiv.org/abs/2605.13794">BlitzGS</a>(scalable reconstruction) + <a href="https://arxiv.org/abs/2605.12919">GuardMarkGS</a>(ownership protection)을 단일 wrapper로 묶고, 우리 lab의 manipulation scene을 in-the-wild 캡처 → 즉시 GS reconstruction → policy training의 closed-loop pipeline으로 만들면, 어제 추천드린 WAM #1(Forecast-GS 기반 World Predictor) 라인의 데이터 인프라를 동시에 해결할 수 있어요. 구체적 다음 단계로 (1) HarmoGS의 gradient harmonization을 manipulation의 hand-mounted camera 캡처에 적용해 illumination inconsistency 처리 가능성 측정, (2) RoSplat의 generalizable feed-forward를 새 manipulation scene에 zero-shot으로 적용해 reconstruction quality 측정, (3) BlitzGS의 distributed framework를 multi-room manipulation에 확장. 매우 실용적이면서도 분야 응축점을 정확히 짚은 라인입니다.</p>
+</div>
+
+<div class="topic">
+<h3>3. E2E driving VLA의 long-tail safety를 "belief-state residual risk" 평가 프레임으로 정량화</h3>
+<p>오늘 <a href="https://arxiv.org/abs/2605.12624">MindVLA-U1</a>·<a href="https://arxiv.org/abs/2605.12625">Driving Intents Amplify</a>·<a href="https://arxiv.org/abs/2605.13646">Causality-Aware E2E AD</a>가 VA→VLA 전환의 method axis를 채웠는데 <em>safety axis는 여전히 비어 있어요</em>. 같은 날 등장한 <a href="https://arxiv.org/abs/2605.12710">Belief-Space Residual Risk</a>와 <a href="https://arxiv.org/abs/2605.12974">Distributionally Robust Safety Filtering</a>을 묶어 "VLA driving policy의 belief-conditioned residual risk"라는 첫 정량 프레임을 제시하면, 어제 보고드린 WAM survey의 evaluation column의 빈 칸을 정확히 메우는 1차 기여가 됩니다. 구체적으론 (1) MindVLA-U1을 backbone으로 두고 ego pose에 epistemic uncertainty를 inject, (2) Belief-Space Residual Risk의 framework로 long-tail scenario에서 risk profile 측정, (3) Distributionally Robust Safety Filter를 inference-time wrapper로 stack해 risk-bounded variant 만들기. WOD-E2E의 RFS 곡선은 평균 reward만 보여주는데, residual risk 프레임은 분포 tail을 직접 측정할 수 있어요. 다음 NeurIPS·ICLR·ICRA 한 사이클 분량의 main 후보로 충분합니다.</p>
+</div>
+
+<!-- ============ 버킷 현황 ============ -->
+<h2>📊 오늘의 버킷 현황</h2>
+
+<div class="bucket-line">[Gen] 33 · [FM] 29 · [Eff] 22 · [Safety] 22 · [RoboL] 21 · [AD] 20 · [3D] 15 · [Manip] 13 · [Embodied] 7</div>
+
+<p>🔥 TOP3: <span class="hot">Generation (33 / pw 148 ⇡+76%)</span>, <span class="hot">Foundation Models (29 / pw 78 ⇡+86%)</span>, <span class="hot">Efficiency/Systems (22 / pw 59 ⇡+20%)</span> &nbsp;|&nbsp; ❄️ BOTTOM2: <span class="cold">Embodied AI (7 / pw 31 ⇡+138%)</span>, <span class="cold">Manipulation (13 / pw 48 ⇡+167%)</span></p>
+
+<p>※ 버킷 옆 ⇡% 는 pastweek 총편수 기준 7일 전(2026-05-07) 대비 델타. 9개 버킷 모두 두 자릿수 % 성장하는 흐름이 어제(05-13)에 이어 이틀째 유지 — 5월 중순 deadline 시즌(NeurIPS, ICRA late·CVPR camera-ready 후속)의 영향이 더 두꺼워지는 중. 양적으로 가장 큰 폭으로 부푼 건 Manipulation(+167%)과 Embodied AI(+138%)인데 오늘 신규는 각각 13편·7편으로 가장 적어요 — 즉 base가 작던 두 축에서 누적이 급격히 두꺼워지는 상태입니다. Robot Learning은 오늘 신규 21편으로 어제(35편)에서 줄었지만 pastweek 85편은 어제 72편에서 한 칸 더 올라 라인 응집은 가속 중이에요.</p>
+
+<!-- ============ 벤치마크 SOTA 추이 ============ -->
+<h2>📈 벤치마크 SOTA 추이 (pastweek 기준)</h2>
+
+<p>이번 주 pastweek에서 추적 벤치마크에 대해 명시적으로 신규 SOTA 또는 새 벤치마크 제안이 보고된 건 다음과 같습니다. 오늘 가장 중요한 건 <strong>WOD-E2E 두 차례 갱신과 human-driver baseline 초과</strong>입니다.</p>
+
+<table class="bench-table">
+<thead><tr><th>벤치마크</th><th>메트릭</th><th>이번주 최고/신규</th><th>지난주 최고</th><th>Δ</th><th>논문 링크</th></tr></thead>
+<tbody>
+<tr>
+  <td>WOD-E2E (Waymo Open Dataset E2E)</td>
+  <td>Rater Feedback Score (RFS)</td>
+  <td><strong>8.20</strong> (MindVLA-U1, 2 diffusion steps, 16 FPS)</td>
+  <td>RAP ~8.5 (BoN), human GT 8.13</td>
+  <td>human baseline 첫 초과</td>
+  <td><a href="https://arxiv.org/abs/2605.12624">MindVLA-U1</a></td>
+</tr>
+<tr>
+  <td>WOD-E2E (Waymo Open Dataset E2E)</td>
+  <td>RFS @ best-of-128</td>
+  <td><strong>9.14</strong> (Driving Intents Amplify, multi-intent GRPO)</td>
+  <td>RAP 8.5 / human 8.13</td>
+  <td>+0.64 vs RAP, +1.01 vs human</td>
+  <td><a href="https://arxiv.org/abs/2605.12625">Driving Intents Amplify</a></td>
+</tr>
+<tr>
+  <td>AssemblyBench</td>
+  <td>Physics-aware 6-DoF industrial assembly (multimodal instruction)</td>
+  <td>신규 벤치마크 — 복합 산업 부품 assembly task</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.12845">AssemblyBench</a></td>
+</tr>
+<tr>
+  <td>PanoWorld</td>
+  <td>360° 파노라마 spatial supersensing (8-task MLLM eval)</td>
+  <td>신규 벤치마크 — narrow-FoV perspective paradigm 한계 정조준</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.13169">PanoWorld</a></td>
+</tr>
+<tr>
+  <td>TouchAnything</td>
+  <td>egocentric video → bimanual tactile estimation</td>
+  <td>신규 large-scale tactile-from-video 데이터셋</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.13083">TouchAnything</a></td>
+</tr>
+<tr>
+  <td>Ego2World</td>
+  <td>belief-state planning over cooking world</td>
+  <td>신규 — egocentric 비디오를 executable world로 컴파일</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.13335">Ego2World</a></td>
+</tr>
+<tr>
+  <td>MMCL-Bench</td>
+  <td>multimodal context learning (rules + procedures + evidence)</td>
+  <td>신규 벤치마크 — 시각 또는 mixed-modality 교습 콘텍스트에서 task-local rule 학습</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.12703">MMCL-Bench</a></td>
+</tr>
+<tr>
+  <td>Visual Aesthetic Benchmark</td>
+  <td>frontier MLLM의 미적 판단 일관성</td>
+  <td>신규 벤치마크</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.12684">Visual Aesthetic Benchmark</a></td>
+</tr>
+<tr>
+  <td>KamonBench</td>
+  <td>grammar 기반 compositional factor recovery (VLM)</td>
+  <td>신규 — 일본 가문문장(crest)을 시험 도구로 한 compositional eval</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.13322">KamonBench</a></td>
+</tr>
+<tr>
+  <td>Edit-Compass / EditReward-Compass</td>
+  <td>unified image editing & reward modeling eval</td>
+  <td>신규 — instruction-editing fidelity + reward model faithfulness 통합</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.13062">Edit-Compass</a></td>
+</tr>
+<tr>
+  <td>ImageAttributionBench</td>
+  <td>generalizable synthetic image source attribution</td>
+  <td>신규 벤치마크</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.12967">ImageAttributionBench</a></td>
+</tr>
+<tr>
+  <td>CiteVQA</td>
+  <td>Doc-VQA의 evidence attribution (final answer + supporting evidence)</td>
+  <td>신규 벤치마크 — Doc-VQA 평가의 evidence 공백 보완</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.12882">CiteVQA</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>이번 주 핵심은 <strong>WOD-E2E의 두 차례 갱신과 human-driver baseline의 첫 초과</strong>입니다. RFS는 Waymo가 human rater 기반으로 정의한 closed-loop driving 평가 메트릭인데, MindVLA-U1이 8.20 RFS로 human GT 8.13을 처음 넘고, Driving Intents Amplify가 best-of-128에서 9.14로 한 칸 더 갱신했어요. 다만 "best-of-128" 라는 강한 sampling budget framing이 single-shot 평가와 다른 setting이라는 점은 risk 필터에서 짚어둡니다. 어제(05-13)에 이어 새 벤치마크 제안이 압도적으로 두꺼운 한 주가 이어지고 있어요 — community-wide 자기점검 분위기 유지 중.</p>
+
+<!-- ============ 크로스오버 페어 ============ -->
+<h2>🔀 크로스오버 페어</h2>
+
+<div class="crossover">
+<h3>① "Long-context everything": CV 이해 vs CV 생성에서의 같은 문제</h3>
+<p>왼쪽엔 <a href="https://arxiv.org/abs/2605.13831">Training Long-Context VLMs Effectively with Generalization Beyond 128K</a> <span class="badge badge-cv">CV</span> — long-document understanding · video analysis · multi-image scene reasoning을 위한 long-context understanding 라인의 native scaling 처방. 다른 한쪽엔 <a href="https://arxiv.org/abs/2605.13111">Pyramid Forcing: Head-Aware Pyramid KV Cache Policy for High-Quality Long Video Generation</a> <span class="badge badge-cv">CV</span> — autoregressive long-video generation의 accumulated error를 head-aware pyramid KV cache로 풀어요. 두 논문이 같은 날에 같은 framing("KV cache를 어떻게 truncate·structure할 것인가") 으로 understanding과 generation 양쪽에서 떨어졌는데, 한쪽은 perception의 context window를 늘리고 한쪽은 generation의 context window 안정성을 늘리는 mirror image예요. 다음 분기에 이 둘이 합쳐진 "long-context understanding + generation"의 unified KV cache architecture가 나올 가능성이 큽니다.</p>
+</div>
+
+<div class="crossover">
+<h3>② "Bimanual tactile 데이터 vs 방법": Egocentric video로부터의 tactile vs Coordinated bimanual control</h3>
+<p>왼쪽엔 <a href="https://arxiv.org/abs/2605.13083">TouchAnything</a> <span class="badge badge-ro">RO</span> — egocentric 인간 비디오에서 bimanual tactile estimation을 학습하는 dataset+framework. 데이터 측에서 "real-world tactile signal을 scale 가능하게 만들자"는 처방. 오른쪽엔 <a href="https://arxiv.org/abs/2605.13452">CUBic (Coordinated Unified Bimanual perception+Control)</a> <span class="badge badge-ro">RO</span> — single-arm visuomotor policy를 bimanual로 확장하는 unified framework. 한쪽은 데이터 인프라, 한쪽은 정책 방법론으로 같은 분야("bimanual manipulation을 scale 가능하게 만들기")를 양쪽에서 공략해요. 이 둘이 같은 lab에서 stack되면 "TouchAnything 데이터로 pre-train + CUBic framework로 control" 의 첫 end-to-end bimanual VLA 인프라가 만들어집니다.</p>
+</div>
+
+<!-- ============ Must-Read ============ -->
+<h2>🌟 오늘의 must-read</h2>
+
+<div class="must-read">
+<h3>MindVLA-U1: VLA Beats VA with Unified Streaming Architecture for Autonomous Driving</h3>
+<p><a href="https://arxiv.org/abs/2605.12624">arxiv:2605.12624</a> · Yuzhou Huang et al. <span class="badge badge-cvro">CV/RO</span></p>
+
+<p><strong>핵심 주장</strong>: E2E autonomous driving이 modular pipeline → Vision-to-Action(VA) unification으로 이미 옮겨갔다면, VLA(Vision-Language-Action)는 그 다음 자연스러운 진화. 핵심 framing은 "language-side intent를 control signal로 명시적으로 받아 continuous trajectory generation을 condition하자"는 것. 저자들은 streaming action diffusion에 classifier-free guidance(CFG)를 결합해 action diffusion이 single batch update 안에서 intent에 따라 modulate되도록 unified streaming architecture를 제안합니다. WOD-E2E long-tail benchmark에서 <strong>8.20 RFS</strong>로 experienced human driver의 GT RFS 8.13을 <em>처음으로 초과</em>(2 diffusion steps만으로), prior VA/VLA SOTA 대비 planning ADE에서도 large margin으로 우위, 그리고 16 FPS throughput으로 RAP-DINO의 18 FPS와 거의 비등 — 즉 "throughput 손해 없이 quality에서 큰 폭 우위"라는 매우 강력한 trade-off 표를 갖고 옵니다. 어제(05-13) DAWN이 깐 WAIM framework의 driving 도메인 첫 SOTA-갱신 instance — 분야 변곡점입니다.</p>
+
+<p><strong>방법의 핵심</strong>: 의사코드로 표현하면, MindVLA-U1은 <code>a_{1:H} ~ ε_θ(noise; vision, instruction_intent)</code> 형태의 action diffusion에서 CFG term이 intent를 control signal로 명시 modulate. unified streaming의 핵심은 (1) vision · language · action을 단일 token stream으로 통합해 separate cascading branches를 없애고, (2) action diffusion step을 streaming inference의 thin layer로 두어 throughput을 VA-class로 유지하며, (3) intent CFG가 mode collapse(continuous-action policy가 한 demonstrated maneuver 주위에 cluster되는 현상)를 mode separation으로 깬다는 점이에요. "VLA beats VA" framing은 단순히 architecture 비교가 아니라 "language intent를 control signal로 받는 것이 RFS 같은 closed-loop quality metric에서 fundamental 우위를 가진다"는 분야적 주장입니다.</p>
+
+<table>
+<thead><tr><th>비교 축</th><th>VA (이전)</th><th>VLA (MindVLA-U1)</th></tr></thead>
+<tbody>
+<tr><td>입력</td><td>vision only</td><td>vision + language intent</td></tr>
+<tr><td>action 생성</td><td>direct regression / single-mode</td><td>action diffusion w/ intent CFG</td></tr>
+<tr><td>WOD-E2E RFS</td><td>RAP-DINO ~8.0대, human GT 8.13</td><td><strong>8.20</strong> (human baseline 첫 초과)</td></tr>
+<tr><td>throughput</td><td>RAP-DINO 18 FPS</td><td>16 FPS (2 diffusion steps)</td></tr>
+<tr><td>mode collapse</td><td>single demonstrated mode에 cluster</td><td>intent CFG로 mode separation</td></tr>
+</tbody>
+</table>
+
+<p><strong>약점·한계</strong>: 첫째, WOD-E2E는 Waymo human rater의 RFS scoring에 의존하는 evaluation으로 closed-loop simulator 평가와는 다른 setting — "human을 초과했다"는 framing이 실세계 driving 안전성으로 직접 transfer되는지는 추가 검증 필요. 둘째, 2 diffusion steps만으로 SOTA를 찍는 게 매우 인상적이지만 step 수에 대한 sensitivity가 abstract만으론 보이지 않음 — step을 더 줄이면 어디서 깨지는지, 더 늘리면 RFS가 어떻게 변하는지가 본문 핵심 ablation. 셋째, 16 FPS는 streaming inference에 충분하지만 RAP-DINO의 18 FPS 대비 ~10% throughput 손실은 long-tail safety-critical scenario에서는 무시할 수 없는 양일 수 있어요. 넷째, "VLA beats VA"라는 강한 framing이 일반화 — driving 도메인 특수 가정(intent가 maneuver level에서 잘 정의됨)에 강하게 의존할 가능성이 있고, manipulation·navigation 같은 도메인에서 같은 우위가 재현될지는 future work. 다섯째, intent CFG의 guidance strength가 long-tail scenario에서 hallucination을 일으킬 risk(language intent가 vision evidence와 모순일 때 어느 쪽을 따르는가)에 대한 ablation이 본문에 충분한지 확인 필요.</p>
+
+<p><strong>우리 랩 파이프라인에의 1차 영향</strong>: 위 추천주제 #3과 직결. MindVLA-U1을 backbone으로 둔 채 우리 lab의 belief-state safety evaluation framework(<a href="https://arxiv.org/abs/2605.12710">Belief-Space Residual Risk</a> + <a href="https://arxiv.org/abs/2605.12974">Distributionally Robust Safety Filter</a>)를 inference-time wrapper로 stack하면, "WOD-E2E human baseline을 넘은 VLA driving policy의 belief-conditioned residual risk"라는 첫 정량 프레임이 만들어져요. 어제 추천드린 WAM survey의 evaluation column 공백 채우기와 직접 연결되고, 다음 NeurIPS/ICRA 사이클 main 후보. 단기적으론 MindVLA-U1의 공개 checkpoint 또는 re-implementation을 우리 driving simulator(CARLA·nuScenes minivariant)에 띄우고 RFS 대신 collision rate · lane adherence · intervention rate 3축으로 cross-evaluate하는 게 첫 단계입니다.</p>
+</div>
+
+<div class="must-read">
+<h3>BlockVLA: Accelerating Autoregressive VLA via Block Diffusion Finetuning</h3>
+<p><a href="https://arxiv.org/abs/2605.13382">arxiv:2605.13382</a> · Ruiheng Wang et al. <span class="badge badge-ro">RO</span></p>
+
+<p><strong>핵심 주장</strong>: 어제 보고드린 "VLA inference engine" 라인이 thin-layer intervention(A3, GridS, Premover 등)으로 막 형성된 sub-area라면, BlockVLA는 그 라인이 paradigm-level로 한 칸 들어간 결정적 사례. AR(autoregressive) VLA가 token-by-token sequential decoding 때문에 inference latency가 본질적으로 길다는 fundamental 한계를, AR backbone을 그대로 두면서 fine-tuning 단계에서 <em>block diffusion</em>으로 decoding scheme을 바꿔 가속하는 게 핵심. AR 학습의 reasoning 강점을 유지한 채 inference만 block-parallel로 만들어내요. 같은 날 등장한 <a href="https://arxiv.org/abs/2605.13778">Realtime-VLA FLASH</a>가 정반대 paradigm(dVLA → speculative inference)에서 같은 latency-cut 목표를 추구한다는 점에서 두 논문은 mirror image — 분야가 "AR vs Diffusion 어느 paradigm이 deploy 친화적인가"라는 fundamental 질문을 직접 던지기 시작한 신호입니다.</p>
+
+<p><strong>방법의 핵심</strong>: AR-VLA의 action token sequence를 길이 B의 block으로 나누고, 각 block 안에서는 diffusion-style parallel decoding을 수행하되 block 간에는 AR ordering을 유지. 의사코드로는 <code>for b in 1..N_blocks: a_{(b-1)B+1 : bB} ~ ε_θ(noise; a_{1:(b-1)B}, vision, instruction)</code> 형태. 핵심은 (1) AR pretraining의 reasoning을 유지하면서 (2) block 내 sequential cost를 diffusion parallel로 cut, (3) block 경계에서 AR consistency를 유지해 long-horizon coherence를 잃지 않는다는 점이에요. fine-tuning 단계에서만 손을 대고 pretraining은 그대로 두는 게 BlockVLA의 매력 — 기존 OpenVLA·RDT·pi0 같은 강한 AR backbone에 plug-and-play로 적용 가능.</p>
+
+<table>
+<thead><tr><th>비교 축</th><th>AR-VLA (baseline)</th><th>Diffusion-VLA</th><th>BlockVLA (이 논문)</th></tr></thead>
+<tbody>
+<tr><td>decoding scheme</td><td>token-by-token sequential</td><td>full-sequence parallel diffusion</td><td>block-parallel + block-AR</td></tr>
+<tr><td>training cost</td><td>standard AR</td><td>diffusion from scratch</td><td>AR pretrain + block-diffusion FT</td></tr>
+<tr><td>reasoning 보존</td><td>강 (AR pretrain)</td><td>약 (parallel decoding이 long-horizon에서 inconsistent)</td><td>강 (AR pretrain 유지)</td></tr>
+<tr><td>inference latency</td><td>긴 (O(H))</td><td>중간 (O(diffusion steps))</td><td>짧음 (O(H/B + B-internal diffusion))</td></tr>
+</tbody>
+</table>
+
+<p><strong>약점·한계</strong>: 첫째, block size B의 선택이 trade-off의 핵심인데 task-dependent — long-horizon manipulation에서 B를 크게 잡으면 latency는 cut되지만 block 경계에서 coherence가 깨질 risk. abstract만으론 B-sensitivity가 명확하지 않아 본문에서 ablation 확인 필수. 둘째, AR pretrain의 reasoning을 "유지한다"는 주장이 매력적이지만 block-diffusion fine-tuning이 reasoning을 sub-block level로 fragment할 가능성 — long-horizon causal chain이 필요한 task(예: 다단계 manipulation)에서 retain 정도가 본문 확인 지점. 셋째, 정반대 paradigm Realtime-VLA FLASH와의 head-to-head가 같은 날 논문이라 본문에 들어가지 않았을 가능성 — 두 paradigm의 cross-comparison은 우리가 직접 해야 할 빈 자리(추천주제 #1). 넷째, "block diffusion finetuning"이 standard diffusion FT보다 안정적인지에 대한 training dynamics ablation이 본문에서 어떻게 다뤄지는지 핵심.</p>
+
+<p><strong>우리 랩 파이프라인에의 1차 영향</strong>: 위 추천주제 #1과 직결. 우리 lab의 manipulation pipeline에서 BlockVLA를 한 paradigm representative로, Realtime-VLA FLASH를 다른 paradigm representative로 두고 동일 backbone·동일 dataset에서 latency-success Pareto frontier를 측정하면, "VLA inference engine"의 paradigm-level 첫 정량 비교가 만들어집니다. 어제 추천드린 thin-layer intervention 6종 stackability 라인과 80% 인프라 공유 가능. 단기적으론 BlockVLA의 block size B를 LIBERO·RoboTwin 2.0 각 task에서 sweep해 task-specific optimal block size를 찾는 게 첫 단계입니다.</p>
+</div>
+
+<!-- ============ 리스크·한계 필터 ============ -->
+<h2>⚠️ 리스크·한계 필터</h2>
+
+<div class="paper">
+<p><strong><a href="https://arxiv.org/abs/2605.12624">MindVLA-U1 (WOD-E2E human-baseline 첫 초과)</a></strong> — <em>오버클레임 의심 + 평가 프로토콜 단일 의존</em>. "human을 처음 초과"라는 framing은 분명 강력하지만, WOD-E2E의 RFS는 Waymo의 human rater scoring 기반 평가로 closed-loop simulator(CARLA Leaderboard, nuPlan)와는 setting이 다르고, real-world safety로의 transfer 보장이 약해요. 또 2 diffusion steps에서 8.20 RFS인데 step 수 sensitivity가 abstract만으론 안 보임 — step을 줄이면 어디서 깨지는지가 본문 핵심 ablation. WOD-E2E 단일 벤치에서의 우위만으로 "VLA beats VA"를 일반 명제로 받아들이는 건 위험합니다. 우리 lab 도입 시엔 CARLA·nuPlan 등 다른 closed-loop 평가에서도 cross-verify가 필요해요.</p>
+</div>
+
+<div class="paper">
+<p><strong><a href="https://arxiv.org/abs/2605.12625">Driving Intents Amplify (best-of-128 9.14 RFS)</a></strong> — <em>sampling budget framing 의심 + cherry-pick 의심</em>. best-of-128 framing은 single-shot 평가와 본질적으로 다른 setting인데, "9.14 RFS"라는 숫자만 보면 single-shot SOTA처럼 읽힐 위험이 있어요. abstract의 held-out RFS 7.681→8.211 (multi-intent GRPO with single sample)이 사실 더 정직한 비교 수치인데, headline은 best-of-128로 잡은 게 framing 압력으로 보입니다. 또 single-intent baseline이 training 종료 시점에 degrade한다는 진단은 흥미롭지만, 그 degradation이 hyperparameter tuning 부족인지 정말 fundamental mode collapse인지 본문 확인 필수. best-of-128 inference cost가 deployment에서 허용되지 않는다는 점도 명확히 짚어야 — 실제 deploy에서는 RFS 8.211 ± δ가 fair 비교 수치.</p>
+</div>
+
+<div class="paper">
+<p><strong><a href="https://arxiv.org/abs/2605.13382">BlockVLA / Realtime-VLA FLASH (VLA paradigm 가속)</a></strong> — <em>ablation 부실 의심 + cross-paradigm 비교 부재</em>. 두 논문 모두 "AR 또는 Diffusion paradigm을 가속한다"는 강력한 framing이지만, 같은 날 mirror 논문이라 서로를 head-to-head로 비교하지 못해요. block size B sensitivity(BlockVLA), speculative draft model 선택(Realtime-VLA FLASH) 같은 핵심 hyperparameter ablation이 abstract만으론 안 보이고, 두 paradigm 중 어느 쪽이 throughput-success 곡선에서 우위인지가 분야 미해결 질문으로 남아요. 우리 lab 채택 시엔 같은 backbone에서 직접 ablation해야 안전 — 추천주제 #1의 동기가 정확히 여기.</p>
+</div>
+
+<div class="paper">
+<p><strong><a href="https://arxiv.org/abs/2605.13794">BlitzGS (city-scale 3DGS)</a></strong> — <em>cherry-pick 의심 + 비공개 baseline 가능성</em>. "city-scale at lightning speed" 라는 강력한 framing이지만 city-scale 3DGS의 prior baseline(CityGS, VastGaussian, GauU-Scene 등)과의 head-to-head가 abstract만으론 명확하지 않음. "active gaussian workload 감소"의 정량 효과(speedup·memory 절약)가 어느 환경에서 측정됐는지, 그리고 그 measurement가 distributed framework의 hardware 가정(GPU 수, network bandwidth)에 얼마나 의존하는지가 본문 핵심 확인 지점. 우리 lab 적용 시엔 우리 hardware setting에서 speedup이 재현되는지가 결정적입니다.</p>
+</div>
+
+<div class="paper">
+<p><strong>Generation 버킷의 "domain-specific high-fidelity restoration" 라인 다수 (HSI, HADAR, MedSR, OP4KSR 4K, fluence map 등)</strong> — 오늘 Generation 33편 중 절반 이상이 specific domain(hyperspectral, thermal infrared, radiotherapy, medical translation 등)의 high-fidelity restoration·synthesis인데, 이 라인 자체가 community-wide framing 변화를 보여주는 게 아니라 deadline 시즌의 application paper 누적일 가능성이 큽니다. 우리 lab의 ROI(manipulation/embodied/3D-Scene)와 직접 연결되는 부분은 적으니, 이 라인은 인사이트가 아닌 "도메인 응용 누적"으로 분류해두는 게 안전.</p>
+</div>
+
+<!-- ============ 논문별 요약 ============ -->
+<h2>📄 논문별 요약</h2>
+
+<!-- Robot Learning -->
+<h4 class="bucket">📦 Robot Learning <span class="count">· 13편 (전체 21편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12624"><strong>MindVLA-U1: VLA Beats VA with Unified Streaming Architecture for Autonomous Driving</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Yuzhou Huang 외</div>
+<p>오늘의 must-read #1. unified streaming architecture로 vision·language·action을 single token stream으로 묶고, action diffusion에 intent CFG를 결합해 WOD-E2E에서 <strong>8.20 RFS</strong>로 experienced human(8.13)을 처음 초과(2 diffusion steps · 16 FPS). 인사이트 #2의 핵심 evidence이자 어제 WAIM paradigm의 driving 도메인 첫 SOTA-갱신 instance.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13382"><strong>BlockVLA: Accelerating Autoregressive VLA via Block Diffusion Finetuning</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Ruiheng Wang 외</div>
+<p>오늘의 must-read #2. AR-VLA의 sequential decoding을 block-internal diffusion + block-level AR로 가속. AR pretrain의 reasoning을 유지한 채 inference latency만 cut하는 fine-tuning 단계 처방. 인사이트 #1의 AR 축 대표.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13778"><strong>Realtime-VLA FLASH: Speculative Inference Framework for Diffusion-based VLAs</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Jiahui Niu 외</div>
+<p>dVLA의 full-inference latency를 speculative inference로 cut. BlockVLA와 정반대 paradigm(diffusion → speculative)에서 같은 latency-cut 목표를 추구. 인사이트 #1의 Diffusion 축 대표이자 추천주제 #1의 핵심 비교 대상.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13548"><strong>AttenA+: Rectifying Action Inequality in Robotic Foundation Models</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Daojie Peng 외</div>
+<p>기존 robotic foundation model의 implicit assumption — "모든 action이 동등하게 informative하다"는 temporal homogeneity 가정 — 을 정면으로 깸. action inequality를 rectify하는 training-time 처방. VLA infrastructure 라인의 training 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13757"><strong>FrameSkip: Learning from Fewer but More Informative Frames in VLA Training</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Bin Yu 외</div>
+<p>dense teleoperation 데이터의 균일 frame sampling이 informative frame 가중치를 모두 동일하게 다루는 낭비라는 진단. informative frame만 골라 학습. VLA infrastructure 라인의 data 축 — TouchAnything의 데이터 인프라와 같은 결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13276"><strong>D-VLA: High-Concurrency Distributed Asynchronous RL Framework for VLA Models</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Yucheng Guo 외</div>
+<p>massive VLA에 RL을 적용할 때 사실 인프라가 가장 큰 병목 — high-concurrency distributed async RL framework로 해결. VLA infrastructure 라인의 training-system 축. embodied AI scaling의 hidden bottleneck을 정공으로.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13105"><strong>What to Ignore, What to React: Visually Robust RL Fine-Tuning of VLA Models</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Yuanfang Peng 외</div>
+<p>VLA RL fine-tuning이 deployment-time visual shift에 약하다는 진단. "ignore할 것 vs react할 것" 분리 학습. 인사이트 #1의 robustness 축이자 어제 DreamAvoid의 critical-phase dreaming과 같은 결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13403"><strong>RotVLA: Rotational Latent Action for Vision-Language-Action Model</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Qiwei Li 외</div>
+<p>Latent Action Model(LAM) 계열이 heterogeneous dataset에서 unified action space를 제공하지만 rotation을 latent에 어떻게 encode할지가 약점이었던 것을 rotational latent로 정조준. embodiment-agnostic VLA pretraining 라인의 정밀화.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13632"><strong>GTA-VLA: Guide, Think, Act — Interactive Embodied Reasoning in VLA Models</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Yiran Ling 외</div>
+<p>VLA에 spatial steerability를 부여해 user가 robot policy를 inference-time에 guide할 수 있게. interactive embodied reasoning framework로 — VLA가 단순 perception-to-action을 넘어 user-collaborative agent로 evolve하는 신호.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13083"><strong>TouchAnything: A Dataset and Framework for Bimanual Tactile Estimation from Egocentric Video</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Jianyi Zhou 외</div>
+<p>egocentric 인간 비디오로부터 bimanual tactile signal을 추정하는 첫 large-scale dataset+framework. tactile sensor 부착 없이 scale 가능하다는 게 결정적 — 크로스오버 #2의 데이터 축이자 어제 ForceFlow의 force-aware policy 라인의 데이터 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13452"><strong>CUBic: Coordinated Unified Bimanual Perception and Control Framework</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Xingyu Wang 외</div>
+<p>single-arm visuomotor policy를 bimanual로 확장하는 unified framework. perception과 control을 coordinated unified로 묶음. 크로스오버 #2의 방법 축 — TouchAnything의 데이터와 stack되면 첫 end-to-end bimanual VLA 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13117"><strong>SECOND-Grasp: Semantic Contact-guided Dexterous Grasping</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Han Yi Shin 외</div>
+<p>dexterous grasping의 oft-conflicted 두 목표 — physical stability와 semantic task guidance — 를 semantic contact 수준에서 synergize. 어제 ForceFlow가 force/torque에서 푼 것과 같은 결을 contact-semantics 축에서.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13428"><strong>SID: Sliding into Distribution for Robust Few-Demonstration Manipulation</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Yicheng Ma 외</div>
+<p>end-to-end visuomotor policy의 expressiveness와 robustness 사이 fundamental trade-off — few-shot에서 expressiveness가 OOD generalization을 갉아먹음 — 을 "분포 안으로 미끄러져 들어가기" framing으로 풀어요. few-shot manipulation 라인의 정공 처방.</p>
+</div>
+
+<!-- Autonomous Driving -->
+<h4 class="bucket">📦 Autonomous Driving <span class="count">· 8편 (전체 20편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12625"><strong>Driving Intents Amplify Planning-Oriented Reinforcement Learning</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Hengtong Lu 외</div>
+<p>continuous-action policy의 mode collapse(single demonstrated trajectory에 cluster되는 현상)를 multi-intent GRPO로 깨고 WOD-E2E에서 best-of-128 9.14 RFS · single-sample 8.211 RFS 갱신. 인사이트 #2의 핵심 evidence이자 risk filter에 "best-of-128 sampling budget" 명시.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12622"><strong>Action Emergence from Streaming Intent</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Pengfei Jing 외</div>
+<p>E2E AD의 "action emergence"(physically feasible · semantically appropriate · safety-compliant action을 임의 시점에 생성) 자체를 target capability로 정식 정의. evaluation axis를 새로 깐 라인. 인사이트 #2의 평가축 보강.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13646"><strong>Causality-Aware End-to-End Autonomous Driving via Ego-Centric Joint Scene Modeling</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Seokha Moon 외</div>
+<p>ego-centric joint scene modeling으로 prediction·planning의 causal substrate를 직접 깔아요. 어제 Causality-Aware framing이 한 칸 더 들어간 사례 — 인사이트 #2의 causal 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13591"><strong>Real2Sim: A Physics-driven and Editable Gaussian Splatting Framework for Autonomous Driving Scenes</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Kaicong Huang 외</div>
+<p>3DGS를 AD simulation으로 끌어와 physics-driven + editable로 만든 라인. 인사이트 #3의 3DGS "production phase" 축이자 AD ↔ 3D/Scene 크로스 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12710"><strong>Belief-Space Residual Risk for Automated Driving under Localization Uncertainty</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Nijinshan Karunainayagam 외</div>
+<p>기존 residual risk metric이 ego pose를 deterministic으로 가정하는 한계를 belief-space로 확장. 추천주제 #3의 safety axis 핵심 도구.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12974"><strong>Distributionally Robust Safety Under Arbitrary Uncertainties: A Safety Filtering Approach</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Daniel M. Cherenson 외</div>
+<p>nonlinear system의 distributional ambiguity 하 probabilistic safety filtering. backup-based switching framework. 추천주제 #3의 inference-time wrapper 후보.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12628"><strong>Multistep Belief Space Dynamics Learning For Risk-Aware Control</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Jason Gibson 외</div>
+<p>autonomous vehicle dynamic behavior와 human driving 사이의 gap을 belief-space multi-step dynamics로 메움. 추천주제 #3의 risk-aware control 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12743"><strong>Still Camouflage, Moving Illusion: View-Induced Trajectory Manipulation in Autonomous Driving</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Shuo Ju 외</div>
+<p>물리적 adversarial attack의 time-evolving perception error 라인의 새 형태 — static camouflage가 motion에 따라 illusion을 induce. AD safety의 long-tail adversarial threat 라인 보강.</p>
+</div>
+
+<!-- Foundation Models -->
+<h4 class="bucket">📦 Foundation Models <span class="count">· 11편 (전체 29편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12586"><strong>3D Primitives are a Spatial Language for VLMs</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Junze Liu 외</div>
+<p>VLM의 striking paradox 정조준 — 3D scene을 geometric primitive로 재구성하는 code는 잘 짜지만 3D spatial reasoning은 약하다는 gap. 3D primitive를 explicit spatial language로 사용해 VLM의 3D 추론을 강화. 어제 VideoSEAL의 evidence misalignment 라인과 같은 결 — VLM이 visual evidence를 internal로 갖되 그것을 reasoning에 끌어쓰지 못하는 fundamental gap.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13156"><strong>Dual-Pathway Circuits of Object Hallucination in Vision-Language Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Jiaxin Liu 외</div>
+<p>VLM hallucination을 두 pathway(visual-grounded vs language-prior)로 분해해 어디서 잘못된 preference가 emerge하는지 정밀 locate. 어제 Visual Attention Structure(Laplacian energy)와 같은 결로 VLM self-diagnosis 라인의 정밀도 가속.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12549"><strong>What Happens Before Decoding? Prefill Determines GUI Grounding in VLMs</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Jiaping Lin 외</div>
+<p>training-free GUI grounding의 iterative cropping 의존을 prefill 단계의 정보 만으로 푼다는 진단. VLM 내부의 prefill stage가 사실은 grounding을 거의 결정한다는 매우 흥미로운 관찰 — interpretability + efficiency 동시 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13080"><strong>Learning to See What You Need: Gaze Attention for MLLMs</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Junha Song 외</div>
+<p>MLLM이 image 전체를 uniform하게 처리하는 한계를 인간 gaze fixation을 모사한 selective attention으로 깸. 어제 GazeVLM의 active vision metacognition과 같은 결의 다른 instance.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13178"><strong>CLIP Tricks You: Training-free Token Pruning for Efficient Pixel Grounding in LVLMs</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Sangin Lee 외</div>
+<p>visual token 다수가 grounding에 사실 불필요하다는 진단. training-free token pruning으로 grounding LVLM을 효율화. Efficiency·FM 크로스 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12882"><strong>CiteVQA: Benchmarking Evidence Attribution for Trustworthy Document Intelligence</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Dongsheng Ma 외</div>
+<p>Doc-VQA 평가가 final answer만 보고 supporting evidence를 채점하지 않는 공백을 직접 메움. 어제 ABRA의 agentic radiology와 같은 "evidence를 직접 평가하라" 결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12684"><strong>Visual Aesthetic Benchmark: Can Frontier Models Judge Beauty?</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Yichen Feng 외</div>
+<p>MLLM의 aesthetic judgment 일관성을 측정하는 새 벤치. T2I evaluator로 MLLM이 점점 더 많이 deploy되는 상황에서 "MLLM의 미적 판단이 human consensus와 align되는가"가 critical 질문.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12571"><strong>VideoSEAL: Mitigating Evidence Misalignment in Agentic Long Video Understanding</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Chenhao Qiu 외</div>
+<p>long video QA의 sparse time-scattered evidence를 agentic decoupling으로 풀어요. answer authority와 evidence localization을 분리. 어제 evidence-grounded benchmark 라인의 long-video 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13062"><strong>Edit-Compass & EditReward-Compass: Unified Benchmark for Image Editing and Reward Modeling</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Xuehai Bai 외</div>
+<p>image editing model의 instruction following과 reward model의 faithfulness를 한 framework에서 통합 평가. 평가 인프라의 unification 라인 — 어제 OmniClean의 audit과 같은 community-wide 결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13831"><strong>Training Long-Context Vision-Language Models Effectively with Generalization Beyond 128K Context</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Zhaowei Wang 외</div>
+<p>long-context modeling을 LVLM core capability로 정식화 — long-document · video analysis · multi-image scene reasoning까지. 크로스오버 #1의 understanding 축 대표.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13775"><strong>RoboEvolve: Co-Evolving Planner-Simulator for Robotic Manipulation with Limited Data</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Harold Haodong Chen 외</div>
+<p>robotic manipulation data scarcity 본질을 정조준 — VLM planner와 VGM simulator를 co-evolve해 task-aligned interaction data를 self-bootstrap. FM·RoboL 크로스 라인.</p>
+</div>
+
+<!-- Generation -->
+<h4 class="bucket">📦 Generation <span class="count">· 13편 (전체 33편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13111"><strong>Pyramid Forcing: Head-Aware Pyramid KV Cache Policy for High-Quality Long Video Generation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Jiayu Chen 외</div>
+<p>autoregressive long video gen의 accumulated error 문제를 head-aware pyramid KV cache로 풀어요. 크로스오버 #1의 generation 축 대표 — long-context 라인이 understanding과 generation 양쪽에서 같이 두꺼워지는 신호.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13565"><strong>Qwen-Image-VAE-2.0 Technical Report</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Zekai Zhang 외</div>
+<p>어제 HiDream-O1·SenseNova-U1·L2P가 "VAE를 없애자"였다면, Qwen-Image-VAE-2.0은 "VAE를 정말 잘 만들자"는 정반대 처방. high-compression VAE의 reconstruction fidelity와 diffusability를 동시에 잡는 정공. 두 framing이 같은 주에 같이 굴러가는 게 흥미로움.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12964"><strong>Asymmetric Flow Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Hansheng Chen 외</div>
+<p>high-dim flow generation의 본질적 어려움 — velocity prediction이 데이터가 low-rank여도 high-dim noise를 모델링해야 한다는 점 — 을 asymmetric framing으로 풀어요. flow model 이론 라인의 정공 처방.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12957"><strong>GTA: Advancing Image-to-3D World Generation via Geometry Then Appearance Video Diffusion</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Hanxin Zhu 외</div>
+<p>image-to-3D world gen에서 geometry와 appearance를 순차로 처리하는 video diffusion. spatial intelligence·embodied intelligence 인프라 라인의 도구 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12938"><strong>CRePE: Curved Ray Expectation Positional Encoding for Unified Camera-Controlled Video Generation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Seonghyun Jin 외</div>
+<p>camera-conditioned video gen의 positional encoding이 camera motion·lens config·scene structure 변화에 깨지는 문제를 curved-ray expectation으로 풀어요. video gen의 controllability 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12939"><strong>DirectTryOn: One-Step Virtual Try-On via Straightened Conditional Transport</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Xianbing Sun 외</div>
+<p>multi-step VTON sampling cost 문제를 straightened conditional transport로 one-step에 reduce. one-step generation 라인이 OT 기반으로 옮겨가는 흐름의 또 다른 사례 — 어제 W-Flow와 같은 결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13010"><strong>Amortized Guidance for Image Inpainting with Pretrained Diffusion Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Yilie Huang 외</div>
+<p>task-specific finetuning과 per-mask adaptation 둘 다 비효율적이라는 문제를 amortized guidance로 풀어 pretrained diffusion 위에서 generic inpainting. inverse problem 라인의 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13027"><strong>PRISM: Prior Rectification and Uncertainty-Aware Structure Modeling for Diffusion-Based Text Image Super-Resolution</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Zihang Xu 외</div>
+<p>text-SR의 stroke topology error가 character identity를 깨뜨리는 fundamental 한계를 prior rectification + uncertainty modeling으로. domain-specific diffusion SR 라인 누적.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13724"><strong>AnyFlow: Any-Step Video Diffusion Model with On-Policy Flow Map Distillation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Yuchao Gu 외</div>
+<p>consistency distilled video model이 step 수 늘릴 때 오히려 quality가 degrade하는 fundamental 한계를 on-policy flow map distillation으로 풀어요. one-step 시대의 manyfold trade-off 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13182"><strong>DiffST: Spatiotemporal-Aware Diffusion for Real-World Space-Time Video Super-Resolution</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Zheng Chen 외</div>
+<p>VSR과 VFI를 individual 잘 푼 diffusion model이 coupled STVSR에서는 약하다는 진단. spatiotemporal-aware diffusion으로 통합 처방.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13223"><strong>Skill-Aligned Annotation for Reliable Evaluation in Text-to-Image Generation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Abdelrahman Eldesokey 외</div>
+<p>T2I 평가의 uniform annotation 관행이 model 간 미세한 차이를 측정 못한다는 진단. skill-aligned annotation으로 평가 인프라 보강 — 어제 EditCompass와 같은 결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12724"><strong>Inline Critic Steers Image Editing</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Weitai Kang 외</div>
+<p>instruction-based image editing의 heterogeneous difficulty(case별·region별)를 inline critic으로 region-wise 조절. editing refinement 라인의 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12826"><strong>FRAME: Forensic Routing and Adaptive Multi-path Evidence Fusion for Image Manipulation Detection</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Kaixiang Zhao 외</div>
+<p>generative AI 시대의 image manipulation detection을 forensic routing + multi-path evidence fusion으로. Safety·Generation 크로스 — 생성과 탐지의 무한 lap이 다시 한 칸.</p>
+</div>
+
+<!-- 3D/Scene -->
+<h4 class="bucket">📦 3D/Scene <span class="count">· 10편 (전체 15편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13073"><strong>HarmoGS: Robust 3D Gaussian Splatting in the Wild via Conflict-Aware Gradient Harmonization</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Yulei Kang 외</div>
+<p>in-the-wild 3DGS의 transient distractor와 illumination inconsistency를 image-level masking이 아니라 gradient-space harmonization으로 푼다는 게 결정적 framing. 인사이트 #3의 robustness 축 대표.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13093"><strong>RoSplat: Robust Feed-Forward Pixel-wise Gaussian Splatting for Varying Input Views and High-Resolution Rendering</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Hoang Chuong Nguyen 외</div>
+<p>generalizable feed-forward GS의 input view 수와 해상도 변동에 대한 robustness 정조준. 인사이트 #3의 generalization 축 — 추천주제 #2의 핵심 컴포넌트.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13794"><strong>BlitzGS: City-Scale Gaussian Splatting at Lightning Speed</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Zhongtao Wang 외</div>
+<p>city-scale GS reconstruction을 system·algorithm·representation 3-level에서 active gaussian workload를 줄이는 distributed framework로 풀어요. 인사이트 #3의 scale 축이자 risk filter에 baseline 명시도 짚어둠.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13465"><strong>Z-Order Transformer for Feed-Forward Gaussian Splatting</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Can Wang 외</div>
+<p>3DGS의 slow iterative optimization을 feed-forward로 가속하는 라인에서 Z-order space-filling 기반 transformer로 latency를 한 단계 더 깎음. 인사이트 #3의 efficiency 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12919"><strong>GuardMarkGS: Unified Ownership Tracing and Edit Deterrence for 3D Gaussian Splatting</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Utae Jeong 외</div>
+<p>3DGS asset의 ownership tracing(watermark)과 instruction-driven edit deterrence를 single optimization framework로 통합. 인사이트 #3의 protection 축 — production phase의 결정적 신호.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13600"><strong>Sparse Code Uplifting for Efficient 3D Language Gaussian Splatting</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Lovre Antonio Budimir 외</div>
+<p>3D Language GS의 high-dim language-aligned feature association을 sparse code uplifting으로 효율화. 인사이트 #3의 efficiency × language 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13152"><strong>EvObj: Evolving Object-centric Representations for 3D Instance Segmentation without Scene Supervision</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Jiahao Chen 외</div>
+<p>unsupervised 3D instance segmentation의 synthetic-real geometric domain gap을 evolving object-centric representation으로 bridge. 어제 OCH3R의 object-centric 라인과 같은 결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13293"><strong>Img2CADSeq: Image-to-CAD Generation via Sequence-Based Diffusion</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Shiyu Tan 외</div>
+<p>single-view image로부터 high-quality BRep CAD를 sequence-based diffusion으로 생성. industrial design pipeline용 generative model 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13741"><strong>LEXI-SG: Monocular 3D Scene Graph Mapping with Room-Guided Feed-Forward Reconstruction</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Christina Kassab 외</div>
+<p>scene graph가 robot navigation의 표준 representation으로 굳어지는 흐름에서 monocular(no-depth) 입력만으로 room-guided feed-forward 재구성. 3D/Scene ↔ Embodied AI 크로스 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13129"><strong>Rigel3D: Rig-aware Latents for Animation-Ready 3D Asset Generation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Nikitas Chatzis 외</div>
+<p>3D generative model의 output이 static asset이라는 한계를 정조준 — skeletal rig + joint hierarchy + skinning weight를 latent에 직접 encode. animation-ready 3D gen 라인 첫 응결.</p>
+</div>
+
+<!-- Manipulation -->
+<h4 class="bucket">📦 Manipulation <span class="count">· 6편 (전체 13편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12845"><strong>AssemblyBench: Physics-Aware Assembly of Complex Industrial Objects</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Danrui Li 외</div>
+<p>multimodal instruction + 3D component grounding + physics-plausible 6-DoF motion을 모두 묶은 산업용 assembly 벤치. 벤치마크 표에 신규 추가.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13815"><strong>OmniLiDAR: A Unified Diffusion Framework for Multi-Domain 3D LiDAR Generation</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Youquan Liu 외</div>
+<p>multi-domain LiDAR scene을 unified diffusion으로 생성 — sensor domain · capture condition · scene type까지 cover. AD·robotics simulation 인프라의 결정적 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12774"><strong>WildPose: A Unified Framework for Robust Pose Estimation in the Wild</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Jianhao Zheng 외</div>
+<p>dynamic environment의 camera pose estimation을 frozen MASt3R 3D-aware feature backbone + differentiable BA + motion mask detector로 unify. dynamic-aware SLAM 라인의 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13018"><strong>OCH3R: Object-Centric Holistic 3D Reconstruction</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Yi Du 외</div>
+<p>multi-stage pipeline(segment → reconstruct) 의존을 깨고 object-centric 3D recon을 holistic 단계로 통합. EvObj와 같은 결로 object-centric 3D 라인 응결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13151"><strong>GenCape: Structure-Inductive Generative Modeling for Category-Agnostic Pose Estimation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Jiyong Rao 외</div>
+<p>CAPE를 structure-inductive generative modeling으로 reframe — 어제 ECHO의 hierarchical memory와 같은 결로 structure를 inductive bias로 옮기는 흐름.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12654"><strong>COSMIC: Concurrent Optimization of Structure, Material, and Integrated Control for Robotic Systems</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Qinsong Guo 외</div>
+<p>robot의 structure·material·control을 분리 설계하는 관행 자체를 깨고 concurrent optimization. soft robot · bio-inspired robotics 인프라 라인.</p>
+</div>
+
+<!-- Efficiency/Systems -->
+<h4 class="bucket">📦 Efficiency/Systems <span class="count">· 8편 (전체 22편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12587"><strong>TrackCraft3R: Repurposing Video Diffusion Transformers for Dense 3D Tracking</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Jisu Nam 외</div>
+<p>video diffusion transformer를 dense 3D tracking으로 repurpose. 3D foundation model이 per-frame geometry는 잘 주는데 motion은 약하다는 진단의 정공 처방. Efficiency보다는 "model reuse" framing의 결정적 사례.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12954"><strong>AdaFocus: Adaptive Relevance-Diversity Sampling with Zero-Cache Look-back for Efficient Long Video Understanding</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Xiao Yang 외</div>
+<p>long video understanding의 one-shot dense encoding vs aggressive compression 양극단을 adaptive relevance-diversity sampling으로 풀어요. zero-cache look-back으로 memory도 cut. 크로스오버 #1의 understanding 효율 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13375"><strong>GRIP-VLM: Group-Relative Importance Pruning for Efficient Vision-Language Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Mingzhe Huang 외</div>
+<p>VLM의 visual token computational overhead를 group-relative importance로 pruning. 어제 PartialPrompt-style token pruning 라인의 정밀화.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13316"><strong>Test-time Sparsity for Extreme Fast Action Diffusion</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Kangye Ji 외</div>
+<p>action diffusion의 iterative denoising cost를 test-time sparsity로 cut. VLA inference engine 라인의 efficiency 축이자 BlockVLA/Realtime-VLA FLASH와 같은 결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13688"><strong>MedCore: Boundary-Preserving Medical Core Pruning for MedSAM</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Cenwei Zhang 외</div>
+<p>medical foundation model의 image encoder가 너무 커서 clinical setting에 안 맞는다는 진단. boundary-preserving core pruning으로 segmentation accuracy를 유지한 채 압축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13517"><strong>ArcVQ-VAE: Spherical Vector Quantization with ArcCosine Additive Margin</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Jaeyung Kim 외</div>
+<p>VQ-VAE 표현의 spherical structure를 arccosine additive margin으로 활용. Qwen-Image-VAE-2.0과 같은 결로 VAE design space의 정밀화.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13476"><strong>Neural Video Compression with Domain Transfer</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Tiange Zhang 외</div>
+<p>content-adaptive NVC의 domain gap 해소를 domain transfer로. NVC가 점점 generative model과 같은 결로 옮겨가는 흐름.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12506"><strong>Scale-Gest: Scalable Model-Space Synthesis and Runtime Selection for On-Device Gesture Detection</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Abdul Basit 외</div>
+<p>on-device ML의 tight constraint(real-time · energy · memory)에 맞춰 model-space에서 synthesis하고 runtime에 select. on-device ML deployment 라인의 정공.</p>
+</div>
+
+<!-- Embodied AI -->
+<h4 class="bucket">📦 Embodied AI <span class="count">· 7편 (전체 7편)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13169"><strong>PanoWorld: Towards Spatial Supersensing in 360° Panorama World</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Changpeng Wang 외</div>
+<p>MLLM의 spatial understanding이 narrow-FoV perspective image 가정에 갇혀 있다는 진단. 360° panorama로 paradigm을 옮기는 첫 large-scale 벤치. 벤치마크 표 신규.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13335"><strong>Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for Belief-State Planning</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Qinchuan Cheng 외</div>
+<p>egocentric video를 executable world로 compile해 partial-observation belief-state planning을 평가. 어제 3D-Belief의 belief inference 라인의 데이터 인프라 측면 확장.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13119"><strong>Towards Long-horizon Embodied Agents with Tool-Aligned Vision-Language-Action Models</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Zixing Lei 외</div>
+<p>VLA의 long-horizon 한계를 tool alignment로 풀어요 — closed-loop planning과 physical operation을 분리·orchestrate. 어제 Nautilus의 agentic robot infrastructure와 같은 결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13328"><strong>What Limits Vision-and-Language Navigation?</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Yunheng Wang 외</div>
+<p>VLN의 sim-to-real gap을 systematic decomposition으로 진단. 어제 PRISM의 capability-tier eval과 같은 결의 VLN 도메인 instance — agent evaluation paradigm shift.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13041"><strong>EgoForce: Robust Online Egocentric Motion Reconstruction via Diffusion Forcing</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Inwoo Hwang 외</div>
+<p>egocentric viewpoint의 self-observation 부족 문제를 diffusion forcing online으로 풀어요. AR/VR · embodied agent의 motion reconstruction 라인의 robustness 보강.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12735"><strong>The Unified Autonomy Stack: Toward a Blueprint for Generalizable Robot Autonomy</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Mihir Dharmadhikari 외</div>
+<p>aerial·ground robot morphology를 cross하는 system-level open-source autonomy stack. 어제 Nautilus의 agentic robot infrastructure와 같은 결의 "robot autonomy를 framework로 묶자" 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12897"><strong>DynoJEPP: Joint Estimation, Prediction and Planning in Dynamic Environments</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Mikolaj Kliniewski 외</div>
+<p>factor-graph 기반 estimation·prediction·planning을 joint로 묶음. 추천주제 #3의 belief-state framework와 같은 결의 robotics general purpose 응용.</p>
+</div>
+
+<!-- Safety/Alignment -->
+<h4 class="bucket">📦 Safety/Alignment <span class="count">· 7편 (전체 22편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13155"><strong>Pareto-Guided Optimal Transport for Multi-Reward Alignment</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Ying Ba 외</div>
+<p>T2I preference optimization이 multiple reward model에 동시 align할 때 발생하는 trade-off를 OT-based Pareto guidance로 풀어요. multi-reward alignment 라인의 정공 처방.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13395"><strong>Taming the Long Tail: Rebalancing Adversarial Training via Adaptive Perturbation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Lilin Zhang 외</div>
+<p>adversarial training의 long-tail class에 대한 약점을 adaptive perturbation rebalancing으로 풀어요. long-tail robustness 라인의 핵심 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13381"><strong>Backbone is All You Need: Assessing Vulnerabilities of Frozen Foundation Models in Synthetic Image Forensics</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Chiara Musso 외</div>
+<p>deepfake detection이 frozen ViT backbone에 의존하는 관행의 fundamental 취약성 진단. FRAME(Generation 버킷)과 mirror — 생성과 탐지의 race가 backbone level까지 내려옴.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13179"><strong>Does Engram Do Memory Retrieval in Autoregressive Image Generation?</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Jinghao Wang 외</div>
+<p>LLM에서 도입된 Engram(hash-keyed associative memory)이 image generation에서도 memory retrieval로 작동하는지 mechanistic하게 분석. interpretability 라인의 novel 시각.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13675"><strong>Characterizing Universal Object Representations Across Vision Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Florian P. Mahner 외</div>
+<p>여러 architecture · objective · dataset로 학습된 DNN이 similar visual representation으로 converge한다는 관찰의 underlying visual property를 characterize. representation universality 라인의 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.12561"><strong>Learning When to Act: Communication-Efficient RL via Run-Time Assurance</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Adam Haroon 외</div>
+<p>safe RL이 "what to do"만 묻던 관행을 "when to act"로 한 칸 옮겨요 — run-time assurance와 communication 동시 학습. safety + efficiency 양면을 묶은 결정적 framing.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.13525"><strong>Beyond VMAF: Towards Application-Specific Metrics for Teleoperation Video</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Ines Trautmannsheimer 외</div>
+<p>teleoperation video quality 평가가 VMAF 같은 generic metric으로는 부족하다는 진단. application-specific metric으로 — teleoperation 라인의 evaluation paradigm shift.</p>
+</div>
+
+<!-- 참고 링크 -->
+<h2>🔗 참고 링크</h2>
+<ul class="links">
+<li><a href="https://arxiv.org/list/cs.CV/new">arXiv cs.CV /new</a> · <a href="https://arxiv.org/list/cs.RO/new">arXiv cs.RO /new</a></li>
+<li><a href="https://arxiv.org/list/cs.CV/pastweek?skip=0&show=2000">arXiv cs.CV /pastweek</a> · <a href="https://arxiv.org/list/cs.RO/pastweek?skip=0&show=2000">arXiv cs.RO /pastweek</a></li>
+<li>이전 브리핑: <a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-13.html">2026-05-13 (수)</a> · <a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-12.html">2026-05-12 (화)</a> · <a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-11.html">2026-05-11 (월)</a></li>
+</ul>
+
+<a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/" class="home-btn home-btn-bottom">🏠 전체 목록으로</a>
+
+<footer>
+arXiv Daily Briefing · 2026-05-14 · ROI 9개 버킷 기반 자동 큐레이션 · 도구: cs.CV/RO fetcher + ROI 분류기 · 톤·평가는 박사과정 4년차 시점의 구어체 브리핑
+</footer>
+
+</div>
+</body>
+</html>
