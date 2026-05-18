@@ -1,0 +1,266 @@
+{
+  "date": "2026-05-18",
+  "buckets": {
+    "Manipulation": {
+      "total": 29,
+      "cv": 24,
+      "ro": 3,
+      "cvro": 2
+    },
+    "3D/Scene": {
+      "total": 71,
+      "cv": 58,
+      "ro": 9,
+      "cvro": 4
+    },
+    "Robot Learning": {
+      "total": 107,
+      "cv": 13,
+      "ro": 72,
+      "cvro": 22
+    },
+    "Autonomous Driving": {
+      "total": 35,
+      "cv": 8,
+      "ro": 20,
+      "cvro": 7
+    },
+    "Foundation Models": {
+      "total": 70,
+      "cv": 66,
+      "ro": 3,
+      "cvro": 1
+    },
+    "Generation": {
+      "total": 158,
+      "cv": 143,
+      "ro": 11,
+      "cvro": 4
+    },
+    "Efficiency/Systems": {
+      "total": 63,
+      "cv": 54,
+      "ro": 6,
+      "cvro": 3
+    },
+    "Embodied AI": {
+      "total": 29,
+      "cv": 3,
+      "ro": 20,
+      "cvro": 6
+    },
+    "Safety/Alignment": {
+      "total": 51,
+      "cv": 44,
+      "ro": 3,
+      "cvro": 4
+    }
+  },
+  "keywords_cv": [
+    [
+      "generation",
+      89
+    ],
+    [
+      "diffusion",
+      86
+    ],
+    [
+      "segmentation",
+      63
+    ],
+    [
+      "rl",
+      63
+    ],
+    [
+      "reasoning",
+      61
+    ],
+    [
+      "multimodal",
+      60
+    ],
+    [
+      "vision-language",
+      58
+    ],
+    [
+      "benchmark",
+      53
+    ],
+    [
+      "language model",
+      52
+    ],
+    [
+      "transformer",
+      48
+    ],
+    [
+      "robust",
+      35
+    ],
+    [
+      "attention",
+      33
+    ],
+    [
+      "agent",
+      32
+    ],
+    [
+      "medical",
+      31
+    ],
+    [
+      "splatting",
+      29
+    ],
+    [
+      "alignment",
+      27
+    ],
+    [
+      "gaussian splat",
+      27
+    ],
+    [
+      "vision-language model",
+      27
+    ],
+    [
+      "sparse",
+      26
+    ],
+    [
+      "token",
+      25
+    ],
+    [
+      "video generation",
+      24
+    ],
+    [
+      "vlm",
+      22
+    ],
+    [
+      "editing",
+      21
+    ],
+    [
+      "world model",
+      20
+    ],
+    [
+      "distillation",
+      18
+    ]
+  ],
+  "keywords_ro": [
+    [
+      "manipulation",
+      28
+    ],
+    [
+      "rl",
+      27
+    ],
+    [
+      "planning",
+      23
+    ],
+    [
+      "navigation",
+      23
+    ],
+    [
+      "vla",
+      22
+    ],
+    [
+      "reinforcement learning",
+      21
+    ],
+    [
+      "vision-language-action",
+      20
+    ],
+    [
+      "driving",
+      20
+    ],
+    [
+      "agent",
+      19
+    ],
+    [
+      "autonomous",
+      18
+    ],
+    [
+      "policy",
+      17
+    ],
+    [
+      "diffusion",
+      13
+    ],
+    [
+      "embodied",
+      12
+    ],
+    [
+      "vehicle",
+      10
+    ],
+    [
+      "flow",
+      10
+    ],
+    [
+      "perception",
+      8
+    ],
+    [
+      "uav",
+      8
+    ],
+    [
+      "world model",
+      8
+    ],
+    [
+      "simulation",
+      8
+    ],
+    [
+      "teleoperation",
+      7
+    ],
+    [
+      "aerial",
+      7
+    ],
+    [
+      "flow matching",
+      7
+    ],
+    [
+      "safety",
+      7
+    ],
+    [
+      "dexterous",
+      6
+    ],
+    [
+      "lidar",
+      6
+    ]
+  ],
+  "pastweek_total": 1306,
+  "cv_pastweek": 1061,
+  "ro_pastweek": 319
+}

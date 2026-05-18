@@ -1,0 +1,52 @@
+{
+  "date": "2026-05-18",
+  "insights": [
+    {
+      "title": "VLA의 'embodiment tax'가 정식 진단명으로 굳어지면서 architectural 처방(dual-stream)으로 옮겨갔다",
+      "claim": "UAM이 VLA fine-tuning이 VLM multimodal competence를 systematically erode하는 현상을 'embodiment tax'로 명명·정량화하고 biological two-stream organization 기반 dual-stream architecture로 처방. VLA-AD(distillation), DiLA(disentangled latent action), Health-Conditioned VLA(conditioning 축 확장)가 같은 결로 응결. 지난주 VLA inference engine paradigm 분기의 자연스러운 다음 sub-question('VLA를 가속한다 치고 무엇을 잃는가')에 대한 첫 응결.",
+      "papers": [
+        "https://arxiv.org/abs/2605.15735",
+        "https://arxiv.org/abs/2605.16241",
+        "https://arxiv.org/abs/2605.15725",
+        "https://arxiv.org/abs/2605.16056"
+      ]
+    },
+    {
+      "title": "World Model이 'imagined future를 어떻게 쓸까'에서 'execution이 돌려준 신호로 어떻게 적응할까'로 한 칸 더 들어갔다",
+      "claim": "Feedback World Model이 execution-time 실제 next-state observation을 mismatch signal로 활용해 diffusion policy의 OOD adaptation 정공. Mind Dreamer(historical tethering 해소·active latent intervention), DiLA(latent action abstraction/fidelity trade-off 해소), Entity-Centric WM(interaction-aware masking으로 causal dynamics), Latent Video Prediction(world model 평가 robustness 5축 확장)이 같은 결로 응결. 지난주 'imagined future 검증' 라인의 다음 칸.",
+      "papers": [
+        "https://arxiv.org/abs/2605.15705",
+        "https://arxiv.org/abs/2605.16030",
+        "https://arxiv.org/abs/2605.15725",
+        "https://arxiv.org/abs/2605.15466",
+        "https://arxiv.org/abs/2605.15618"
+      ]
+    },
+    {
+      "title": "3DGS production phase가 'in-the-wild deployment kit'에서 'on-device 압축 + physics-aware 4D + editable+robust'로 한 칸 더 응축",
+      "claim": "Fisher-Guided VGGT Quantization(task-aware PTQ), GHOST(geometry-hierarchical token eviction), EndoGSim(physics-aware 4D dynamic GS), Learn2Splat(learned optimizer), Robust Prior-Guided Editable GS(robust editing), Invaria(scale/density invariance) 6편이 production phase 안에서 sub-area를 만드는 중. 평가축이 PSNR에서 on-device·physics·editable+robust로 응축.",
+      "papers": [
+        "https://arxiv.org/abs/2605.15828",
+        "https://arxiv.org/abs/2605.15852",
+        "https://arxiv.org/abs/2605.16022",
+        "https://arxiv.org/abs/2605.15760",
+        "https://arxiv.org/abs/2605.16065",
+        "https://arxiv.org/abs/2605.15923"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "UAM dual-stream + Feedback WM + DiLA를 묶어 'VLA pretraining 보존 + 실행-시 WM 적응'의 closed-loop training framework",
+      "claim": "UAM dual-stream으로 multimodal competence 보존 → DiLA disentangled latent action으로 abstraction/fidelity trade-off 해소 → Feedback WM mismatch signal로 OOD adaptation, 3-stage closed-loop. OpenVLA/pi0/RDT backbone에 plug-in해 LIBERO·RoboTwin 2.0에서 embodiment tax 정량화 + LAM ablation + OOD success rate 비교. 지난주 BlockVLA vs Realtime-VLA FLASH 라인과 인프라 60% 공유 가능. NeurIPS/ICLR/ICRA main 후보."
+    },
+    {
+      "title": "WeatherOcc3D + Health-Conditioned VLA의 modality/health-aware adaptive control wrapper",
+      "claim": "WeatherOcc3D의 adaptive sensor re-weighting(환경 변화)과 Health-Conditioned VLA의 robot state encoder(본체 상태)를 합쳐 fault-tolerant VLA deployment framework. AGC adaptive geodesic correction을 inference-time wrapper로, single-robot compromise propagation을 평가축으로. 인사이트 #1의 conditioning 축 확장 + 인사이트 #2의 deployment adaptation을 잇는 라인."
+    },
+    {
+      "title": "HoloMotion-1 video-reconstructed motion scaling을 manipulation·dexterous로 가져와 'video-only humanoid manipulation foundation'",
+      "claim": "HoloMotion-1의 video-motion scaling과 PhysBrain 1.0의 egocentric→physical commonsense QA 변환 framework를 dexterous manipulation으로 확장. Ego4D 손 부분/EpicKitchens에 재적용해 dexterous motion corpus 구축, DiLA disentangled latent로 controllable latent 변환, conformal prediction wrapper로 safety 인증. 2026-05-04 추천주제 ③(⏳ 관찰 중)을 ◐ → ✅로 끌어올리는 시퀀스."
+    }
+  ]
+}

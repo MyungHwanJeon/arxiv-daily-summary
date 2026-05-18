@@ -1,0 +1,47 @@
+{
+  "date": "2026-05-18",
+  "results": [
+    {
+      "benchmark": "DexJoCo",
+      "metric": "Task-oriented dexterous manipulation (MuJoCo)",
+      "value": "new benchmark — dexterous-hand-specific task suite",
+      "paper": "https://arxiv.org/abs/2605.16257"
+    },
+    {
+      "benchmark": "Minerva-Ego",
+      "metric": "Egocentric video reasoning (intermediate-step + visual eval)",
+      "value": "new benchmark — beyond output-only egocentric QA",
+      "paper": "https://arxiv.org/abs/2605.15342"
+    },
+    {
+      "benchmark": "VS-Bench (VisualSwap)",
+      "metric": "VLM real visual re-examination (image-swap probing)",
+      "value": "new benchmark — 800 image pairs from MathVista etc.",
+      "paper": "https://arxiv.org/abs/2605.15864"
+    },
+    {
+      "benchmark": "MorphoHELM",
+      "metric": "Microscopy-based morphology representation evaluation",
+      "value": "new benchmark — drug-screening representation unification",
+      "paper": "https://arxiv.org/abs/2605.15383"
+    },
+    {
+      "benchmark": "ELDOR",
+      "metric": "Amazon illegal-mining UAV remote sensing detection",
+      "value": "new large-scale UAV benchmark",
+      "paper": "https://arxiv.org/abs/2605.15397"
+    },
+    {
+      "benchmark": "MI-CXR",
+      "metric": "Longitudinal multi-interval chest X-ray reasoning",
+      "value": "new benchmark — temporal reasoning over CXR series",
+      "paper": "https://arxiv.org/abs/2605.15574"
+    },
+    {
+      "benchmark": "VCG-Bench",
+      "metric": "Visual-centric structured generation + editing (unified)",
+      "value": "new unified benchmark",
+      "paper": "https://arxiv.org/abs/2605.15677"
+    }
+  ]
+}

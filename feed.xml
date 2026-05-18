@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Thu, 14 May 2026 12:24:24 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 15:30:58 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-18 (월)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-18.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-18.html</guid>
+      <pubDate>Mon, 18 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[지난주 목요일(05-14)에 보고드린 "VLA inference engine paradigm 분기"와 "E2E driving이 VLA로 흡수"라는 두 변곡점이 일주일 사이 어떻게 굳어졌나 보면, 결정적으로 옮겨간 축은 Robot Learning 버킷입니다 — pastweek 51 → 107편으로 한 주 사이 +110% 폭증하면서, 절대 편수로도 Generation·Foundation Models에 이어 세 번째로 두꺼운 축이 됐어요. 이 폭증의 내부를 들여다보면 thin-layer VLA inference 가속 라인이 sub-area로 자리잡은 게 아니라 그 라인 자체가 pretraining preservation ( UAM dual-stream 의 "embodiment…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-14 (목)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-14.html</link>
