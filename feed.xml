@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 18 May 2026 15:30:58 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 12:26:18 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-19 (화)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-19.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-19.html</guid>
+      <pubDate>Tue, 19 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[어제(05-18) 보고드린 "VLA의 embodiment tax + World Model이 execution feedback으로 진화" 라인이 이번 주에도 살아있긴 한데, 오늘 신규 65편을 보면 결의 무게중심이 한 칸 더 옮겨갔어요. 7일 전(2026-05-12) pastweek 대비 보면 Manipulation 이 24→45편 +88%로 가장 큰 폭으로 늘었고, Robot Learning 은 51→91편 +78%로 두 번째, 3D/Scene 은 49→71편 +45%, Embodied AI 는 20→29편 +45%로 따라옵니다. 결정적인 건 폭증의 내용물이에요 — 어제는 "VLA를 어떻게 보존/조건화할까"라는 메타 질문이 응결됐는데, 오늘 신규는 그 한 칸 아래 "lo…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-18 (월)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-18.html</link>

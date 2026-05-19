@@ -1,0 +1,26 @@
+{
+  "date": "2026-05-19",
+  "results": [
+    {
+      "benchmark": "KaRMA",
+      "metric": "Kinematic Rolling Manipulation Ability (in-hand reorientation translation/orientation)",
+      "value": null,
+      "value_note": "신규 metric 제안 — joint limit·collision·rolling contact·antipodal force 동시 enforce, spherical test object의 reachable rolling region 정량화",
+      "paper": "https://arxiv.org/abs/2605.15548"
+    },
+    {
+      "benchmark": "Design-Anim Eval",
+      "metric": "4-axis automated (layout fidelity · motion correctness · temporal quality · content fidelity)",
+      "value": null,
+      "value_note": "신규 평가 framework — design video generation 표준",
+      "paper": "https://arxiv.org/abs/2605.16223"
+    },
+    {
+      "benchmark": "CLEVRER (validation full, n=75618)",
+      "metric": "4 sub-tasks (descriptive · explanatory · predictive · counterfactual)",
+      "value": "beats NS-DR symbolic oracle on all 4",
+      "value_note": "Event-Graph Substrate가 learned component 없이 RDF triple log만으로 NS-DR symbolic oracle을 능가",
+      "paper": "https://arxiv.org/abs/2605.15967"
+    }
+  ]
+}

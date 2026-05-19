@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>arXiv Daily Briefing — 2026-05-19</title>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:#f6f7f9;color:#1f2328;line-height:1.72;font-size:15px;padding:32px 16px;word-wrap:break-word;word-break:keep-all}
+.container{max-width:860px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);padding:40px 48px}
+h1{font-size:28px;margin:0 0 6px;font-weight:700;color:#0d1117;letter-spacing:-.01em}
+h2{font-size:21px;margin:40px 0 14px;padding-bottom:8px;border-bottom:2px solid #e5e7eb;color:#0d1117;font-weight:700}
+h3{font-size:17px;margin:22px 0 10px;color:#0d1117;font-weight:600}
+h4.bucket{margin:40px 0 16px;padding:10px 0 8px;border-top:3px solid #0d1117;border-bottom:1px solid #eaeef2;font-size:19px;font-weight:700;color:#0d1117}
+h4.bucket .count{font-size:13px;font-weight:400;color:#656d76;font-style:italic;margin-left:8px}
+p{margin:0 0 14px}
+a{color:#0969da;text-decoration:none}
+a:hover{text-decoration:underline}
+.meta{font-size:13px;color:#3b434d;padding:14px 18px;background:#f6f8fa;border-left:3px solid #0969da;border-radius:6px;margin:14px 0 28px}
+.meta div{margin:2px 0}
+.bucket-line{font-family:ui-monospace,SFMono-Regular,Consolas,Menlo,monospace;background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;padding:10px 14px;font-size:13px;color:#24292f;margin:10px 0;overflow-x:auto}
+.paper{padding:16px 0;border-top:1px solid #eaeef2}
+.paper:first-of-type{border-top:none}
+.paper-line1{margin-bottom:4px}
+.paper-line1 a{font-weight:600}
+.paper-authors{font-style:italic;color:#656d76;font-size:14px;margin:2px 0 10px}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:1px 8px;border-radius:10px;margin-left:6px;vertical-align:middle;font-family:ui-monospace,monospace;letter-spacing:.02em}
+.badge-cv{background:#ddf4ff;color:#0550ae;border:1px solid #54aeff}
+.badge-ro{background:#fff8c5;color:#7a4e00;border:1px solid #d4a72c}
+.badge-cvro{background:#ffe5d9;color:#9a3412;border:1px solid #f59e0b}
+.badge-code{background:#dafbe1;color:#1a7f37;border:1px solid #4ac26b}
+.badge-page{background:#e3f2fd;color:#0550ae;border:1px solid #80c2f9}
+.badge-hf{background:#fff5b1;color:#7a4e00;border:1px solid #e0c45a}
+.badge-nocode{background:#eaeef2;color:#656d76;border:1px solid #d0d7de}
+.badge-unknown{background:#f3f4f6;color:#9ca3af;border:1px solid #e0e3e8}
+.insight,.topic{background:#fafbfc;border:1px solid #eaeef2;border-radius:8px;padding:14px 18px;margin:12px 0}
+.insight h3,.topic h3{margin-top:0}
+blockquote{border-left:3px solid #d0d7de;margin:10px 0;padding:6px 14px;color:#656d76;background:#f6f8fa;border-radius:0 6px 6px 0;font-size:13.5px}
+.hot{font-weight:600;color:#b91c1c}
+.cold{font-weight:600;color:#0369a1}
+hr{border:none;border-top:1px solid #eaeef2;margin:28px 0}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid #eaeef2;font-size:12px;color:#656d76;text-align:center}
+ul.links{padding-left:20px}
+ul.links li{margin:4px 0}
+.home-btn{display:inline-block;padding:6px 14px;font-size:13px;font-weight:500;color:#0969da;background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;text-decoration:none;transition:background-color .12s ease,border-color .12s ease}
+.home-btn:hover{background:#eaeef2;border-color:#8b95a1;text-decoration:none}
+.home-btn-top{margin:0 0 18px}
+.home-btn-bottom{display:block;text-align:center;margin:18px 0 0}
+.crossover{background:#fafbfc;border:1px solid #eaeef2;border-radius:8px;padding:14px 18px;margin:14px 0}
+.crossover h3{margin-top:0}
+.must-read{background:#fff8e1;border:1px solid #f5c542;border-radius:8px;padding:16px 20px;margin:14px 0}
+.must-read h3{margin-top:0;color:#7a4e00}
+.must-read table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+.must-read th,.must-read td{padding:6px 10px;border-bottom:1px solid #eaeef2;text-align:left}
+.must-read th{background:#fdf2c8;font-weight:600}
+.bench-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0}
+.bench-table th,.bench-table td{padding:6px 10px;border-bottom:1px solid #eaeef2;text-align:left}
+.bench-table th{background:#f6f8fa;font-weight:600}
+@media (max-width:640px){.container{padding:24px 20px}h1{font-size:23px}h2{font-size:19px}body{padding:16px 8px}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/" class="home-btn home-btn-top">← 전체 목록으로</a>
+
+<h1>📄 arXiv Daily Briefing — 2026-05-19 (화)</h1>
+
+<div class="meta">
+<div><strong>시야:</strong> 주간 2026-05-12 ~ 2026-05-18 · 오늘 배치 2026-05-18(월) 공지분</div>
+<div><strong>소스:</strong> cs.CV/new + cs.RO/new (pastweek 포함 트렌드 분석)</div>
+<div><strong>주간 규모:</strong> cs.CV 1,061편 · cs.RO 319편 (deduped union 1,306편)</div>
+<div><strong>오늘 선별:</strong> 전체 신규 175편 중 ROI 매칭 155편 · 그 중 어제 미게재 fresh 65편을 중점 다룸 · 9개 버킷</div>
+</div>
+
+<!-- ============ 주간 동향 ============ -->
+<h2>🔭 주간 동향</h2>
+
+<p>어제(05-18) 보고드린 "VLA의 embodiment tax + World Model이 execution feedback으로 진화" 라인이 이번 주에도 살아있긴 한데, 오늘 신규 65편을 보면 결의 무게중심이 한 칸 더 옮겨갔어요. 7일 전(2026-05-12) pastweek 대비 보면 <strong>Manipulation</strong>이 24→45편 +88%로 가장 큰 폭으로 늘었고, <strong>Robot Learning</strong>은 51→91편 +78%로 두 번째, <strong>3D/Scene</strong>은 49→71편 +45%, <strong>Embodied AI</strong>는 20→29편 +45%로 따라옵니다. 결정적인 건 폭증의 내용물이에요 — 어제는 "VLA를 어떻게 보존/조건화할까"라는 메타 질문이 응결됐는데, 오늘 신규는 그 한 칸 아래 "low-level skill을 어떻게 structured prior로 grounded하게 만들까"로 결이 옮겨갔습니다. <a href="https://arxiv.org/abs/2605.15975">Bilevel Symbolic World Models</a>는 HL symbolic abstraction + LL imitation의 정공 결합, <a href="https://arxiv.org/abs/2605.15517">Terrain-Consistent Reference-Guided RL</a>는 terrain geometry로 reference trajectory를 SE(2) interface 안에서 modulate, <a href="https://arxiv.org/abs/2605.15548">KaRMA</a>는 in-hand reorientation의 kinematic-only metric으로 dexterity를 정량화. 세 편이 같은 결로 떨어지는데, 어제의 "policy 보존" 라인과 오늘의 "skill grounding" 라인이 다음 1–2주 안에 합류할 가능성이 큽니다.</p>
+
+<p>또 하나 주목할 만한 건 <strong>World Model의 "non-video 분기"</strong>가 오늘 처음 가시화됐다는 점이에요. 어제까지의 world model 논문은 죄다 video JEPA·diffusion-based variants였는데, 오늘 신규에는 <a href="https://arxiv.org/abs/2605.15733">Hippocampal-Entorhinal Inspired World Model</a>이 HPC-MEC circuit의 relational-structure 추출을 직접 architecture로 가져왔고, <a href="https://arxiv.org/abs/2605.15967">Deterministic Event-Graph Substrates</a>는 typed RDF triples 위에서 counterfactual을 정확히(exact, learned components 없이) 풀어 CLEVRER에서 NS-DR symbolic oracle을 넘었어요. 이게 단순 alternative가 아니라 "video pretraining-heavy world model이 풀지 못하는 inspectability·exact counterfactual·domain transfer" 결의 정공이라 결이 다릅니다. <a href="https://arxiv.org/abs/2605.15975">Bilevel Symbolic WM</a>까지 합치면 한 주 사이에 "symbolic·structural·biologically-grounded" 3편이 동시에 떨어진 셈이라, world model 라인이 video-only에서 갈라져 나오는 첫 신호로 봐야 할 것 같아요.</p>
+
+<p>한편 부상 중인 미니토픽은 <strong>AI 생성 이미지 진정성(AIGI authenticity) 라인</strong>입니다. 어제 BARRIER(bounded activation regions for info erasure)가 unlearning 도구를 내놨다면, 오늘은 <a href="https://arxiv.org/abs/2605.15398">3DEditSafe</a>가 3DGS editing pipeline에서 unsafe NSFW 생성을 multi-view-coherent하게 막는 정공, <a href="https://arxiv.org/abs/2605.16080">ReAlign</a>이 LLM 기반 reasoning과 non-LLM 기반 artifact 감지의 trade-off를 reasoning-aligned representation으로 정공, <a href="https://arxiv.org/abs/2605.16122">GenShield</a>가 detection과 artifact correction을 autoregressive closed-loop으로 통합했어요. 두 일 사이에 4편이 같은 결로 응결되는 건 우연이 아니고, "diffusion이 사진처럼 그릴 수 있게 됐으니 진위 검증·교정·편집 안전화가 한 stack으로 묶일 차례"라는 framing이 응결되는 중. Safety/Alignment 버킷(이번 주 41→51편 +24%)의 다음 sub-area가 이 라인일 가능성이 큽니다.</p>
+
+<blockquote>※ 위 델타는 7일 전(2026-05-12) pastweek 스냅샷 대비입니다. 평일(화요일) 실행이라 회고 루프는 다음 월요일에 다시 활성화돼요.</blockquote>
+
+<!-- ============ CV vs RO 대비 ============ -->
+<h2>📐 CV vs RO 대비</h2>
+
+<p>오늘 키워드 분포를 CV/RO로 나눠 보면, 어제(05-18) 짚었던 "agent 어휘 동시 침투" 패턴이 그대로 유지되면서 두 분야의 어휘 정렬이 한 칸 더 굳어졌어요. CV는 <em>diffusion(86) · segmentation(63) · rl(63) · reasoning(61) · multimodal(60) · vision-language(58) · benchmark(53) · efficient(51) · transformer(48) · world(45)</em>로 "생성·diffusion·reasoning" 삼각형 위에 <strong>rl(63)</strong>이 alignment 도구로 자리를 유지. RO는 <em>manipulation(28) · rl(27) · vision-language(26) · navigation(23) · vla(22) · reinforcement learning(21) · agent(19) · efficient(16) · world(16) · diffusion(13)</em>로 manipulation·rl·navigation 상단 트리오가 견고하고, <strong>navigation(23)</strong>이 어제보다 더 두꺼워졌어요. 오늘 신규에 humanoid navigation 라인(Terrain-Consistent RL, NavRL++)이 떨어진 것과 정확히 맞물립니다.</p>
+
+<ul>
+<li><strong>공통 hot 키워드</strong>: <em>rl</em>(CV 63 / RO 27), <em>vision-language</em>(CV 58 / RO 26), <em>diffusion</em>(CV 86 / RO 13), <em>world</em>(CV 45 / RO 16), <em>agent</em>(CV 32 / RO 19) — RL과 vision-language는 양쪽 동시 hot 축, world 어휘도 양쪽 동시 침투 중이지만 결은 갈라짐(아래).</li>
+<li><strong>CV에만</strong>: <em>generation</em>(89, RO 미진입), <em>segmentation</em>(63), <em>reasoning</em>(61), <em>multimodal</em>(60), <em>benchmark</em>(53) — 평가·생성·다중모달 추론은 여전히 CV 라인.</li>
+<li><strong>RO에만</strong>: <em>manipulation</em>(28, CV 거의 없음), <em>vla / vision-language-action</em>(22+20), <em>navigation</em>(23), <em>locomotion</em>(11), <em>embodied</em>(12) — 물리·행동·embodiment 어휘는 RO 전용.</li>
+<li><strong>같은 단어 다른 맥락</strong>:
+  <ul>
+    <li><em>world model</em> — CV에선 오늘 <a href="https://arxiv.org/abs/2605.15733">Hippocampal-Entorhinal</a>·<a href="https://arxiv.org/abs/2605.15967">Event-Graph Substrates</a>처럼 <em>structural·counterfactual reasoning</em>으로, RO에선 <a href="https://arxiv.org/abs/2605.15975">Bilevel Symbolic</a>·<a href="https://arxiv.org/abs/2605.15517">Reference-Guided RL</a>처럼 <em>planning을 위한 abstraction layer</em>로 쓰여요. CV는 "세계가 어떻게 작동하는지 이해"이고 RO는 "그 세계 위에서 어떻게 행동할지 계획" — 같은 어휘인데 한쪽은 understanding, 한쪽은 planning이라 결이 갈립니다.</li>
+    <li><em>navigation</em> — CV에선 <a href="https://arxiv.org/abs/2605.15519">DiffVAS</a>처럼 <em>visual active search</em>의 perception 측면으로, RO에선 <a href="https://arxiv.org/abs/2605.15559">NavRL++</a>·<a href="https://arxiv.org/abs/2605.15517">Terrain-Consistent RL</a>·<a href="https://arxiv.org/abs/2605.15782">Reactive Robot-Centric Safety</a>처럼 <em>sim-to-real RL + safety filter</em>의 control 측면으로 쓰여요. CV는 "어디를 봐야 하는지", RO는 "어떻게 안전하게 가는지" — perception/control 분업이 어휘에 그대로 드러납니다.</li>
+    <li><em>rl</em> — CV에선 <a href="https://arxiv.org/abs/2605.15855">Do Less Achieve More (diffusion RL fine-tuning)</a>·<a href="https://arxiv.org/abs/2605.15325">COPRA (RL-based parameter adaptation)</a>처럼 <em>generative model alignment 도구</em>로, RO에선 <a href="https://arxiv.org/abs/2605.16015">Adaptive Quadrotor RL</a>·<a href="https://arxiv.org/abs/2605.15517">Terrain RL</a>처럼 <em>physical control의 policy 학습</em>으로 갈라져요. 동일 어휘인데 한쪽은 reward shaping, 한쪽은 environment 모델링이 핵심이라 evaluation methodology부터 다릅니다.</li>
+  </ul>
+</li>
+</ul>
+
+<!-- ============ 인사이트 ============ -->
+<h2>💡 오늘의 인사이트</h2>
+
+<div class="insight">
+<h3>1. World Model이 video-pretrained 한 가족에서 갈라져 "symbolic·biological·event-graph" 비디오 외 분기가 등장</h3>
+<p>어제까지 world model 라인은 거의 전부 video JEPA·diffusion·latent video prediction 같은 비디오 데이터 기반이었는데, 오늘 신규에서 결이 갈라지는 신호가 정확히 동시에 3편 떨어졌어요. <a href="https://arxiv.org/abs/2605.15733">Hippocampal-Entorhinal Inspired WM</a>은 인간 뇌의 HPC-MEC circuit이 relational structure(MEC)와 episodic scenes(HPC)를 분리하는 organization을 직접 architecture로 가져와 dual-stream inverse + predictive model을 학습 — 어제 UAM의 dual-stream과 같은 결이지만 영역이 vision policy가 아니라 abstraction-relation으로 갈라진 게 결정적. <a href="https://arxiv.org/abs/2605.15967">Deterministic Event-Graph Substrates</a>는 더 극단적 정공으로, world state를 append-only RDF triple log로 정의해 counterfactual 질의를 exact하게 풀고 learned component 없이 도메인 간 transfer까지 가능 — CLEVRER 전체 검증셋(n=75,618)에서 NS-DR symbolic oracle을 4개 task 모두에서 능가한다는 게 놀라움. <a href="https://arxiv.org/abs/2605.15975">Bilevel Symbolic WM</a>은 HL symbolic abstraction 위에 LL imitation policy를 stack해서 long-horizon planning을 정공으로 풀어요. 셋이 공유하는 framing은 "video data로 학습한 implicit world model은 inspectable하지 않고 exact counterfactual을 못 한다"는 진단인데, 이 진단이 video-pretrained 라인의 메인스트림에 도전장을 내미는 첫 신호입니다. 다음 1–2분기 안에 "symbolic-augmented neural WM"이라는 별도 sub-area로 떨어져 나올 가능성이 크고, 우리 lab의 manipulation pipeline에서도 LL diffusion policy + HL symbolic plan stack을 시도해볼 timing이 정확히 맞물려요.</p>
+</div>
+
+<div class="insight">
+<h3>2. Humanoid/Mobile Robot의 RL 정책이 "도메인 무작위화"에서 "구조적 reference·terrain-grounded prior"로 이동</h3>
+<p>오늘 RO 신규에 humanoid·quadrotor·legged manipulator·navigation 정책 4–5편이 동시에 떨어졌는데, 공통 framing이 매우 명확합니다 — Domain Randomization(DR)의 conservative policy 한계를 buying하지 않고, 환경/물리 구조를 reference·prior로 직접 inject하는 방향이에요. <a href="https://arxiv.org/abs/2605.15517">Terrain-Consistent Reference-Guided RL</a>은 reference trajectory를 RL training loop 안에서 terrain geometry에 consistent하도록 modulate(footstep을 valid foothold에 project, swing-foot·CoM trajectory를 terrain에 맞춤)해서 standard navigation autonomy infrastructure와 호환되는 SE(2) velocity interface를 제공. <a href="https://arxiv.org/abs/2605.16015">Adaptive Outer-Loop Quadrotor</a>는 DR의 over-conservative 한계를 정면 비판하면서 instantaneous perturbation을 능동 인식·반응하는 adaptive control로 옮겨가요. <a href="https://arxiv.org/abs/2605.15559">NavRL++</a>는 RL framework design(input·action·reward)이 아니라 sim-to-real transfer 자체를 system-level로 disentangle한 첫 empirical study고, <a href="https://arxiv.org/abs/2605.15713">Legged Manipulator Pick-and-Place</a>는 hierarchical RL + explicit mass estimation으로 dynamic locomotion + arm control 조정 문제를 푼다. 결정적인 건 이 4편이 모두 "DR이 더 이상 free lunch가 아니다"는 정량 진단 위에 서 있다는 점 — sim-to-real 라인이 한 칸 더 들어가는 신호고, 우리 lab manipulation pipeline에도 reference/prior 측 처방이 다음 cycle의 일순위로 올라옵니다.</p>
+</div>
+
+<div class="insight">
+<h3>3. AIGI 진정성 라인이 "detection only"에서 "detection + correction + safety-edit"의 unified stack으로 응축</h3>
+<p>어제 BARRIER가 diffusion concept erasure를 bounded activation region으로 안정화했다면, 오늘은 그 결을 잇는 3편이 동시에 떨어졌어요. <a href="https://arxiv.org/abs/2605.16122">GenShield</a>는 가장 야심찬 framing으로, AIGI detection과 artifact correction을 autoregressive closed-loop으로 통합 — explainable detection이 어디가 artifact인지 알려주고, controllable correction이 그 위에서 realistic appearance를 복원해 detect→correct가 한 stack에서 닫힙니다. <a href="https://arxiv.org/abs/2605.16080">ReAlign</a>은 non-LLM-based(efficient artifact 감지)와 LLM-based(semantic reasoning) 양극단의 trade-off를 reasoning-aligned representation으로 정공으로 푸는데, 특히 "reasoning text가 detection 성능에 정말 기여하는가"라는 community-wide 의문을 정량 검증한 게 결정적이에요. <a href="https://arxiv.org/abs/2605.15398">3DEditSafe</a>는 라인을 3DGS editing pipeline까지 끌어와, unsafe prompt가 multi-view consistent NSFW로 propagate되는 fundamental 위험을 safety-regularized optimization으로 막는 정공 — 어제 인사이트 #3의 "3DGS editability+robustness" 라인과 안전 측에서 합류하는 결입니다. 3편이 한 일에 동시 응결되는 건 "diffusion이 사진 수준에 도달했으니 진위 검증·교정·편집 안전화가 같은 stack에서 동시에 풀려야 한다"는 framing이 커뮤니티에 합의된 신호. 다음 분기 Safety/Alignment 버킷의 메인 sub-area로 굳어질 가능성이 큽니다.</p>
+</div>
+
+<!-- ============ 추천 연구주제 ============ -->
+<h2>🔬 추천 연구주제</h2>
+
+<div class="topic">
+<h3>1. Bilevel Symbolic WM + Hippocampal-Entorhinal abstraction을 묶어 "Inspectable·Counterfactual·Long-horizon" manipulation framework</h3>
+<p>오늘 인사이트 #1의 3편을 한 stack으로 묶을 수 있어요. <a href="https://arxiv.org/abs/2605.15975">Bilevel Symbolic WM</a>의 HL symbolic abstraction을 frame으로 두고, <a href="https://arxiv.org/abs/2605.15733">HPC-MEC inspired WM</a>의 relational-structure encoder를 abstraction extractor로 stack, <a href="https://arxiv.org/abs/2605.15967">Event-Graph Substrates</a>의 RDF triple log를 inspectable state로 두면, "LL diffusion policy로 manipulation, HL symbolic plan으로 long-horizon, RDF triple로 counterfactual debug"가 한 framework에 동시에 들어옵니다. 구체적 다음 단계: (1) Bilevel SymbolicWM을 ManiSkill·LIBERO 위에 적용해 long-horizon success rate를 정량화, (2) HPC-MEC inverse model을 latent abstraction extractor로 plug-in해 task-agnostic relational representation 학습, (3) Event-Graph runtime을 deployment-time debugger로 stack해 failure case에 대한 exact counterfactual("if joint angle had been X, would task succeed?") 생성, (4) 어제 추천드린 "UAM + Feedback WM + DiLA" closed-loop stack과 결합 가능성 확인. ROI 높고, NeurIPS/ICRA 한 사이클의 main 후보. 비디오 데이터에 묶이지 않는 라인이라 우리 lab의 manipulation-domain-specific 데이터로도 자체 검증 가능한 게 강점입니다.</p>
+</div>
+
+<div class="topic">
+<h3>2. Terrain-Consistent Reference + Reactive CBF Safety + KaRMA를 묶어 "Structured-Prior Humanoid Locomotion+Manipulation" 통합 평가</h3>
+<p>인사이트 #2의 RO 정책 4편을 통합 평가 framework로 묶는 라인이에요. <a href="https://arxiv.org/abs/2605.15517">Terrain-Consistent Reference RL</a>의 SE(2) velocity interface 위에, <a href="https://arxiv.org/abs/2605.15782">Reactive Robot-Centric Safety CBF</a>의 onboard-LIDAR-driven safety filter를 stack해 navigation 안전성을 인증, <a href="https://arxiv.org/abs/2605.15548">KaRMA</a>의 kinematic-only dexterity metric으로 in-hand manipulation 능력을 정량화, <a href="https://arxiv.org/abs/2605.15713">Legged Manipulator HRL</a>의 explicit mass estimation 모듈을 mobile manipulation 평가에 통합. 구체적 단계: (1) humanoid platform(Unitree G1·H1, Boston Dynamics-style)에서 terrain-consistent RL의 SE(2) interface를 따라 navigation policy 학습, (2) CBF safety filter를 inference-time wrapper로 plug-in해 collision-free 보장, (3) arm payload별 KaRMA 점수와 manipulation success를 페어로 측정, (4) sim-to-real에서 어제의 Health-Conditioned VLA conditioning을 stack해 actuator degradation 시 graceful degradation 측정. 이 통합 평가 framework는 humanoid 전용 LIBERO 같은 자리를 만들 수 있고, 우리 lab도 navigation·manipulation 양 측 metric을 한 stack에서 비교 가능합니다. <a href="https://arxiv.org/abs/2605.16257">DexJoCo</a>(어제 새로 등장한 dexterous benchmark)와도 호환되게 설계하면 sub-area 통합 가능.</p>
+</div>
+
+<div class="topic">
+<h3>3. 3DEditSafe + GenShield + BARRIER를 결합한 "3D-Aware AIGI Authenticity Stack"</h3>
+<p>인사이트 #3의 3편 + 어제 BARRIER를 한 stack으로 묶으면 2D 이미지·3D scene·diffusion editing 전반의 AIGI 안전화 layer가 만들어져요. <a href="https://arxiv.org/abs/2605.16080">ReAlign</a>의 reasoning-aligned representation을 detection backbone으로, <a href="https://arxiv.org/abs/2605.16122">GenShield</a>의 autoregressive correction을 후처리 module로, <a href="https://arxiv.org/abs/2605.15398">3DEditSafe</a>의 safety-regularized optimization을 3DGS editing pipeline에 inject, BARRIER의 bounded activation region을 unlearning module로 stack. 구체적 단계: (1) 2D AIGI detection·correction은 ReAlign+GenShield로 검증, (2) 3DGS 자산(특히 우리 lab이 어제 짚었던 production phase 3D scene)에서 unsafe prompt 공격 시나리오 평가 — multi-view consistent NSFW가 어디까지 통과하는지, 3DEditSafe가 어떤 prompt category에서 막는지 ablation, (3) BARRIER unlearning을 3DGS pipeline에 lift하는 정공 라인을 우리가 메우는 미발견 빈자리(아직 3D unlearning 정공 paper가 없음), (4) 평가 framework로 GenShield의 unified detect+correct를 3DGS editing artifact에도 적용. 이 라인은 우리 lab의 manipulation pipeline과는 직접 결이 다르지만 3D/Scene 버킷의 production phase가 본격적으로 깊어지면서 안전 측 정공 슬롯이 비어 있어요 — "3DGS production phase의 다음 sub-area" 자리를 우리가 선점할 수 있는 timing입니다.</p>
+</div>
+
+<!-- ============ 버킷 현황 ============ -->
+<h2>📊 오늘의 버킷 현황</h2>
+
+<div class="bucket-line">[Gen] 37 · [FM] 25 · [RoboL] 24 · [3D] 18 · [Eff] 18 · [Safety] 15 · [AD] 8 · [Manip] 6 · [Embodied] 4</div>
+
+<p>🔥 TOP3: <span class="hot">Generation (37 / pw 158 ⇡+33%)</span>, <span class="hot">Foundation Models (25 / pw 70 ⇡+25%)</span>, <span class="hot">Robot Learning (24 / pw 91 ⇡+78%)</span> &nbsp;|&nbsp; ❄️ BOTTOM2: <span class="cold">Embodied AI (4 / pw 29 ⇡+45%)</span>, <span class="cold">Manipulation (6 / pw 45 ⇡+88%)</span></p>
+
+<p>※ 버킷 옆 ⇡% 는 pastweek 총편수 기준 7일 전(2026-05-12) 대비 델타. 가장 두드러진 한 주 변화는 <strong>Manipulation +88%</strong>·<strong>Robot Learning +78%</strong> 두 축인데 — 흥미로운 건 신규 편수(오늘 /new 기준)는 6편·24편으로 어제와 거의 같지만 pastweek 누적이 한 주 사이에 크게 두꺼워졌다는 점이에요. 즉 어제 짚었던 "VLA preservation·Feedback WM" 라인이 evidence 측면에서 가속 중이고, 오늘 신규(Bilevel SymbolicWM·Terrain-RL·KaRMA·NavRL++)가 그 위에 sub-area를 더 깔고 있는 모양새. 3D/Scene(+45%)·Embodied AI(+45%)도 한 주 사이 같이 두꺼워졌고, 가장 평탄한 건 Autonomous Driving(+9%)인데 이건 어제 짚었던 것처럼 driving 라인이 5월 둘째 주 instantiation 후 한 호흡 쉬어가는 패턴 그대로 유지. Generation은 +33%로 견고하지만 sub-area 측면에선 video editing·diffusion guidance 라인이 두꺼워지고 있어서 인사이트 응결은 한 호흡 느린 상태입니다.</p>
+
+<!-- ============ 벤치마크 SOTA 추이 ============ -->
+<h2>📈 벤치마크 SOTA 추이 (pastweek 기준)</h2>
+
+<p>오늘은 추적 벤치마크(ScanNet++·LIBERO·nuScenes 등)의 직접 SOTA 갱신은 없었고, <strong>새로운 평가 metric·framework 제안</strong> 라인이 두 편 떨어졌어요. 어제 DexJoCo·VS-Bench·Minerva-Ego 신규 추가에 이어 이번 주 evaluation 인프라가 계속 두꺼워지는 흐름입니다.</p>
+
+<table class="bench-table">
+<thead><tr><th>벤치마크/메트릭</th><th>도메인</th><th>이번주 보고</th><th>지난주 최고</th><th>Δ</th><th>논문 링크</th></tr></thead>
+<tbody>
+<tr>
+  <td>KaRMA</td>
+  <td>Kinematic dexterity metric for robotic hands</td>
+  <td>신규 metric — in-hand rolling reorientation의 kinematic-only 평가축</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.15548">KaRMA</a></td>
+</tr>
+<tr>
+  <td>Design-Anim Eval</td>
+  <td>Design video generation (layout fidelity · motion · temporal · content)</td>
+  <td>신규 4축 자동 평가 framework — design animation 도메인의 첫 표준</td>
+  <td>—</td>
+  <td>(신규)</td>
+  <td><a href="https://arxiv.org/abs/2605.16223">Evaluating Design Video Generation</a></td>
+</tr>
+<tr>
+  <td>CLEVRER (validation full)</td>
+  <td>Counterfactual reasoning · 4 sub-tasks</td>
+  <td>Event-Graph Substrate가 NS-DR symbolic oracle을 4개 task 모두에서 능가 (n=75,618)</td>
+  <td>NS-DR (symbolic oracle baseline)</td>
+  <td>+ (전 task)</td>
+  <td><a href="https://arxiv.org/abs/2605.15967">Event-Graph Substrates</a></td>
+</tr>
+<tr>
+  <td>WOD-E2E (지난주 추적 유지)</td>
+  <td>Rater Feedback Score (RFS)</td>
+  <td>이번 주 신규 보고 없음</td>
+  <td>8.20 (MindVLA-U1) · 9.14 (Driving Intents BoN)</td>
+  <td>±0</td>
+  <td>(이번 주 신규 없음)</td>
+</tr>
+</tbody>
+</table>
+
+<p>이번 주는 SOTA 숫자 갱신보다 <strong>"기존 평가 framework가 측정하지 못하는 차원을 표준 metric으로 정공화"</strong> 흐름이 계속됩니다. KaRMA는 traditional workspace·manipulability·grasp stability metric이 "in-hand reorientation 능력"을 직접 측정하지 못한다는 정공 진단에서 출발 — joint limit·collision·rolling contact·antipodal force 제약을 동시 enforce하면서 spherical test object의 reachable translation·reorientation을 정량화. dexterous 라인의 evaluation 인프라가 한 칸 두꺼워지는 신호고, 어제 DexJoCo와 짝지어 평가축이 빠르게 정립되는 중이에요. Event-Graph Substrate의 CLEVRER 성능은 더 결정적인데, learned component 없이 RDF triple substrate만으로 NS-DR symbolic oracle을 능가했다는 건 video-pretrained world model의 reasoning baseline에 도전장을 던진 셈. 이 결과가 다른 도메인(Habitat·ProcTHOR)으로 transfer되면 world model 라인 전반에 영향이 큽니다.</p>
+
+<!-- ============ 크로스오버 페어 ============ -->
+<h2>🔀 크로스오버 페어</h2>
+
+<div class="crossover">
+<h3>① "구조 prior로 RL을 grounded하게": CV의 hippocampal abstraction vs RO의 terrain-consistent reference</h3>
+<p>왼쪽엔 <a href="https://arxiv.org/abs/2605.15733">Hippocampal-Entorhinal Inspired World Model</a> <span class="badge badge-cv">CV</span> — 인간 뇌의 HPC-MEC circuit이 relational structure(MEC)와 episodic scenes(HPC)를 분리하는 organization을 직접 architecture로 가져와 inverse model + predictive model dual-stream으로 latent transition과 visual world model을 동시에 추론. 오른쪽엔 <a href="https://arxiv.org/abs/2605.15517">Terrain-Consistent Reference-Guided RL</a> <span class="badge badge-ro">RO</span> — humanoid locomotion RL의 reference trajectory를 terrain geometry에 consistent하도록 training loop 안에서 modulate(footstep을 valid foothold에 project, swing-foot·CoM trajectory를 terrain에 맞춤)해 standard navigation autonomy infrastructure와 호환되는 SE(2) interface 제공. 한쪽은 "abstraction을 어디서 가져올까"(neuroscience-inspired), 한쪽은 "abstraction을 어떻게 RL training에 inject할까"(terrain-grounded reference) — 같은 "구조 prior로 RL을 grounded하게" 문제를 정반대 방향에서 푸는 mirror image예요. 두 처방을 stack하면 "HPC-MEC inverse model로 relational abstraction 학습 → terrain-grounded reference trajectory로 그 abstraction을 control에 inject"가 가능하고, 추천주제 #1과 #2의 교차점이 됩니다.</p>
+</div>
+
+<div class="crossover">
+<h3>② "Generated content의 진위": CV 2D forgery detection vs CV 3D editing safety</h3>
+<p>왼쪽엔 <a href="https://arxiv.org/abs/2605.16080">ReAlign</a> <span class="badge badge-cv">CV</span> — 2D AI-generated image의 forgery detection에서 non-LLM(efficient artifact)와 LLM-based(semantic reasoning) 양극단의 trade-off를 reasoning-aligned representation으로 정공으로 통합. 오른쪽엔 <a href="https://arxiv.org/abs/2605.15398">3DEditSafe</a> <span class="badge badge-cv">CV</span> — 3DGS 기반 generative editing pipeline에서 unsafe prompt가 multi-view consistent NSFW로 propagate되는 위험을 safety-regularized optimization으로 막는 정공. 한쪽은 "이미 생성된 2D가 진짜인지 검증"이고, 한쪽은 "3D 생성 과정에서 unsafe가 만들어지지 않도록 사전 차단" — 같은 AIGI 진정성 문제를 detection(사후)과 prevention(사전) 양 방향에서 푸는 mirror image. 두 처방이 같은 lab에서 stack되면 "3D editing 중 prevention → 산출물에 대한 2D detection → artifact correction(GenShield) → unlearning(BARRIER)"의 4-stage AIGI safety stack이 만들어지고, 추천주제 #3의 핵심 컴포넌트가 됩니다.</p>
+</div>
+
+<!-- ============ Must-Read ============ -->
+<h2>🌟 오늘의 must-read</h2>
+
+<div class="must-read">
+<h3>Learning Bilevel Policies over Symbolic World Models for Long-Horizon Planning</h3>
+<p><a href="https://arxiv.org/abs/2605.15975">arxiv:2605.15975</a> · Dillon Z. Chen, Till Hofmann, Toryn Q. Klassen, Sheila A. McIlraith <span class="badge badge-ro">RO</span></p>
+
+<p><strong>핵심 주장</strong>: Embodied AI agent가 long-horizon planning을 안정적으로 풀려면 LL(low-level) imitation learning만으로는 부족하고 HL(high-level) symbolic abstraction이 필요하다는 framing이 핵심. 저자들은 두 패러다임의 장점을 합치는 정공 처방을 제시 — LL에서는 continuous environment의 fine motor control·manipulation을 imitation learning이 푸는 반면, HL에서는 symbolic abstraction이 efficient·interpretable long-horizon planning을 푼다. Bilevel policy framework가 두 layer 사이의 결합 인터페이스를 명시적으로 정의해서, 같은 task를 LL diffusion policy만으로 또는 HL classical planner만으로 풀 때 각각 부딪히는 한계를 동시에 풀어요. 어제 보고드린 "VLA가 무엇을 잊는가"의 다음 sub-question("VLA가 잊지 않으려면 무엇을 symbol화해야 하는가")에 대한 첫 architectural 처방이라는 점에서 분야 변곡점입니다.</p>
+
+<p><strong>방법의 핵심</strong>: 의사코드로 표현하면 <code>plan_HL = SymbolicPlanner(state_symbolic, goal); for op in plan_HL: skill = SkillLibrary(op); for t: a_t = pi_LL(state_continuous, skill); state_continuous = env.step(a_t); state_symbolic = SymbolGrounding(state_continuous)</code> 형태. 핵심은 (1) HL planner가 symbolic state·goal·precondition·effect를 다루는 classical PDDL-style planner로 깔끔하게 분리, (2) LL policy가 HL operator(예: "pick up object A")를 conditioning 받아 continuous action을 imitation으로 학습, (3) state symbol grounding이 continuous state를 매 step symbolic state로 lift해 HL planner의 closed-loop replanning 가능. 이 분리가 long-horizon에서 결정적인 이유는 LL policy의 horizon이 짧아도(operator 단위) HL plan이 길어질 수 있고, 반대로 LL이 실패해도 HL이 replan으로 회복 가능하기 때문이에요.</p>
+
+<table>
+<thead><tr><th>비교 축</th><th>LL imitation only</th><th>HL symbolic only</th><th>Bilevel (이 논문)</th></tr></thead>
+<tbody>
+<tr><td>Long-horizon 성능</td><td>약 (compounding error)</td><td>강 (탐색 효율적)</td><td>강 + LL 회복 가능</td></tr>
+<tr><td>Fine motor control</td><td>강</td><td>약 (continuous 모델 부재)</td><td>강 (LL이 담당)</td></tr>
+<tr><td>Interpretability</td><td>약 (black-box)</td><td>강 (PDDL 명시)</td><td>HL은 interpretable</td></tr>
+<tr><td>Failure recovery</td><td>약</td><td>약 (LL 못 푸는 task)</td><td>강 (replan + retry)</td></tr>
+<tr><td>학습 비용</td><td>imitation data</td><td>0 (manual symbol)</td><td>imitation + symbol design</td></tr>
+</tbody>
+</table>
+
+<p><strong>약점·한계</strong>: 첫째, "symbolic abstraction을 누가 설계할 것인가"의 fundamental 한계 — PDDL operator·precondition·effect가 manual하게 설계되어야 하면 새 도메인마다 expert 부담이 누적되고, 이는 VLA의 end-to-end generality와 정면 충돌. 본문에서 symbol auto-discovery 또는 LLM-assisted symbol design을 다루는지가 결정적. 둘째, symbol grounding 함수(continuous → symbolic mapping)의 정확도가 전체 시스템의 성능 ceiling — grounding이 잘못되면 HL planner가 잘못된 state를 보고 잘못된 plan 생성. abstract에서 grounding이 어떻게 학습/설계되는지가 안 보임. 셋째, HL operator 단위 horizon이 task마다 다양한데, operator 시작·종료 detection이 어려운 task(예: 연속 manipulation, 정교한 in-hand reorientation)에서는 bilevel framework가 깨질 가능성. 넷째, LL imitation policy의 failure가 HL plan의 retry로 회복된다는 framing이 좋지만, retry 횟수·time budget·실패 누적 시 graceful degradation 등 실용 시나리오의 ablation이 본문에 충분히 있는지 확인 필수. 다섯째, 이 framework가 우리 lab의 deep RL/VLA 라인과 어떻게 호환되는지 — diffusion policy를 LL로 plug-in하거나 OpenVLA action expert로 대체 가능한지, abstract만으론 불명확.</p>
+
+<p><strong>우리 랩 파이프라인에의 1차 영향</strong>: 위 추천주제 #1의 핵심 컴포넌트로 직결. 우리 lab manipulation pipeline에서 LIBERO·RoboTwin 같은 long-horizon task에서 bilevel framework를 retrofit해, LL은 우리 diffusion policy·VLA backbone, HL은 PDDL-style planner로 두는 stack을 구성하면 어제 인사이트 #2(WM execution feedback)와 결합 가능해요. 또한 인사이트 #1의 HPC-MEC inspired WM(2605.15733)을 symbol grounding extractor로 stack하면 manual symbol design 부담을 완화할 수 있고, Event-Graph substrate를 deployment-time debugger로 stack하면 LL 실패의 root cause analysis가 inspectable해집니다. 단기적으론 LIBERO long-horizon subset(예: pick-place-pour)에서 LL-only baseline vs bilevel framework의 success rate·step budget을 비교하는 게 첫 단계 — 일주일 이내 가능한 ablation입니다.</p>
+</div>
+
+<!-- ============ 리스크·한계 필터 ============ -->
+<h2>⚠️ 리스크·한계 필터</h2>
+
+<div class="paper">
+<p><strong><a href="https://arxiv.org/abs/2605.15967">Event-Graph Substrates as World Models</a></strong> — <em>스코프 일반화 의심 + dataset-specific 평가</em>. CLEVRER 검증셋 전체(n=75,618)에서 NS-DR symbolic oracle을 능가했다는 결과는 강력하지만, CLEVRER은 fully simulated 환경에 typed object·typed event가 깔끔하게 정의된 dataset이라 RDF triple substrate가 정공으로 들어맞는 best-case scenario예요. 핵심 의문은 (1) Habitat·ProcTHOR·Isaac Sim 같은 realistic indoor scene이나 (2) noisy perception(YOLO·SAM-HQ 출력) 위에 RDF triple을 lift할 때 같은 정확도가 재현되는지, (3) typed intervention vocabulary가 새 도메인마다 manual하게 정의되어야 하면 generality가 무너지는지. CLEVRER-only 평가는 신뢰할 만하지만 "world model"이라는 일반적 framing을 정당화하기엔 부족. 본문에서 cross-domain transfer ablation이 충분한지 확인 필수.</p>
+</div>
+
+<div class="paper">
+<p><strong><a href="https://arxiv.org/abs/2605.15733">Hippocampal-Entorhinal Inspired WM</a></strong> — <em>neuroscience inspiration의 ground truth 불명확</em>. HPC-MEC circuit의 relational/episodic 분리가 architectural inspiration의 framing은 매력적이지만, 학습된 representation에서 정말 MEC 측이 relational structure를 잡고 HPC 측이 episodic scene을 잡는지에 대한 interpretability 평가가 abstract에서 안 보입니다. 단순히 dual-stream architecture가 single-stream보다 잘 작동한다고 해서 그게 HPC-MEC 대응의 evidence는 아니에요 — neuroscience-inspired 처방의 흔한 함정. 어제 UAM의 ventral-dorsal dual-stream과 같은 결의 의심으로, 본문에서 두 stream의 학습된 feature가 어떻게 다른지 saturation/orthogonality/interpretability 측정이 있는지 확인 필요. 또 "primitives" benchmark 평가가 abstract에 명시돼 있는데 이게 어떤 dataset인지가 결과 재현성에 결정적입니다.</p>
+</div>
+
+<div class="paper">
+<p><strong><a href="https://arxiv.org/abs/2605.15975">Bilevel Symbolic WM (must-read)</a></strong> — <em>symbol design의 manual cost + grounding 정확도 의존성</em>. PDDL-style symbolic abstraction이 long-horizon planning을 푸는 정공 처방의 강점은 분명하지만, 새 도메인마다 operator·precondition·effect를 manual 설계해야 하는 cost가 abstract에서 명확히 다뤄지지 않아요 — 우리 lab manipulation pipeline의 generality와 정면 충돌 가능성. 또 continuous state → symbolic state grounding 함수의 정확도가 전체 시스템 ceiling이라, 학습되는지 manual하게 설계되는지, 그리고 그 grounding이 noisy perception 환경에서 얼마나 robust한지가 핵심 risk. 본문에서 symbol auto-discovery 또는 LLM-assisted symbol design 라인이 있는지, 그리고 grounding 함수의 학습 곡선·noise robustness ablation이 있는지 확인이 결정적입니다.</p>
+</div>
+
+<div class="paper">
+<p><strong><a href="https://arxiv.org/abs/2605.16080">ReAlign · <a href="https://arxiv.org/abs/2605.16122">GenShield</a></a></strong> — <em>같은 저자 그룹의 dual-paper 가능성 + adversarial robustness 미검증</em>. 두 논문의 저자 명단(Zhipei Xu·Xuanyu Zhang·Qing Huang 등)이 중복되는데, 같은 lab이 같은 일에 detection-only(ReAlign)와 detection+correction(GenShield) 두 paper를 동시에 내는 건 framing 측면에서 community에 일관된 stack을 제시하려는 의도로 보여요 — 라인 자체는 견고하지만 두 paper의 detection backbone이 사실상 같으면 "detection 정확도 향상"이라는 main claim이 단일 일자리에서 두 번 카운트될 risk. 또 두 paper 모두 adversarial perturbation에 대한 robustness 측정이 abstract에 명시돼 있지 않은데, AIGI detection이 deployment에서 의미 있으려면 adversarial robust해야 하기에 (특히 GenShield의 correction module이 adversarial sample에 어떻게 반응하는지) 본문 ablation 확인 필수.</p>
+</div>
+
+<div class="paper">
+<p><strong>Generation 버킷의 "domain-specific high-fidelity" 라인 다수 (어제와 동일 패턴 유지)</strong> — 오늘 신규 Generation 21편 중에도 brain diffusion MRI super-resolution, infrared hyperspectral image classification, stipple diffusion, plaque counting, agricultural disease classification 등 specific domain의 high-fidelity 처방이 다수. community-wide framing 변화보다 deadline 시즌의 application paper 누적 신호로 분류해두는 게 안전합니다. 우리 lab ROI(manipulation/embodied/3D-Scene)와 직결되는 부분은 이 라인 내 video editing·diffusion guidance·world model 정도이고, 나머지는 도메인 응용 누적으로 분리해서 봅니다.</p>
+</div>
+
+<!-- ============ 논문별 요약 ============ -->
+<h2>📄 논문별 요약</h2>
+
+<!-- Robot Learning -->
+<h4 class="bucket">📦 Robot Learning <span class="count">· 14편 (전체 24편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15975"><strong>Learning Bilevel Policies over Symbolic World Models for Long-Horizon Planning</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Dillon Z. Chen, Till Hofmann, Toryn Q. Klassen, Sheila A. McIlraith</div>
+<p>오늘의 must-read. LL imitation learning과 HL symbolic abstraction을 bilevel policy framework로 통합해 long-horizon manipulation을 정공으로 푸는 처방. 인사이트 #1의 핵심 evidence이자 추천주제 #1의 중심.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15517"><strong>Terrain Consistent Reference-Guided RL for Humanoid Navigation Autonomy</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 William D. Compton, Zachary Olkin, Aaron D. Ames</div>
+<p>humanoid locomotion RL의 reference trajectory를 terrain geometry에 consistent하도록 training loop 안에서 modulate. footstep을 valid foothold에 project, swing-foot·CoM trajectory를 terrain에 맞춰 standard navigation autonomy infrastructure와 호환되는 SE(2) velocity interface 제공. 인사이트 #2의 핵심 evidence이자 크로스오버 #1의 한 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15559"><strong>NavRL++: A System-Level Framework for Improving Sim-to-Real Transfer in RL-Based Robot Navigation</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Zhefan Xu, Hanyu Jin, Kenji Shimada</div>
+<p>RL navigation 연구가 framework design(input·action·reward)에 치우치고 sim-to-real 자체의 systematic 분석은 약하다는 정공 진단. complete training+deployment pipeline과 sim-to-real key factor disentangle ablation을 제시. 인사이트 #2의 system-level 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15548"><strong>KaRMA: A Kinematic Metric for Fine Manipulation Ability in Robotic Hands</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Martin Peticco, Pulkit Agrawal</div>
+<p>traditional robotic hand metric(workspace·manipulability·grasp stability)이 "in-hand reorientation 능력"을 직접 측정하지 못한다는 진단. joint limit·collision·rolling contact·antipodal force 제약 동시 enforce하면서 spherical object의 reachable rolling translation·reorientation을 정량화. 벤치마크 신규 등록 — dexterous 라인의 evaluation 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15713"><strong>Learning Dynamic Pick-and-Place for a Legged Manipulator</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>quadruped + 6-DOF arm의 dynamic pick-and-place를 hierarchical RL + explicit mass estimation으로 정공. locomotion과 arm control의 coordination 한계를 정량 진단하고 푸는 정공 — 인사이트 #2의 legged manipulation 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16043"><strong>Learning Sim-Grounded Policies for Bimanual Rope Manipulation from Human Teleoperation Data</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Gina Wigginghaus, Tim Missal, Berk Guler, Simon Manschitz</div>
+<p>DLO(Deformable Linear Object) manipulation의 generalization 부족 원인이 observation space 자체이지 policy architecture·data scale이 아니라는 정공 진단. teleoperation 기반 bimanual rope manipulation에서 observation space ablation으로 라인 자체를 정정. teleoperation 인프라 라인의 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16015"><strong>Adaptive Outer-Loop Control of Quadrotors via Reinforcement Learning</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>quadrotor flight control RL이 Domain Randomization으로 인해 over-conservative해진다는 정공 진단. instantaneous perturbation을 능동 인식·반응하는 adaptive outer-loop으로 정공. 인사이트 #2의 DR-conservative 한계 우회 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15480"><strong>Residual RL for Robot Teleoperation under Stochastic Delays</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>teleoperation의 stochastic communication delay가 RL을 chattering으로 망가뜨리는 한계를 residual RL + LSTM state estimator hybrid로 풂. 어제 짚었던 teleoperation 인프라 라인의 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15971"><strong>OHP-RL: Online Human Preference as Guidance in RL for Robot Manipulation</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>human-in-the-loop intervention을 단순 auxiliary signal이 아니라 "언제 어떻게 autonomy를 guide할 것인가"의 richer information으로 활용. preference learning + RL guidance 라인의 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15952"><strong>Driving Through the Network: Teleoperation Performance and Workload Under Latency and Video Impairment</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Ines Trautmannsheimer, Ahmed Azab, Frank Diermeyer</div>
+<p>teleoperated automated vehicle의 effective glass-to-glass latency(500-700ms)와 video quality(bitrate)가 operator performance·workload·oculomotor·physiology에 어떻게 영향을 미치는지 N=25 driving simulator study. teleoperation 인프라의 정량 ablation — 어제 DEX-Mouse · OHP-RL 라인의 latency 측 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16154"><strong>Learn Where Outcomes Diverge: Efficient VLA RL via Probabilistic Chunk Masking</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>VLA RL의 wall-clock이 rollout이 아니라 gradient computation에 78% 쏠린다는 정량 진단. outcome divergence가 있는 chunk만 확률적으로 mask해 gradient cost 절감. 어제 VLA inference 가속 라인의 training-side 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15735"><strong>UAM: A Dual-Stream Perspective on Forgetting in VLA Training</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>(어제 must-read와 동일) VLA training이 VLM의 multimodal competence를 systematically erode한다는 embodiment tax 진단과 biological dual-stream 처방. 어제 인사이트 #1의 핵심 — 이번 주 evidence 농도가 계속 가속 중.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15298"><strong>PhysBrain 1.0 Technical Report</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>human egocentric video를 structured physical commonsense QA로 변환하는 data engine. 어제 인사이트(2026-05-04 회고의 ✅ 적중 격상) evidence — VLA가 egocentric 데이터에서 physical understanding을 supervisory signal로 흡수하는 라인의 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15336"><strong>HoloMotion-1 Technical Report</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>humanoid whole-body motion foundation model. "video-reconstructed motion이 motion diversity의 dominant source"라는 framing — egocentric/video-based data scaling이 humanoid foundation model 수준까지 올라옴. 어제 짚은 "video-only humanoid manipulation foundation" 추천주제의 데이터 측 핵심.</p>
+</div>
+
+<!-- 3D/Scene -->
+<h4 class="bucket">📦 3D/Scene <span class="count">· 11편 (전체 18편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15398"><strong>3DEditSafe: Defending 3D Editing Pipelines from Unsafe Generation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Nicole Meng, Zheyuan Liu, Meng Jiang, Yingjie Lao</div>
+<p>3DGS editing pipeline이 unsafe prompt를 multi-view consistent NSFW로 propagate시키는 fundamental 위험을 정공 진단하고, safety-regularized optimization framework로 unsafe semantic propagation을 제약. 인사이트 #3의 3D-측 응결 + 크로스오버 #2.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15782"><strong>Reactive Robot-Centric Safety for Autonomous Navigation in Constrained and Dynamic Environments</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Viswa N. Sankaranarayanan, Vignesh K. Viswanathan, Akshit Saradagi, Sumeet Satpute</div>
+<p>onboard 3D LIDAR perception-based composite CBF safety filter를 autonomy pipeline에 직접 integrate. ellipsoidal body-frame safety region으로 dynamic constraint 다수를 control frequency에서 enforce, nominal task에 minimally invasive. 추천주제 #2의 safety filter 컴포넌트.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15999"><strong>Constrained MPC-Based Motion Planning for Morphing Quadrotors in Ultra-Narrow Passages</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Harsh Modi, Xiao Liang, Minghui Zheng</div>
+<p>morphing quadrotor의 ultra-narrow passage navigation에서 nonlinear MPC + smooth exponential obstacle cost로 classical APF의 high-cost-in-narrow-gap 한계 정공. 2D LIDAR 제한된 perception 하 morphology + trajectory 동시 plan.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16009"><strong>Fast Expanding Safe Circular Regions for Efficient Local Path Planning</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Scott Fredriksson, Akshit Saradagi, George Nikolakopoulos</div>
+<p>local navigation의 DWA·MPC·CBF·ML-based 한계를 더 geometric algorithmic 접근(safe circular region 시퀀스)으로 정공 — 빠른 계산 + 긴 horizon. classical 알고리즘이 ML 시대에도 정공 슬롯을 확보하는 한 사례.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15828"><strong>Not All Tasks Quantize Equally: Fisher-Guided Quantization for Visual Geometry Transformer</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>VGGT의 multi-task(depth · pose · point cloud) 안에서 task별 quantization sensitivity가 다르다는 진단으로 task-aware PTQ 처방. 어제 인사이트 #3 on-device 압축 축의 핵심.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15852"><strong>GHOST: Geometry-Hierarchical Online Streaming Token Eviction for Efficient 3D Reconstruction</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>streaming 3D reconstruction의 KV cache가 sequence linear-grow하는 한계를 geometry-aware token eviction으로 정공. attention-score heuristic이 3D structure를 모른다는 진단.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16022"><strong>EndoGSim: Physics-Aware 4D Dynamic Endoscopic Scene Simulations via MLLM-Guided GS</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>robot-assisted minimally invasive surgery의 dynamic endoscopic scene을 MLLM-guided physics-aware 4D dynamic GS로 reconstruct·simulate. 어제 인사이트 #3 physics-aware 4D 라인 evidence.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15760"><strong>Learn2Splat: Extending the Horizon of Learned 3DGS Optimization</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>standard optimizer(Adam·SGD)의 general-purpose 한계를 learned optimizer로 풀어 3DGS의 spatial 구조를 직접 활용. 어제 인사이트 #3 learned optimization 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16065"><strong>Robust Prior-Guided Segmentation for Editable 3D Gaussian Splatting</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>3DGS editing의 2D-3D mask lifting view-inconsistency를 SAM-HQ + robust prior로 정공. production phase의 editability 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15923"><strong>Invaria: Learning Scale and Density Invariance in Point Clouds via Next-Resolution Prediction</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>point cloud encoder의 sampling resolution·scale fragility를 next-resolution prediction으로 정공해 robotics deployment에 한 칸 더. 어제 인사이트 #3 deployment-robust 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15496"><strong>LAPS: Improving Incremental LiDAR Mapping using Active Pooling and Sampling for Neural Distance Fields</strong></a> <span class="badge badge-cvro">CV/RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>incremental LiDAR mapping의 neural distance field 학습에서 active pooling·sampling으로 효율 정공. SLAM 측 인프라.</p>
+</div>
+
+<!-- Generation -->
+<h4 class="bucket">📦 Generation <span class="count">· 13편 (전체 37편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15967"><strong>Deterministic Event-Graph Substrates as World Models for Counterfactual Reasoning</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Fabio Rovai</div>
+<p>world state를 append-only typed RDF triple log로 정의해 counterfactual을 exact하게 풀고 learned component 없이 도메인 간 transfer 가능. CLEVRER 전체(n=75,618)에서 NS-DR symbolic oracle을 4개 task 모두에서 능가. 인사이트 #1의 결정적 evidence.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15733"><strong>Structure Abstraction and Generalization in a Hippocampal-Entorhinal Inspired World Model</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Tianqiu Zhang, Muyang Lyu, Xiao Liu, Si Wu</div>
+<p>HPC-MEC circuit의 relational structure(MEC) vs episodic scene(HPC) 분리 organization을 architecture로 가져와 inverse + predictive dual-stream으로 latent transition·visual world model 동시 추론. 인사이트 #1 + 크로스오버 #1의 핵심.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15725"><strong>DiLA: Disentangled Latent Action World Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>LAM의 action abstraction vs generation fidelity fundamental trade-off를 disentangled latent로 정공. 어제 인사이트 #2 latent action 축의 핵심 evidence.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15466"><strong>Entity-Centric World Models: Interaction-Aware Masking for Causal Video Prediction</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>JEPA의 patch-based masking이 kinematic event(rare but informative)를 놓친다는 진단을 interaction-aware masking으로 정공. 어제 인사이트 #2 causal 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15618"><strong>Latent Video Prediction Learns Better World Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>video foundation model의 world model 평가를 robustness 5축으로 확장 — V-JEPA 2.1·VideoPrism·VideoMAEv2 matched-capacity systematic comparison. 어제 인사이트 #2 평가 framework 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15855"><strong>Do Less, Achieve More: Do We Need Every-Step Optimization for RL Fine-tuning of Diffusion Models?</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Renye Yan, Jikang Cheng, Shikun Sun, Yi Sun</div>
+<p>diffusion RL fine-tuning이 full denoising trajectory에 RL을 가하는 게 computationally costly하고 preference alignment를 오히려 약화시킨다는 정량 진단. stage-aware selective RL update로 cost-down + alignment-up 동시 달성. RL alignment 라인의 efficiency 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15661"><strong>VAGS: Velocity Adaptive Guidance Scale for Image Editing and Generation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Yan Luo, Ahmadou Aidara, Jingyi Lu, Jeremy Moebel</div>
+<p>CFG의 fixed-scale 가정을 깨고 ODE trajectory에 따른 temporal + velocity-consistency factor로 dynamically 조정. training-free, generative model guidance 라인의 정밀화.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15921"><strong>AdaEraser: Training-Free Object Removal via Adaptive Attention Suppression</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Dingming Liu</div>
+<p>training-free object removal의 indiscriminate attention suppression이 background 복원을 약화시킨다는 진단을 adaptive attention modulation으로 정공. inpainting 라인의 정밀화.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15391"><strong>PanoWorld: Geometry-Consistent Panoramic Video World Modeling</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>panoramic video generation의 visual realism 위에 명시적 3D scene state constraint(depth·correspondence·spherical motion consistency). spatial supersensing 라인의 generation 측 응결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15309"><strong>One Pass Is Not Enough: Recursive Latent Refinement for Generative Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>FID가 mode collapse를 감지하지 못한다는 정공 진단으로 recursive latent refinement + precision/recall 평가축. 평가 인프라 측 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16003"><strong>Echo-Forcing: Scene Memory Framework for Interactive Long Video Generation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>autoregressive video diffusion의 KV cache가 prompt switching·scene recall 인터랙티브 시나리오에서 functional entanglement로 깨진다는 진단을 echo-forcing으로 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15256"><strong>ReactiveGWM: Steering NPC in Reactive Game World Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>game world model이 NPC를 background pixel로 다루는 한계를 reactive game WM으로 정공. 어제 인사이트 #2 entity-aware WM 라인의 game 도메인 응결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15843"><strong>WorldAct: Activating Monolithic 3D Worlds into Interactive-Ready Object-Centric Scenes</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>Marble 류 generative scene의 static monolithic 출력을 interactive·editable·simulation-ready object-centric scene으로 활성화. 3D/Scene production phase와 generation의 연결.</p>
+</div>
+
+<!-- Foundation Models -->
+<h4 class="bucket">📦 Foundation Models <span class="count">· 12편 (전체 25편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15723"><strong>GOMA: Toward Structure-Driven Multimodal Alignment from a Graph Signal Smoothing Perspective</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Xu Wang, Xunkai Li, Yinlin Zhu, Rong-Hua Li</div>
+<p>CLIP-style isolated image-text pair alignment가 relational context를 놓친다는 정공 진단으로 multimodal attributed graph(MAG) 기반 alignment. graph signal smoothing 관점에서 modality-specific topology를 동시에 깨면서 over-smoothing 제어. 인사이트와는 거리가 있지만 alignment 라인의 신선한 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15864"><strong>Are VLMs Seeing or Just Saying? Uncovering the Illusion of Visual Re-examination</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>VLM이 "let me check again"을 말할 때 실제 시각을 재검토하는지 image-swap probing으로 정공 검증. VS-Bench 800 image pair 신규. 어제 짚은 VLM 자가 진단 라인의 가장 우아한 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15876"><strong>Unlocking Dense Metric Depth Estimation in VLMs</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>VLM의 text-only supervision이 dense geometry recovery를 막는 한계를 depth-aware supervision으로 정공. VLM이 3D understanding을 직접 갖도록 만드는 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15672"><strong>VLMs Trace Without Tracking: Diagnosing Failures in Visual Path Following</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>VLM의 line tracing 같은 basic visual operation control이 fragile하다는 정공 진단. controlled tracing task로 ambiguity 떼어내고 failure mode 분리.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15792"><strong>Reversing the Flow: Generation-to-Understanding Synergy in Large Multimodal Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>unified multimodal model이 unification을 한 방향(understanding→generation)으로만 활용한다는 진단. G2U synergy로 generation이 understanding을 강화하는 양방향 framework.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15300"><strong>Deep Pre-Alignment for VLMs</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>VLM의 ViT→light projector→LLM 표준 구조에서 visual feature가 LLM 초반 layer에서 text space와 멀어 critical depth를 alignment에 낭비한다는 진단. deep pre-alignment 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15764"><strong>GRASP: Learning to Ground Social Reasoning in Multi-Person Non-Verbal Interactions</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>multi-person non-verbal interaction에서 social reasoning을 grounding한 라인. 사회적 reasoning이 VLM 평가에 들어오는 새 sub-area.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15615"><strong>Neutral-Reference Prompting for Vision-Language Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>VLM prompting의 reference bias를 neutral reference로 정공. VLM 평가 인프라 라인의 정밀화.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15961"><strong>Sparse Autoencoders enable Robust and Interpretable Fine-tuning of CLIP models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>CLIP의 robustness와 interpretability를 fine-tuning 시 동시에 보존하는 sparse autoencoder 처방. mechanistic interpretability와 robust learning의 만남.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15951"><strong>From Failure to Feedback: Group Revision Unlocks Hard Cases in Object-Level Grounding</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>object-level grounding의 hard case에서 single-pass failure를 group revision으로 정공. VLM 자가 진단 라인의 grounding 측 응결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16079"><strong>VideoSeeker: Incentivizing Instance-level Video Understanding via Native Agentic Tool Invocation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>video understanding의 text-prompt-only spatiotemporal localization 한계를 native agentic tool invocation으로 정공. CV vs RO 대비의 agent 어휘 동시 침투의 CV 측 응결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16241"><strong>VLA-AD: Offline Semantic Guidance for Efficient VLA Policy Distillation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>billion-parameter VLA teacher를 lightweight student로 distill할 때 7-DoF action imitation에만 의존하지 않고 VLM을 offline semantic supervisor로 두는 framework. 어제 인사이트 #1 distillation 축.</p>
+</div>
+
+<!-- Efficiency/Systems -->
+<h4 class="bucket">📦 Efficiency/Systems <span class="count">· 8편 (전체 18편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15484"><strong>When Does Sparse MoE Help in Vision? The Role of Backbone Compute Leverage in Sparse Routing</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>vision MoE의 expert collapse·limited end-to-end gain을 compute-leverage pattern으로 진단 — top-k routing이 backbone total compute의 fraction이 충분히 클 때만 positive accuracy gap. MoE 도입 가이드라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15621"><strong>LRCP: Low-Rank Compressibility Guided Visual Token Pruning for Efficient LVLMs</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>LVLM token pruning에서 attention-based vs representation-based 양극단을 low-rank compressibility로 정공. global 시각 구조 보존.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15684"><strong>ElasticDiT: Efficient DiT via Elastic Architecture and Sparse Attention for Mobile</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>mobile constraint 하의 DiT 가속 — elastic architecture + sparse attention. 인사이트 #3의 on-device 압축 라인 generation 측.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15799"><strong>From Gridworlds to Warehouses: Adapting Lightweight One-shot MAPF for AGVs</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Hiroki Nagai, Keisuke Okumura</div>
+<p>multi-agent pathfinding(MAPF)의 4-connected unit-time 가정을 differential-drive AGV에 맞춘 MAWPF 정공. 4 제약(straight+rotation·multi-step cost·acc/dec·follower collision) 통합 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15375"><strong>ChangeFlow — Latent Rectified Flow for Change Detection in Remote Sensing</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>remote sensing change detection을 latent rectified flow로 정공. flow model이 detection 도구로 옮겨가는 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15456"><strong>DIPA: Distilled Preconditioned Algorithms for Solving Imaging Inverse Problems</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>imaging inverse problem의 distilled preconditioned algorithm. classical 최적화와 deep learning의 접합 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15487"><strong>Learning Normalized Energy Models for Linear Inverse Problems</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Nicolas Zilberstein, Santiago Segarra, Eero Simoncelli, Florentin Guth</div>
+<p>diffusion prior의 implicit density + likelihood approximation 한계를 normalized energy model로 정공 — denoising + covariance regularization으로 normalized posterior 다양한 inverse problem에 retraining 없이. classical inverse problem 라인의 정밀화.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15689"><strong>How to Choose Your Teacher for Fine Grained Image Recognition</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>FGVC의 distillation에서 teacher 선택이 결정적이라는 정량 진단. distillation 라인의 architectural choice 가이드.</p>
+</div>
+
+<!-- Autonomous Driving -->
+<h4 class="bucket">📦 Autonomous Driving <span class="count">· 6편 (전체 8편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15424"><strong>Social-Mamba: Socially-Aware Trajectory Forecasting with State-Space Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>crowded environment trajectory forecasting의 attention quadratic cost를 SSM(Mamba)으로 정공. real-time pedestrian forecasting 라인.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15654"><strong>PCASim: Promptable Closed-loop Adversarial Simulation for Urban Traffic</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>driving safety agent의 adversarial scenario generation + closed-loop testing의 co-evolution을 정공. driving safety evaluation 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16087"><strong>Towards Trustworthy and Explainable AI for Perception Models: From Concept to Prototype Vehicle</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>DNN-based AD perception의 opacity 한계를 trustworthy XAI 처방 + prototype vehicle deployment까지. driving safety 측 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15519"><strong>DiffVAS: Diffusion-Guided Visual Active Search in Partially Observable Environments</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>UAV-based visual active search의 partial observation을 diffusion-guided sampling으로 정공. SAR·conservation 응용 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15779"><strong>Topology-Aware Spatiotemporal Handover Framework for Continuous Multi-UAV Tracking</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>multi-UAV FOV의 trajectory fragmentation을 topology-aware spatiotemporal handover로 정공. distributed perception 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15528"><strong>Task-Semantic Graph-Driven Distributed Agent Networking for Underwater Target Tracking</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>AUV swarm의 acoustic constraint + intermittent link 하 distributed MARL을 task-semantic graph로 정공. underwater multi-agent 인프라.</p>
+</div>
+
+<!-- Manipulation / Object Recognition -->
+<h4 class="bucket">📦 Object Recognition / 6D Pose <span class="count">· 6편 (전체 6편)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15728"><strong>DecomPose: Disentangling Cross-Category Optimization Contention for Category-Level 6D Pose</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>category-level 6D pose의 fully shared model이 cross-category gradient conflict를 일으킨다는 정량 진단. 6D pose 라인의 결정적 정밀화.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15583"><strong>Unsupervised 3D Human Pose Estimation via Conditional Multi-view Ancestral Sampling</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>3D supervision 없이 motion diffusion model의 2D prior로 single-view 3D pose를 lift하는 cMAS 처방.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15450"><strong>RIDE: Retinex-Informed Decoupling for Exposing Concealed Objects</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>concealed object segmentation의 양극단(RGB/heterogeneous decomposition)을 retinex-informed decoupling으로 정공. transparent·camouflaged·polyp·industrial defect 통합.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15535"><strong>Learning Dynamic Structural Specialization for Underwater Salient Object Detection</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>USOD의 underwater degradation localization을 dynamic structural specialization으로 정공. underwater vision-guided robotics와 연결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15326"><strong>Multimodal Object Detection Under Sparse Forest-Canopy Occlusion</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>forest canopy occlusion 하 human detection을 LiDAR · visible-thermal · sparse-representation 3축 통합 pipeline으로. SAR 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15423"><strong>MR2-ByteTrack: CNN + Transformer Video OD for AI-augmented Embedded Vision Sensor Nodes</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>on-device(MCU) video OD의 memory·compute 한계를 CNN+Transformer hybrid + ByteTrack 통합. edge-vision 라인.</p>
+</div>
+
+<!-- Safety/Alignment -->
+<h4 class="bucket">📦 Safety/Alignment <span class="count">· 9편 (전체 15편 중 선별)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16080"><strong>ReAlign: Generalizable Image Forgery Detection via Reasoning-Aligned Representation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Qing Huang, Zhipei Xu, Xuanyu Zhang, Xiangyu Yu</div>
+<p>AIGI forgery detection의 non-LLM(efficient artifact) vs LLM-based(semantic reasoning) 양극단 trade-off를 reasoning-aligned representation으로 정공. "reasoning text가 detection에 정말 기여하는가" 정량 검증이 결정적. 인사이트 #3 + 크로스오버 #2.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16122"><strong>GenShield: Unified Detection and Artifact Correction for AI-Generated Images</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Zhipei Xu, Xuanyu Zhang, Youmin Xu, Qing Huang</div>
+<p>AIGI detection과 artifact correction을 autoregressive closed-loop으로 통합 — explainable detection이 artifact 위치를 알려주고 controllable correction이 그 위에서 realistic appearance 복원. 인사이트 #3의 가장 야심찬 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16090"><strong>Cross-Modal Prompt Injection Attack against LVLMs with Image-Only Perturbation</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>기존 prompt injection이 modality-singular하다는 한계를 cross-modal로 정공 — image-only perturbation으로 cross-modal interpretation을 steer. LVLM safety의 새 공격면.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15711"><strong>EntropyScan: Model-level Backdoor Detection in LVLMs via Visual Attention Entropy</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>LVLM backdoor 방어를 sample-level에서 model-level로 옮긴 정공 — visual attention entropy 기반의 trigger-agnostic detection. defender 측 응결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15584"><strong>AGC: Adaptive Geodesic Correction for Adversarial Robustness on VLMs</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>VLM의 test-time defense gradient-overhead 한계를 geodesic correction으로 정공. test-time defense의 inference-cost 효율 축.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15641"><strong>Propagating Unsafe Actions in LLM-Controlled Multi-Robot Collaboration via Single Robot Compromise</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>LLM이 multi-robot orchestration의 single-robot compromise를 어떻게 system-wide unsafe로 propagate하는지 정공 진단. embodied LLM planning의 새 attack surface.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16165"><strong>Second-Order Multi-Level Variance Correction for Modality Competition in Multimodal Models</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>AR next-token multimodal training의 cross-modality gradient heterogeneity를 second-order preconditioning + multi-level variance correction으로 정공. 어제 UAM과 같은 결의 optimizer 측 정공.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16171"><strong>Res²CLIP: Few-Shot Generalist Anomaly Detection with Residual-to-Residual Alignment</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>CLIP 기반 few-shot anomaly detection의 cross-granularity mismatch를 residual-to-residual로 정공. industrial anomaly detection 라인의 응결.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15935"><strong>Dynamic Plasma Shape Control with Arbitrary Sensor Subsets</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>tokamak plasma control의 diagnostic failure·dynamic shape target·classical controller 한계를 RL agent로 정공. fault-tolerant control의 industrial 도메인 instantiation.</p>
+</div>
+
+<!-- Embodied AI -->
+<h4 class="bucket">📦 Embodied AI <span class="count">· 4편 (전체 4편)</span></h4>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15964"><strong>WorldVLN: Autoregressive World Action Model for Aerial VLN</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>aerial VLN을 "prediction-driven world-action problem"으로 정식 framing. autoregressive WAM을 aerial-specific으로 정밀화. 어제 인사이트 #2 navigation 측.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.15342"><strong>Minerva-Ego: Spatiotemporal Hints for Egocentric Video Understanding</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>egocentric video reasoning의 output-only 평가 한계를 intermediate reasoning step 평가로 정공. 어제 벤치마크 신규 — 2026-05-04 인사이트 #3의 평가 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16137"><strong>STABLE: Simulation-Ready Tabletop Layout Generation via Semantics-Physics Dual System</strong></a> <span class="badge badge-cv">CV</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>task-to-scene generation의 LLM-only spatial reasoning 한계(object collision·floating)를 semantics-physics dual system으로 정공. embodied AI sim 인프라.</p>
+</div>
+
+<div class="paper">
+<div class="paper-line1">📄 <a href="https://arxiv.org/abs/2605.16115"><strong>Beyond Collision Avoidance: Multi-Robot Yielding and Spatial Affordance in Emergency Evacuations</strong></a> <span class="badge badge-ro">RO</span></div>
+<div class="paper-authors">👥 Anonymous 외</div>
+<p>mobile service robot의 confined emergency evacuation에서 yielding strategy를 collision avoidance 너머 spatial affordance·human expectation으로 확장. HRI 라인의 정공.</p>
+</div>
+
+<!-- 참고 링크 -->
+<h2>🔗 참고 링크</h2>
+<ul class="links">
+<li>cs.CV new — <a href="https://arxiv.org/list/cs.CV/new">arxiv.org/list/cs.CV/new</a></li>
+<li>cs.RO new — <a href="https://arxiv.org/list/cs.RO/new">arxiv.org/list/cs.RO/new</a></li>
+<li>cs.CV pastweek — <a href="https://arxiv.org/list/cs.CV/pastweek?skip=0&show=2000">2000편 단일 페이지</a></li>
+<li>cs.RO pastweek — <a href="https://arxiv.org/list/cs.RO/pastweek?skip=0&show=2000">2000편 단일 페이지</a></li>
+<li>어제 — <a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-18.html">2026-05-18 (월) Weekly retro 포함</a></li>
+<li>지난 회 weekly — <a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-09-weekly.html">2026-05-09 (토요일 weekly)</a></li>
+</ul>
+
+<a href="https://MyungHwanJeon.github.io/arxiv-daily-summary/" class="home-btn home-btn-bottom">🏠 전체 목록으로 돌아가기</a>
+
+<footer>
+arXiv Daily Briefing · 2026-05-19 · cs.CV/cs.RO · 자동 생성 · 톤 = "박사과정 구두 브리핑"
+</footer>
+
+</div>
+</body>
+</html>

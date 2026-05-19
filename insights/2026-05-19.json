@@ -1,0 +1,48 @@
+{
+  "date": "2026-05-19",
+  "insights": [
+    {
+      "title": "World Model이 video-pretrained 한 가족에서 갈라져 symbolic·biological·event-graph 비디오 외 분기 등장",
+      "claim": "지금까지 video JEPA·diffusion 기반이 메인스트림이던 world model 라인에서 처음으로 (1) hippocampal-entorhinal 영감 dual-stream(MEC=relational, HPC=episodic), (2) RDF triple log 기반 exact counterfactual substrate (CLEVRER에서 NS-DR symbolic oracle 능가), (3) symbolic abstraction + LL imitation의 bilevel framework가 동시에 등장 — '비디오 외' sub-area의 첫 응결.",
+      "papers": [
+        "https://arxiv.org/abs/2605.15733",
+        "https://arxiv.org/abs/2605.15967",
+        "https://arxiv.org/abs/2605.15975"
+      ]
+    },
+    {
+      "title": "Humanoid/Mobile Robot RL이 'Domain Randomization'에서 'Structured Reference·Terrain-Grounded Prior'로 이동",
+      "claim": "Terrain-Consistent Reference-Guided RL, Adaptive Outer-Loop Quadrotor, NavRL++, Legged Manipulator HRL 4편이 DR over-conservative 한계를 정량 진단하고 환경 구조를 reference·prior로 직접 inject하는 결로 동시 응결. sim-to-real이 framework design을 넘어 system-level disentangle로 메타화.",
+      "papers": [
+        "https://arxiv.org/abs/2605.15517",
+        "https://arxiv.org/abs/2605.16015",
+        "https://arxiv.org/abs/2605.15559",
+        "https://arxiv.org/abs/2605.15713",
+        "https://arxiv.org/abs/2605.15548"
+      ]
+    },
+    {
+      "title": "AIGI 진정성 라인이 'detection only'에서 'detection + correction + safety-edit'의 unified stack으로 응축",
+      "claim": "어제 BARRIER(unlearning)에 이어 오늘 GenShield(detection+correction 통합), ReAlign(non-LLM vs LLM-based 통합), 3DEditSafe(3DGS editing 안전화) 3편 동시 응결. 'diffusion이 사진 수준에 도달했으니 진위 검증·교정·편집 안전화가 같은 stack에서 동시 풀려야 한다' framing이 community-wide로 합의되는 신호.",
+      "papers": [
+        "https://arxiv.org/abs/2605.16122",
+        "https://arxiv.org/abs/2605.16080",
+        "https://arxiv.org/abs/2605.15398"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "Bilevel Symbolic WM + Hippocampal-Entorhinal abstraction을 묶어 'Inspectable·Counterfactual·Long-horizon' manipulation framework",
+      "claim": "Bilevel Symbolic의 HL/LL 분리 위에 HPC-MEC inverse model로 abstraction extractor, Event-Graph runtime을 deployment-time debugger로 stack — 비디오 데이터에 묶이지 않고 manipulation domain-specific 데이터로 자체 검증 가능."
+    },
+    {
+      "title": "Terrain-Consistent Reference + Reactive CBF Safety + KaRMA를 묶어 'Structured-Prior Humanoid Locomotion+Manipulation' 통합 평가",
+      "claim": "SE(2) interface(Terrain-RL) + CBF safety filter + KaRMA dexterity metric + Legged-Manipulator mass estimation을 한 stack에 통합한 humanoid 전용 LIBERO 자리. DexJoCo와 호환 설계."
+    },
+    {
+      "title": "3DEditSafe + GenShield + BARRIER를 결합한 '3D-Aware AIGI Authenticity Stack'",
+      "claim": "ReAlign detection + GenShield correction + 3DEditSafe prevention + BARRIER unlearning을 4-stage stack으로. 3DGS unlearning은 아직 정공 paper가 없는 빈자리라 선점 가능."
+    }
+  ]
+}
