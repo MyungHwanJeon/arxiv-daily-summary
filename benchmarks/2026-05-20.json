@@ -1,0 +1,63 @@
+{
+  "date": "2026-05-20",
+  "results": [
+    {
+      "benchmark": "Kinetix (async VLA)",
+      "metric": "Success rate at 7-step inference cycle",
+      "value_prev": 1.0,
+      "value_now": 89.0,
+      "delta": "+88pp (회복)",
+      "paper": "https://arxiv.org/abs/2605.19294",
+      "note": "DEFLECT — naive async rollover의 collapse를 flow matching counterfactual tuning으로 회복"
+    },
+    {
+      "benchmark": "Artifact-Bench",
+      "metric": "MLLM artifact perception & diagnostic reasoning",
+      "value": "신규 벤치마크 (baseline 정의)",
+      "paper": "https://arxiv.org/abs/2605.18984",
+      "note": "AI-generated video artifact를 MLLM이 인지·진단하는지 평가하는 첫 종합 벤치마크"
+    },
+    {
+      "benchmark": "EgoCoT-Bench",
+      "metric": "Grounded operation-centric CoT for ego video",
+      "value": "신규 벤치마크",
+      "paper": "https://arxiv.org/abs/2605.19559",
+      "note": "rationale이 spatio-temporal evidence에 grounded인지 측정"
+    },
+    {
+      "benchmark": "FineBench",
+      "metric": "Fine-grained human activity VQA + frame-level grounding",
+      "value": "신규 벤치마크",
+      "paper": "https://arxiv.org/abs/2605.19846",
+      "note": "long-form video + dense QA + grounding을 동시에"
+    },
+    {
+      "benchmark": "Spatial Narrative Score (CaMo)",
+      "metric": "Camera motion understanding for spatial VLM",
+      "value": "신규 metric",
+      "paper": "https://arxiv.org/abs/2605.20165",
+      "note": "SOTA spatial VLM이 explicit camera motion 평가에서 significant degradation"
+    },
+    {
+      "benchmark": "MetaFine",
+      "metric": "Fine-grained manipulation evaluation (3-axis disentangled)",
+      "value": "신규 평가 framework",
+      "paper": "https://arxiv.org/abs/2605.19986",
+      "note": "binary success가 manipulation capability를 최대 70%까지 과대 보고한다는 정량 진단"
+    },
+    {
+      "benchmark": "CaptchaBench",
+      "metric": "CAPTCHA solving (visual reasoning + interaction)",
+      "value": "신규 벤치마크 (16K 샘플, 8 task)",
+      "paper": "https://arxiv.org/abs/2605.19538",
+      "note": "process-level annotation 포함"
+    },
+    {
+      "benchmark": "RoboJailBench",
+      "metric": "Embodied robot VLM jailbreak attack/defense",
+      "value": "신규 벤치마크",
+      "paper": "https://arxiv.org/abs/2605.19328",
+      "note": "security vs benign-task following trade-off까지 측정"
+    }
+  ]
+}

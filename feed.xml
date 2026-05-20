@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 19 May 2026 12:26:18 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 17:01:20 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-20 (수)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-20.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-20.html</guid>
+      <pubDate>Wed, 20 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[어제(05-19) "World Model이 video-pretrained 한 가족에서 갈라져 symbolic·biological·event-graph 분기가 등장한다"·"humanoid RL이 DR에서 structured prior로 이동한다"·"AIGI 진정성 라인이 detect+correct+safety-edit 통합 stack으로 응축"이라는 3개 라인을 보고드렸는데, 오늘 신규 189편을 보면 그 결이 한 칸 더 굳어진 게 핵심이에요. 7일 전(2026-05-13) pastweek 대비 보면 Embodied AI 가 26→34편 +31% 로 가장 큰 증가, Efficiency/Systems 가 58→67편 +16% 로 두 번째, Generation 이 145→15…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-19 (화)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-19.html</link>

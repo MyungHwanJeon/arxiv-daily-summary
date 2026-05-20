@@ -1,0 +1,52 @@
+{
+  "date": "2026-05-20",
+  "insights": [
+    {
+      "title": "VLA 신뢰성이 단일 결의 sub-area로 응결 — async·planning·robustness·latent steering의 5축이 한 일에 동시 떨어짐",
+      "claim": "VLA가 closed-loop deployment에서 brittle한 메커니즘이 한 일에 5축(DEFLECT의 async misalignment, PAPO-VLA의 planner/executor 분해, RoVLA의 multi-consistency robustness, ZPRL의 latent bottleneck steering, SafeAlign-VLA의 negative-enhanced safety alignment)으로 분해되어 다음 1–2분기 별도 sub-area로 떨어질 가능성이 크다.",
+      "papers": [
+        "https://arxiv.org/abs/2605.19294",
+        "https://arxiv.org/abs/2605.19580",
+        "https://arxiv.org/abs/2605.19678",
+        "https://arxiv.org/abs/2605.19919",
+        "https://arxiv.org/abs/2605.19524"
+      ]
+    },
+    {
+      "title": "VLM 평가 인프라가 단일 라인에서 perception vs reasoning 분리·grounded·diagnostic 라인으로 결을 갈음",
+      "claim": "VLM 라인이 single-stage scaling에서 staged·diagnostic 측정으로 transition 중. 'From Seeing to Thinking'이 perception이 reasoning의 scaffold임을 정공으로 짚고, EgoCoT-Bench/Mechanisms of Localization/CaMo가 grounded·mechanistic 진단을 한 일에 떨어뜨려 평가 인프라 10편의 framing 모체가 됨.",
+      "papers": [
+        "https://arxiv.org/abs/2605.20177",
+        "https://arxiv.org/abs/2605.19559",
+        "https://arxiv.org/abs/2605.19792",
+        "https://arxiv.org/abs/2605.20165",
+        "https://arxiv.org/abs/2605.18984",
+        "https://arxiv.org/abs/2605.19846"
+      ]
+    },
+    {
+      "title": "3DGS가 production·system 단계로 한 칸 더 내려가 — billion-scale·dual-opacity·LUT primitive 같은 시스템 레벨 정공이 동시 떨어짐",
+      "claim": "3DGS 라인이 editability·safety 결에서 한 칸 더 내려가 'system·deployment·production engineering' layer로 옮겨감. TideGS의 1B primitive out-of-core training, OP2GS의 object identity primitive, GLUT의 Gaussian LUT, MMGS의 10× 압축이 한 일에 동시 떨어진 게 결정적 신호.",
+      "papers": [
+        "https://arxiv.org/abs/2605.20150",
+        "https://arxiv.org/abs/2605.20044",
+        "https://arxiv.org/abs/2605.19889",
+        "https://arxiv.org/abs/2605.19304"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "DEFLECT + PAPO-VLA + RoVLA를 묶은 VLA Deployment Diagnostic Stack",
+      "claim": "DEFLECT의 async misalignment 진단 + PAPO-VLA의 planner/executor 분해 + RoVLA의 multi-consistency robustness + ZPRL의 latent steering을 한 framework로 묶은 VLA deployment-time brittleness 진단·개선 통합 스택. 우리 lab manipulation pipeline에 직접 plug-in 가능, ICRA·CoRL 주력 후보."
+    },
+    {
+      "title": "Perception vs Reasoning 분리·Grounded·Mechanistic의 통합 VLM Evaluation Framework",
+      "claim": "From Seeing to Thinking의 staged training framing 위에 EgoCoT-Bench의 grounded rationale + mechanistic localization analysis + CaMo의 spatial cognition + MetaRA의 metamorphic robustness + GoTTA의 memory policy를 한 평가 stack에 통합. VLM 기반 perception bottleneck을 perception/reasoning 단계별로 진단."
+    },
+    {
+      "title": "TideGS + OP2GS + GLUT을 묶은 Billion-Scale Object-Aware 3DGS Production Stack",
+      "claim": "TideGS out-of-core training + OP2GS dual-opacity object identity + GLUT interpretable color LUT + MMGS 10× 압축을 한 production-grade 3DGS 인프라 스택으로 통합. mobile robot 등 deployment 환경에서 1B-primitive scene을 retrieval·streaming할 수 있는 stack."
+    }
+  ]
+}
