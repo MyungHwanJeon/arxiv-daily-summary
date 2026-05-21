@@ -1,0 +1,51 @@
+{
+  "date": "2026-05-21",
+  "insights": [
+    {
+      "title": "Driving VLA가 manipulation VLA와 동일 결로 'visual evidence를 실제로 쓰는가' 진단 단계에 진입 — 4편이 한 일에 떨어짐",
+      "claim": "어제 manipulation 측에서 5축(DEFLECT·PAPO·RoVLA·ZPRL·SafeAlign)으로 응결된 VLA 신뢰성 라인이 오늘 driving 측 4편(Lost in Fog의 CoC consistency r=0.99, Grounding via IK의 future-visual-state boundary 진단, DriveMA의 meta-action interface, CoPhy의 distilled VLM + AR BEV world model)으로 확장. ICRA·CoRL·CVPR 다음 분기 VLA track의 평가축이 이 진단 framework 위에서 변형될 가능성이 큼.",
+      "papers": [
+        "https://arxiv.org/abs/2605.21446",
+        "https://arxiv.org/abs/2605.21061",
+        "https://arxiv.org/abs/2605.21273",
+        "https://arxiv.org/abs/2605.21139"
+      ]
+    },
+    {
+      "title": "VLM의 spatial/grounding 한계가 mechanistic localization · abstention · 3D 3축에서 동시 진단됨",
+      "claim": "어제 'perception vs reasoning 분리·diagnostic' framing이 오늘 'mechanistic·abstention·3D' 3축의 깊이로 내려감. Do VLMs Understand 3D Scenes가 visual-token merger를 spatial-info bottleneck으로 white-box localize, Capability ≠ Interpretability가 DINOv2/CLIP/SigLIP가 supervised ViT보다 less interpretable이라는 정량 진단, Yes-Man Syndrome이 embodied abstention의 4축 taxonomy + RoboAbstention framework. 'capability + mechanistic + abstention'의 3축이 다음 분기 VLM 평가의 기본 축이 될 가능성.",
+      "papers": [
+        "https://arxiv.org/abs/2605.20448",
+        "https://arxiv.org/abs/2605.20337",
+        "https://arxiv.org/abs/2605.20544"
+      ]
+    },
+    {
+      "title": "Long video generation이 algorithmic novelty에서 engineering·deployment layer로 전이 — 7편이 동시에 시스템 정공",
+      "claim": "Generation 44편 중 long-horizon video 7편이 한 일에 떨어짐. Anchored Tree Sampling이 K sequential → L+1 tree-hierarchical drift bound, DySink가 sink collapse 메커니즘 + dynamic retrieval, FlowLong이 Tweedie matching architecture-agnostic, Q-ARVD가 ARVD 양자화, AVIS가 streaming AR video inverse problem, StreamGVE가 training-free streaming editing. 3DGS의 production·system 전이와 같은 시점·같은 결로 video gen 라인도 engineering layer로 내려감.",
+      "papers": [
+        "https://arxiv.org/abs/2605.20476",
+        "https://arxiv.org/abs/2605.21028",
+        "https://arxiv.org/abs/2605.20910",
+        "https://arxiv.org/abs/2605.21072",
+        "https://arxiv.org/abs/2605.21042",
+        "https://arxiv.org/abs/2605.20624",
+        "https://arxiv.org/abs/2605.21466"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "Driving + Manipulation VLA를 통합한 Cross-Domain VLA Deployment Diagnostic Framework",
+      "claim": "오늘 driving 4편 + 어제 manipulation 5편을 한 framework로 묶음. Lost in Fog의 CoC consistency metric을 backbone으로, DEFLECT의 async misalignment + PAPO의 planner/executor 분해 + IK grounding의 visual evidence usage + Yes-Man Syndrome의 abstention을 stack해 driving·manipulation domain에 무관한 deployment-time diagnostic. ICRA·CoRL·CVPR 한 사이클 주력 후보."
+    },
+    {
+      "title": "Visual-Token Merger Diagnostic backbone의 VLM Spatial Reliability Stack",
+      "claim": "Do VLMs Understand 3D Scenes의 'visual-token merger가 spatial-info bottleneck'이라는 mechanistic 발견을 우리 lab VLM stack에 직접 활용. layer-wise spatial info 측정 + 어제 Mechanisms of Object Localization의 causal mediation + Capability ≠ Interpretability의 localizability+nameability 측정 + Yes-Man Syndrome abstention을 deploy-time safety net으로 stack. mechanistic interpretability publication 가능성도 높음."
+    },
+    {
+      "title": "Long Video Engineering 인프라를 robotics rollout/simulation에 plug-in",
+      "claim": "오늘 long video 7편의 시스템 처방(Anchored Tree Sampling의 K→L+1, DySink의 dynamic sink, Q-ARVD 양자화)을 robot forward model·driving sim의 long-horizon rollout에 적용. GaussianDream의 Gaussian prefix와 결합해 'long-horizon Gaussian world rollout'이라는 새 stack 가능. video gen 라인이 robotics로 plug-in되는 첫 stack이라는 framing 자체가 paper 가치."
+    }
+  ]
+}

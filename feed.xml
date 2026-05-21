@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Wed, 20 May 2026 17:01:20 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2026 12:36:11 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-21 (목)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-21.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-21.html</guid>
+      <pubDate>Thu, 21 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[어제(05-20) "VLA 신뢰성이 async·planning·robustness·latent steering의 5축으로 응결" · "VLM 평가 인프라가 perception vs reasoning 분리·diagnostic로 결을 바꿈" · "3DGS가 production·system layer로 내려감"이라는 3가지 결을 보고드렸는데, 오늘 신규 207편을 보면 그 결이 한 칸 더 굳어진 게 핵심입니다. 7일 전(2026-05-14) pastweek 대비 보면 Generation 이 148→161편 +9% 로 정체된 듯 보이지만 오늘 신규에서만 44편(어제 27편 대비 +63%) 이 쏟아진 게 결정적이에요 — long video 라인이 'engineering 단계'로…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-20 (수)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-20.html</link>

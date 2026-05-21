@@ -1,0 +1,65 @@
+{
+  "date": "2026-05-21",
+  "results": [
+    {
+      "benchmark": "Waymo Open Dataset (Perception)",
+      "metric": "3D detection / multi-modal perception SOTA",
+      "value": "STELLAR 500M-param model with 50M samples — prior arts outperformed by large margin",
+      "paper": "https://arxiv.org/abs/2605.20390"
+    },
+    {
+      "benchmark": "VLA-REPLICA",
+      "metric": "Real-world VLA evaluation reproducibility",
+      "value": "신규 low-cost reproducible benchmark for VLA real-world evaluation",
+      "paper": "https://arxiv.org/abs/2605.20774"
+    },
+    {
+      "benchmark": "RoboAbstention",
+      "metric": "Embodied agent abstention taxonomy",
+      "value": "신규 4-axis taxonomy + scalable auditable framework",
+      "paper": "https://arxiv.org/abs/2605.20544"
+    },
+    {
+      "benchmark": "roto 2.0 (Robot Tactile Olympiad)",
+      "metric": "Tactile-only manipulation (Baoding ball rotations per 10s)",
+      "value": "13 rotations / 10s (blind agent, order-of-magnitude over prior SOTA)",
+      "paper": "https://arxiv.org/abs/2605.21429"
+    },
+    {
+      "benchmark": "Capability vs Interpretability (vision foundation models)",
+      "metric": "Localizability + Nameability psychophysics score",
+      "value": "신규 — supervised ViTs *more* interpretable than DINOv2/v3·CLIP·SigLIP across 15K behavioral responses (377 participants)",
+      "paper": "https://arxiv.org/abs/2605.20337"
+    },
+    {
+      "benchmark": "3D Scene Understanding for VLMs",
+      "metric": "Occlusion / Reflection / Rearrangement axis (human-annotated, no LLM-as-judge)",
+      "value": "신규 — frontier VLMs: occlusion 6-45%, reflection <7%, rearrangement 53-97%",
+      "paper": "https://arxiv.org/abs/2605.20448"
+    },
+    {
+      "benchmark": "CoC Reasoning Consistency (Lost in Fog)",
+      "metric": "Correlation with trajectory deviation under sensor perturbation",
+      "value": "신규 — r=0.99 across attack types, trajectory deviation 5.3× spike (4.1m→21.8m); CoC ablation +11.8% accuracy (p<0.0001)",
+      "paper": "https://arxiv.org/abs/2605.21446"
+    },
+    {
+      "benchmark": "WildRoadBench (UAV road damage)",
+      "metric": "AP_50 dual-track (VLM grounding · LLM-driven agent)",
+      "value": "신규 — same image set, same metric, two evaluation protocols",
+      "paper": "https://arxiv.org/abs/2605.20306"
+    },
+    {
+      "benchmark": "HalluCXR",
+      "metric": "Medical VLM hallucination (8-category clinical severity)",
+      "value": "신규 — 856 MIMIC-CXR stratified × 6 VLMs × 15,408 evaluations",
+      "paper": "https://arxiv.org/abs/2605.20469"
+    },
+    {
+      "benchmark": "NeuroQA",
+      "metric": "3D Brain MRI VQA (5 clinical domains, full 3D volumes)",
+      "value": "신규 — 12,977 subjects × 56,953 QA × age 5-104",
+      "paper": "https://arxiv.org/abs/2605.20525"
+    }
+  ]
+}
