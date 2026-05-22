@@ -1,0 +1,271 @@
+{
+ "date": "2026-05-22",
+ "window": {
+  "approx_days": 7
+ },
+ "totals": {
+  "cv_pastweek_entries": 1026,
+  "ro_pastweek_entries": 317,
+  "deduped_union": 1277
+ },
+ "buckets": {
+  "Manipulation": {
+   "total": 31,
+   "cv": 19,
+   "ro": 9,
+   "cvro": 3
+  },
+  "3D/Scene": {
+   "total": 70,
+   "cv": 55,
+   "ro": 11,
+   "cvro": 4
+  },
+  "Robot Learning": {
+   "total": 73,
+   "cv": 9,
+   "ro": 53,
+   "cvro": 11
+  },
+  "Autonomous Driving": {
+   "total": 37,
+   "cv": 7,
+   "ro": 19,
+   "cvro": 11
+  },
+  "Foundation Models": {
+   "total": 88,
+   "cv": 88,
+   "ro": 0,
+   "cvro": 0
+  },
+  "Generation": {
+   "total": 148,
+   "cv": 133,
+   "ro": 11,
+   "cvro": 4
+  },
+  "Efficiency/Systems": {
+   "total": 59,
+   "cv": 52,
+   "ro": 4,
+   "cvro": 3
+  },
+  "Embodied AI": {
+   "total": 28,
+   "cv": 4,
+   "ro": 18,
+   "cvro": 6
+  },
+  "Safety/Alignment": {
+   "total": 59,
+   "cv": 54,
+   "ro": 5,
+   "cvro": 0
+  }
+ },
+ "keywords_cv": [
+  [
+   "diffusion",
+   77
+  ],
+  [
+   "segmentation",
+   68
+  ],
+  [
+   "vision-language",
+   64
+  ],
+  [
+   "efficient",
+   61
+  ],
+  [
+   "multimodal",
+   56
+  ],
+  [
+   "benchmark",
+   55
+  ],
+  [
+   "rl",
+   54
+  ],
+  [
+   "reasoning",
+   52
+  ],
+  [
+   "robust",
+   39
+  ],
+  [
+   "world",
+   36
+  ],
+  [
+   "agent",
+   36
+  ],
+  [
+   "transformer",
+   35
+  ],
+  [
+   "attention",
+   32
+  ],
+  [
+   "alignment",
+   30
+  ],
+  [
+   "video gen",
+   26
+  ],
+  [
+   "video generation",
+   25
+  ],
+  [
+   "world model",
+   21
+  ],
+  [
+   "sparse",
+   20
+  ],
+  [
+   "vlm",
+   20
+  ],
+  [
+   "code",
+   17
+  ],
+  [
+   "distillation",
+   16
+  ],
+  [
+   "generative",
+   16
+  ],
+  [
+   "retrieval",
+   15
+  ],
+  [
+   "splatting",
+   15
+  ],
+  [
+   "gaussian splat",
+   15
+  ]
+ ],
+ "keywords_ro": [
+  [
+   "rl",
+   32
+  ],
+  [
+   "manipulation",
+   27
+  ],
+  [
+   "world",
+   23
+  ],
+  [
+   "navigation",
+   18
+  ],
+  [
+   "vision-language",
+   17
+  ],
+  [
+   "reinforcement learning",
+   17
+  ],
+  [
+   "agent",
+   17
+  ],
+  [
+   "vla",
+   16
+  ],
+  [
+   "efficient",
+   15
+  ],
+  [
+   "embodied",
+   15
+  ],
+  [
+   "benchmark",
+   12
+  ],
+  [
+   "world model",
+   12
+  ],
+  [
+   "trajectory",
+   11
+  ],
+  [
+   "humanoid",
+   10
+  ],
+  [
+   "robust",
+   10
+  ],
+  [
+   "diffusion",
+   9
+  ],
+  [
+   "reasoning",
+   8
+  ],
+  [
+   "rag",
+   8
+  ],
+  [
+   "motion planning",
+   7
+  ],
+  [
+   "uncertainty",
+   7
+  ],
+  [
+   "tracking",
+   7
+  ],
+  [
+   "long-horizon",
+   7
+  ],
+  [
+   "tactile",
+   5
+  ],
+  [
+   "dexterous",
+   5
+  ],
+  [
+   "multimodal",
+   5
+  ]
+ ]
+}

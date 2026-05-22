@@ -1,0 +1,54 @@
+{
+  "date": "2026-05-22",
+  "insights": [
+    {
+      "title": "VLA가 어제 'driving 진단' 응결 직후 오늘 'runtime verification + cross-paradigm post-training + chunked scene belief'로 한꺼번에 architecture 답 7편이 떨어짐",
+      "claim": "어제까지 진단 측에 응결돼 있던 VLA 신뢰성 라인이, 오늘 Pre-VLA · CrossVLA · EvoScene-VLA · SOMA · Action with Visual Primitives · BehaviorVLA · LVDrive 7편이 한 일에 떨어지면서 architecture/training 측 정공 답으로 즉각 확장됨. 다음 분기 VLA 표준 구조가 'runtime-verifiable + cross-paradigm post-training + chunked scene belief' 위에서 결정될 가능성이 큼.",
+      "papers": [
+        "https://arxiv.org/abs/2605.22446",
+        "https://arxiv.org/abs/2605.21854",
+        "https://arxiv.org/abs/2605.21862",
+        "https://arxiv.org/abs/2605.22283",
+        "https://arxiv.org/abs/2605.22183",
+        "https://arxiv.org/abs/2605.22671",
+        "https://arxiv.org/abs/2605.22089"
+      ]
+    },
+    {
+      "title": "VLM mechanistic interpretability가 'sparse autoencoder + disentanglement + ablate-to-validate' 라인으로 본격 응결 — 어제 진단의 architecture 측 답",
+      "claim": "어제 VLM 한계가 'visual-token merger localization · capability ≠ interpretability · abstention' 3축 진단으로 깊어진 뒤, 오늘 SegCompass · CEDAR · Ablate-to-Validate · Visual-Advantage Distillation · GeoWeaver · Faithful-MR1 6편이 정공 답으로 동시 응결. CV pastweek에서 'sparse' 어휘가 0→20/주로 급가속한 것이 정량 신호.",
+      "papers": [
+        "https://arxiv.org/abs/2605.22658",
+        "https://arxiv.org/abs/2605.22679",
+        "https://arxiv.org/abs/2605.21642",
+        "https://arxiv.org/abs/2605.21924",
+        "https://arxiv.org/abs/2605.22558",
+        "https://arxiv.org/abs/2605.22072"
+      ]
+    },
+    {
+      "title": "'Humanoid'가 RO 측 새 어휘로 +10/주 부상 — 'scene memory · HOI · whole-body coordination' 3축에서 동시 응결되는 단일 토픽 아닌 응결점",
+      "claim": "RO pastweek에서 humanoid가 0→10/주로 갑자기 top-25에 진입한 것이 단일 토픽이 아닌 multiple line(MIF의 3DGS scene memory · Imagine2Real의 video gen prior HOI · Microgravity grasp-locomotion의 whole-body design)의 응결점이라는 framing. Mobile manipulation pipeline의 humanoid form factor 확장 timing.",
+      "papers": [
+        "https://arxiv.org/abs/2605.21935",
+        "https://arxiv.org/abs/2605.22272",
+        "https://arxiv.org/abs/2605.21704",
+        "https://arxiv.org/abs/2605.22322"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "Pre-VLA + CrossVLA + EvoScene/SOMA를 backbone으로 한 VLA Runtime-Verifiable Architecture Stack",
+      "claim": "오늘 VLA 7편을 한 framework로 묶어, Pre-VLA의 preemptive runtime verification + CrossVLA의 DPO surrogate + EvoScene/SOMA의 persistent action-updated scene state를 stacking. 'VLA의 deployment-time architecture가 한 결정으로 결정되는 통합 stack' 구축. ICRA·CoRL·CVPR 한 사이클의 주력 후보."
+    },
+    {
+      "title": "SegCompass + CEDAR + Ablate-to-Validate를 backbone으로 한 VLM Mechanism-Aware Perception Stack",
+      "claim": "VLM perception stack에 SAE 기반 interpretable alignment + dimensionality-preserving disentanglement + Ablate-to-Validate 진단 + Visual-Advantage Distillation + GeoWeaver token별 geometric weighting을 통합. Lab의 VLM perception layer 자체의 mechanism-aware monitoring/training 인프라."
+    },
+    {
+      "title": "MIF + Imagine2Real + Motion Design을 backbone으로 한 Humanoid Whole-Body Pipeline (Scene Memory + HOI + Coordination 3축 통합)",
+      "claim": "Humanoid form factor 확장 timing에 맞춰 MIF의 3DGS scene memory + Imagine2Real의 zero-shot HOI + microgravity grasp-locomotion의 whole-body design을 한 pipeline으로 통합. 'humanoid가 RO 측 응결점'이라는 인사이트를 multiple-paper output stack으로 실행."
+    }
+  ]
+}
