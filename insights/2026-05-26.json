@@ -1,0 +1,62 @@
+{
+  "date": "2026-05-26",
+  "insights": [
+    {
+      "title": "World model이 한 일 만에 CV · RO · medical · driving · navigation 전 영역으로 동시 응결 — 'single application' 단계에서 'universal architecture' 단계로 진입",
+      "claim": "금요일까지 stable-worldmodel · WorldKV · Bernini 측 인프라 단계였던 WM 라인이, 오늘 'Why We Need WM for AGI · Nano World Models · UWM-JEPA · Causal Physics Steering · Drift-Resistant Nav WM · ReMind · World Models as Group Actions · SparseWorld · AnyScene · GazeWorld · SliceWorld · WorldCraft · X-Foresight' 13편 이상이 한 일에 떨어지면서 universal architecture(reliability + interpretability + memory + cross-domain) 단계로 진입. 'world' 키워드가 CV 23→34, RO 16→20으로 양쪽 모두 가속된 것이 정량 신호. CVPR·NeurIPS·ICRA 다음 분기 표준 vocabulary로 자리잡을 가능성이 큼.",
+      "papers": [
+        "https://arxiv.org/abs/2605.23972",
+        "https://arxiv.org/abs/2605.23993",
+        "https://arxiv.org/abs/2605.25313",
+        "https://arxiv.org/abs/2605.24322",
+        "https://arxiv.org/abs/2605.24761",
+        "https://arxiv.org/abs/2605.25333",
+        "https://arxiv.org/abs/2605.24578",
+        "https://arxiv.org/abs/2605.24354",
+        "https://arxiv.org/abs/2605.26113",
+        "https://arxiv.org/abs/2605.23992",
+        "https://arxiv.org/abs/2605.24371",
+        "https://arxiv.org/abs/2605.25077",
+        "https://arxiv.org/abs/2605.24892"
+      ]
+    },
+    {
+      "title": "VLM SAE 라인이 'transfer + steering' 측으로 한 칸 더 굳어짐 — Foundation Models 한 주 사이 +26% 가속의 결정적 이유",
+      "claim": "금요일 SegCompass · CEDAR · Ablate-to-Validate가 'SAE-based architecture/training' 측 응결이었다면, 오늘 VISTA(language→vision SAE transfer alignment) · Universal Boosts(per-token SAE steering medical VLM) · Causal Route Gating · Visual Blur from Attention Distraction · ProSR · VisReason · Mono-Anchored Advantage Normalization 7편이 'transfer + deployment-time steering' 측 정공으로 응결. Foundation Models 70→88편(+26%) 가속의 결정적 원인. SAE/mechanistic interpretability가 진단/architecture를 넘어 deployment-time monitoring · steering 인프라로 자리잡는 변곡점.",
+      "papers": [
+        "https://arxiv.org/abs/2605.24946",
+        "https://arxiv.org/abs/2605.24977",
+        "https://arxiv.org/abs/2605.24024",
+        "https://arxiv.org/abs/2605.24602",
+        "https://arxiv.org/abs/2605.25524",
+        "https://arxiv.org/abs/2605.25364",
+        "https://arxiv.org/abs/2605.25437"
+      ]
+    },
+    {
+      "title": "Humanoid가 RO 측 '단일 토픽 부상' 단계에서 'locomotion + parkour + safety + text-driven control' 4축 mature stack 단계로 진입",
+      "claim": "금요일 RO 측 humanoid가 5→10/주로 첫 가속 시 'scene memory · HOI · whole-body coordination' 3축 응결점이었다면, 오늘 'MuGen(multi-skill generative locomotion) · ParkourFormer(predictive parkour) · ISSF CBF(safety-critical whole-body) · MIND(text → humanoid multi-scale intent) · Noisy Pose Inverse Dynamics(biomechanics robustness)' 5편이 한 일에 mature application stack 단계로 진입. RO에서 humanoid 5→13/주(+8) 추가 가속. 'humanoid + locomotion + RL' 새 paper-level 어휘 자리잡는 단계로 빈자리 명확.",
+      "papers": [
+        "https://arxiv.org/abs/2605.24592",
+        "https://arxiv.org/abs/2605.25782",
+        "https://arxiv.org/abs/2605.25546",
+        "https://arxiv.org/abs/2605.26006",
+        "https://arxiv.org/abs/2605.24776"
+      ]
+    }
+  ],
+  "research_topics": [
+    {
+      "title": "X-Foresight + UWM-JEPA + Pre-VLA + Causal Physics Steering을 backbone으로 한 VLA-WM Unified Belief-Space Verification Stack",
+      "claim": "오늘 WM 13편 + 금요일 Pre-VLA를 한 framework로 묶어, X-Foresight의 joint vision-action causal forecasting + UWM-JEPA의 belief space rollout + Pre-VLA의 preemptive runtime verification + Causal Physics Steering의 PEZ-CAV training-free physics control을 stacking. 'VLA + WM이 belief space에서 동시 rollout · verify · physics-steer되는 첫 unified architecture'. CVPR·NeurIPS·ICRA·CoRL 한 사이클의 주력 후보. 'world model + belief space + runtime verification + physics steering' 4축 결합은 아직 paper-level로 정공으로 본 곳이 없어 빈자리 명확."
+    },
+    {
+      "title": "VISTA + Universal Boosts + Causal Route Gating + Mono-Anchored Advantage를 backbone으로 한 VLM SAE-Based Deployment-Time Intervention Stack",
+      "claim": "금요일 추천 #2의 'mechanism-aware perception stack'을 한 칸 더 'deployment-time interventional infrastructure' 단계로 확장. VLM perception/grounding stack(Qwen3-VL · LLaVA-family)에 VISTA의 language→vision SAE transfer alignment + Universal Boosts의 per-token SAE steering + Causal Route Gating의 attention decomposition + Mono-Anchored Advantage의 multi-source RLVR + ProSR의 process-shaped CoT를 통합. 'SAE-based VLM이 진단 framework가 아니라 deployment-time interventional infrastructure로 작동'하는 첫 통합 결."
+    },
+    {
+      "title": "MuGen + ParkourFormer + ISSF CBF + MIND + (금요일 MIF/Imagine2Real)를 backbone으로 한 Humanoid Whole-Body Mature Stack (Locomotion + Parkour + Safety + Text Interface + Scene Memory + HOI 6축 통합)",
+      "claim": "Humanoid 오늘 5편 + 금요일 4편을 한 framework로 묶어, MuGen의 VQ-VAE multi-skill locomotion + ParkourFormer의 predictive Transformer + ISSF CBF의 safety guarantee + MIND의 text→multi-scale intent diffusion + MIF의 confidence-aware semantic 3DGS + Imagine2Real의 zero-shot HOI + biomechanics-side Noisy Pose robustness를 6축 통합. ICRA·CoRL·Humanoids·CVPR 한 사이클 multiple-paper output 가능. 'humanoid + locomotion + parkour + safety + text interface + scene memory + HOI' 7축 결합은 아직 paper-level로 정공으로 본 곳 없어 빈자리 명확."
+    }
+  ]
+}

@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Fri, 22 May 2026 12:33:49 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 15:50:12 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-26 (화)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-26.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-26.html</guid>
+      <pubDate>Tue, 26 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[금요일(05-22) "VLA가 runtime verification + cross-paradigm post-training + chunked scene belief로 architecture 답 7편 동시 응결" · "VLM mechanistic interpretability가 SAE 라인으로 본격 응결" · "Humanoid가 RO 측 새 어휘로 부상" 3가지 결을 짚었는데, 주말 + 오늘(365편) 배치를 합쳐 보면 그 세 결이 한 칸 더 'world model이 RO·CV·medical 전 영역으로 응결 + VLM SAE가 transfer/steering까지 확장 + Humanoid가 locomotion/parkour/safety 측에서 굳어짐' 라인으로 굳어졌어요.…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-22 (금)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-22.html</link>
