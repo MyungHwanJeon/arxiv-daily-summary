@@ -6,8 +6,15 @@
     <atom:link href="https://MyungHwanJeon.github.io/arxiv-daily-summary/feed.xml" rel="self" type="application/rss+xml" />
     <description>cs.CV · cs.RO arXiv new submissions, bucketed by lab ROI (3D/Scene, Robot Learning, Autonomous Driving, Foundation Models, Generation, Efficiency, Embodied AI, Safety). Daily briefing with insights and cross-domain contrast.</description>
     <language>ko</language>
-    <lastBuildDate>Tue, 26 May 2026 15:50:12 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 12:35:32 +0900</lastBuildDate>
     <ttl>720</ttl>
+    <item>
+      <title>📄 arXiv Daily Briefing — 2026-05-27 (수)</title>
+      <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-27.html</link>
+      <guid isPermaLink="true">https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-27.html</guid>
+      <pubDate>Wed, 27 May 2026 09:00:00 +0900</pubDate>
+      <description><![CDATA[어제 화요일(05-26)에 짚었던 'world model이 universal architecture로 응결 + VLM SAE가 deployment-time steering까지 확장 + Humanoid가 mature 4축 stack으로 진입' 3가지 결을 오늘 320편 배치에 비춰 보면, 그 세 결이 한 칸 더 'geometry foundation model이 streaming/panoramic/gravity-aligned/sparse-LiDAR로 동시 분화 + VLM mechanism이 retrieval-head 측 본격 진단으로 깊어짐 + VLA 측 real-world continual learning이 미해결 문제로 surface' 라인으로 옮겨가고 있어요. 7일 전…]]></description>
+    </item>
     <item>
       <title>📄 arXiv Daily Briefing — 2026-05-26 (화)</title>
       <link>https://MyungHwanJeon.github.io/arxiv-daily-summary/posts/2026-05-26.html</link>

@@ -1,0 +1,56 @@
+{
+ "date": "2026-05-27",
+ "insights": [
+  {
+   "title": "Geometry FM이 '단일 표준 출력' 단계에서 '4축 분화(panoramic · streaming · gravity · sparse-LiDAR injection)' 단계로 진입",
+   "claim": "feed-forward geometry foundation model이 pixel-aligned pointmap을 표준 출력으로 정착한 직후, panoramic 확장(PaGeR) · streaming/offline 통합(R^3) · gravity-aligned coordinate frame(G3T) · sparse-LiDAR injection(SLIM) · feature-space robustness(GARD) 5+편이 한 일에 동시 응결되며 application-specific 분화 단계로 옮겨가는 변곡점이다.",
+   "papers": [
+    "https://arxiv.org/abs/2605.26368",
+    "https://arxiv.org/abs/2605.26519",
+    "https://arxiv.org/abs/2605.27372",
+    "https://arxiv.org/abs/2605.26456",
+    "https://arxiv.org/abs/2605.26230",
+    "https://arxiv.org/abs/2605.26629",
+    "https://arxiv.org/abs/2605.26447",
+    "https://arxiv.org/abs/2605.26328"
+   ]
+  },
+  {
+   "title": "VLM mechanism이 'circuit-level 진단' 단계로 — retrieval head · bag-of-events · think-with-images · counterfactual shortcut이 동시 측정 도구로 응결",
+   "claim": "어제 VLM SAE deployment-time steering 라인이 한 칸 더 깊어져, multimodal retrieval head(4.4-10.2% head가 retrieval circuit) · VideoLLM bag-of-events behavior · view dropout learning design · VisualNeedle shortcut 진단 · INT8 CLIP QIRC mechanistic 측정 6+편이 같은 날 응결, VLM 평가/사용이 black-box benchmark에서 circuit-level diagnostic로 옮겨가는 결정적 변곡점이다. Foundation Models 버킷이 +10%로 유일하게 가속.",
+   "papers": [
+    "https://arxiv.org/abs/2605.27243",
+    "https://arxiv.org/abs/2605.27101",
+    "https://arxiv.org/abs/2605.27310",
+    "https://arxiv.org/abs/2605.26380",
+    "https://arxiv.org/abs/2605.26415",
+    "https://arxiv.org/abs/2605.26661"
+   ]
+  },
+  {
+   "title": "VLA가 'architecture/training 측 mature'에서 'real-world continual + data + grounding evaluation' 측 본격 미해결 문제로 표면화",
+   "claim": "VLA real-world continual learning의 catastrophic forgetting 첫 large-scale empirical 측 답(Zhu et al.) + fine-grained execution-controllable supervision(FineVLA) + VR-DAgger uncertainty-guided correction + KIL generalization study + modular vs end-to-end grasp synthesis 결과가 한 일에 응결, VLA 라인이 architecture surge에서 real-world deployment + data + evaluation 측 미해결 문제 단계로 옮겨가는 변곡점이다.",
+   "papers": [
+    "https://arxiv.org/abs/2605.26820",
+    "https://arxiv.org/abs/2605.27284",
+    "https://arxiv.org/abs/2605.27114",
+    "https://arxiv.org/abs/2605.26649",
+    "https://arxiv.org/abs/2605.26944"
+   ]
+  }
+ ],
+ "research_topics": [
+  {
+   "title": "PaGeR + R^3 + G3T + SLIM + GARD를 backbone으로 한 Geometry FM Unified Multi-Modal Multi-Frame Stack",
+   "claim": "5+편의 geometry FM 분화 라인을 한 unified stack에 묶어 streaming + gravity-aligned + panoramic + sparse-LiDAR + robustness의 5축을 plug-in으로 조합 가능한 backbone을 제안. CVPR/NeurIPS/CoRL 주력 후보."
+  },
+  {
+   "title": "VLA Real-World Continual Learning Benchmark + Replay Policy Design Library",
+   "claim": "Zhu et al.의 4-task continual learning dataset을 lab 환경 sequential task 8+개로 확장한 VLA-CL-Bench + open-source replay policy library를 community 표준 인프라로 release. ICRA/CoRL 후보."
+  },
+  {
+   "title": "VLM Mechanism Diagnostic Toolkit: Retrieval Head + Bag-of-Events + View Dropout 통합 평가 stack",
+   "claim": "Multimodal Retrieval Head detection + DistractionBench bag-of-events 측정 + View Dropout training intervention + VisualNeedle counterfactual + Modality Gap visual prototype의 4-5축을 표준 mechanistic toolkit으로 묶어 deployment monitoring 인프라화."
+  }
+ ]
+}

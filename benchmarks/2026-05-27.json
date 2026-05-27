@@ -1,0 +1,91 @@
+{
+ "date": "2026-05-27",
+ "results": [
+  {
+   "benchmark": "MMLongBench-Doc",
+   "metric": "retrieval head ablation impact",
+   "value": "48.2->5.7 (top-5% head mask)",
+   "paper": "https://arxiv.org/abs/2605.27243",
+   "note": "Mechanistic measurement, not absolute SOTA"
+  },
+  {
+   "benchmark": "SlideVQA",
+   "metric": "retrieval head ablation impact",
+   "value": "71.2->8.9 (top-5% head mask)",
+   "paper": "https://arxiv.org/abs/2605.27243",
+   "note": "Mechanistic measurement, not absolute SOTA"
+  },
+  {
+   "benchmark": "Virtual KITTI / CARLA",
+   "metric": "abs rel error @ 100-150m",
+   "value": "-39 to -51% vs MoGe-2 baseline",
+   "paper": "https://arxiv.org/abs/2605.26456"
+  },
+  {
+   "benchmark": "V2X-Real (zero-shot, 64 cases)",
+   "metric": "mAP@0.7 relative",
+   "value": "+35.91%",
+   "paper": "https://arxiv.org/abs/2605.26642"
+  },
+  {
+   "benchmark": "KIL real-world eval (5 tasks, 2000+ rollouts)",
+   "metric": "average success rate",
+   "value": "75% (vs RGB 47% / S2-diffusion 73%)",
+   "paper": "https://arxiv.org/abs/2605.26649"
+  },
+  {
+   "benchmark": "OpenS2V-Eval",
+   "metric": "peak GPU memory vs BF16",
+   "value": "-59.3%",
+   "paper": "https://arxiv.org/abs/2605.27003"
+  },
+  {
+   "benchmark": "ImageNet-1K zero-shot (INT8 CLIP)",
+   "metric": "FLOPs / Top-1 accuracy",
+   "value": "-13.4% FLOPs + Top-1 improved",
+   "paper": "https://arxiv.org/abs/2605.26415"
+  },
+  {
+   "benchmark": "Novel-114 (Continual OVD)",
+   "metric": "new benchmark introduced",
+   "value": "new benchmark",
+   "paper": "https://arxiv.org/abs/2605.27116"
+  },
+  {
+   "benchmark": "TouchReason-Bench",
+   "metric": "new tactile reasoning benchmark",
+   "value": "new benchmark",
+   "paper": "https://arxiv.org/abs/2605.27154"
+  },
+  {
+   "benchmark": "DistractionBench (VideoLLM bag-of-events)",
+   "metric": "new diagnostic benchmark",
+   "value": "new benchmark; 11 VideoLLMs evaluated",
+   "paper": "https://arxiv.org/abs/2605.27101"
+  },
+  {
+   "benchmark": "VisualNeedle",
+   "metric": "new active visual search benchmark",
+   "value": "new benchmark",
+   "paper": "https://arxiv.org/abs/2605.26380"
+  },
+  {
+   "benchmark": "SpatialBench",
+   "metric": "new spatial FM holistic eval",
+   "value": "new benchmark",
+   "paper": "https://arxiv.org/abs/2605.27367"
+  },
+  {
+   "benchmark": "IPIBench",
+   "metric": "new streaming MLLM proactive eval",
+   "value": "new benchmark",
+   "paper": "https://arxiv.org/abs/2605.27074"
+  },
+  {
+   "benchmark": "LongAV-Compass",
+   "metric": "minute-scale audio-visual generation unified eval",
+   "value": "new benchmark",
+   "paper": "https://arxiv.org/abs/2605.26244"
+  }
+ ]
+}
